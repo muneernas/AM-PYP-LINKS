@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ahliyyah &amp; Mutran · AM-PYP-LINKS</title>
+    <meta
+      name="description"
+      content="Ahliyyah & Mutran PYP resource hub — replacement for ahliyyahmutranpyp.weebly.com"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand-lockup" href="#/home" data-nav="home">
+        <img
+          class="brand-logo"
+          src="assets/logo.png"
+          alt=""
+          width="52"
+          height="52"
+        />
+        <span>
+          <strong>Ahliyyah &amp; Mutran</strong>
+          <small>AM-PYP-LINKS</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false">
+        Menu
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary"></nav>
+    </header>
+
+    <main class="shell">
+      <div class="page-head">
+        <h1 id="pageTitle">Home</h1>
+        <p id="pageMeta" class="page-meta"></p>
+      </div>
+      <div id="content"></div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Replacement for
+        <a href="https://ahliyyahmutranpyp.weebly.com/" target="_blank" rel="noopener"
+          >ahliyyahmutranpyp.weebly.com</a
+        >
+        · <span id="stamp"></span>
+      </p>
+    </footer>
+
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>

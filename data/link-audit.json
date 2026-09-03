@@ -1,0 +1,4846 @@
+{
+  "summary": {
+    "checkedAt": "2026-09-03T11:22:18.592Z",
+    "total": 257,
+    "critical": 12,
+    "warning": 7,
+    "info": 0,
+    "ok": 238
+  },
+  "issues": [
+    {
+      "href": "http://bgps.sharpschool.net/curriculum/computers/kid_links/first_grade_kid_links/first_grade_keyboarding/",
+      "label": "typingadventure vscgameicons 300x225 300x225",
+      "pages": [
+        "typing"
+      ],
+      "units": [],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://bgps.sharpschool.net/curriculum/computers/kid_links/first_grade_kid_links/first_grade_keyboarding/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://pbskids.org/curiousgeorge/games/build_a_bot/",
+      "label": "splash",
+      "pages": [
+        "kg-1--2"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://pbskids.org/curiousgeorge/games/build_a_bot",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://pbskids.org/curiousgeorge/games/monkey_faces/monkey_faces.html",
+      "label": "untitled 7",
+      "pages": [
+        "kg-1--2"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://pbskids.org/curiousgeorge/games/monkey_faces/monkey_faces.html",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.ict.mic.ul.ie/websites/2002/Imelda_Fitzgerald/Homes%20Around%20the%20World-1.htm",
+      "label": "386554",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "http://www.ict.mic.ul.ie/websites/2002/Imelda_Fitzgerald/Homes%20Around%20the%20World-1.htm",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://cardoo.co/ar/technology-news-ar/%D9%85%D9%85%D9%8A%D8%B2%D8%A7%D8%AA-%D9%88-%D8%B9%D9%8A%D9%88%D8%A8-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A3%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%D9%85%D9%85%D9%8A%D8%B2%D8%A7%D8%AA/",
+      "label": "مميزات و عيوب الذكاء الأصطناعي",
+      "pages": [
+        "157516041584160315751569-157516041573158915911606157515931610"
+      ],
+      "units": [],
+      "level": "critical",
+      "notes": [
+        "SSL certificate problem. Browsers will show a security warning."
+      ],
+      "status": 0,
+      "error": "SELF_SIGNED_CERT_IN_CHAIN",
+      "finalUrl": "https://cardoo.co/ar/technology-news-ar/%D9%85%D9%85%D9%8A%D8%B2%D8%A7%D8%AA-%D9%88-%D8%B9%D9%8A%D9%88%D8%A8-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A3%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%D9%85%D9%85%D9%8A%D8%B2%D8%A7%D8%AA/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=167&ct=1733724908&rver=7.5.2211.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26deeplink%3dowa%252f%253fstate%253d1%2526redirectTo%253daHR0cHM6Ly9vdXRsb29rLmxpdmUuY29tL21haWwv%26RpsCsrfState%3d092331ba-5615-e579-cf80-796ce262f3e4&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c",
+      "label": "oip",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=167&ct=1733724908&rver=7.5.2211.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26deeplink%3dowa%252f%253fstate%253d1%2526redirectTo%253daHR0cHM6Ly9vdXRsb29rLmxpdmUuY29tL21haWwv%26RpsCsrfState%3d092331ba-5615-e579-cf80-796ce262f3e4&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/wasanalzawaidah/padlet-74i49i0tamr7ndsh",
+      "label": "padlet 74i49i0tamr7ndsh",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead Padlet (HTTP 404). Board missing, removed, or private — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://padlet.com/wasanalzawaidah/padlet-74i49i0tamr7ndsh",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/wasanalzawaidah/testing-the-product-4e-2024-x7gclphhzzjpq0c6",
+      "label": "TESTING THE PRODUCT 4E",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead Padlet (HTTP 404). Board missing, removed, or private — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://padlet.com/wasanalzawaidah/testing-the-product-4e-2024-x7gclphhzzjpq0c6",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/wasanalzawaidah/testing-the-product-4f-2024-s1j3sepgzli3mqhq",
+      "label": "TESTING THE PRODUCT 4F",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead Padlet (HTTP 404). Board missing, removed, or private — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://padlet.com/wasanalzawaidah/testing-the-product-4f-2024-s1j3sepgzli3mqhq",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.brainpop.com/games/sortifyanimals/?topic_id=",
+      "label": "BrainPOP",
+      "pages": [
+        "grade-1",
+        "grade-3"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://www.brainpop.com/unit/sortifyanimals/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.brainpop.com/games/sortifycomputertechnology/?topic_id=",
+      "label": "BrainPOP",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://www.brainpop.com/unit/sortifycomputertechnology/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.turacogames.com/games/living-non-living/",
+      "label": "download orig",
+      "pages": [
+        "kg-1--2"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "critical",
+      "notes": [
+        "SSL certificate problem. Browsers will show a security warning."
+      ],
+      "status": 0,
+      "error": "SELF_SIGNED_CERT_IN_CHAIN",
+      "finalUrl": "https://www.turacogames.com/games/living-non-living/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.kidzsearch.com/",
+      "label": "967464 orig",
+      "pages": [
+        "search-engines"
+      ],
+      "units": [],
+      "level": "warning",
+      "notes": [
+        "Access restricted (HTTP 403). Resource may be private or removed."
+      ],
+      "status": 403,
+      "error": null,
+      "finalUrl": "https://www.kidzsearch.com/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://outlook.office.com/mail/safelink.html?url=https://geolougy.com/k/%D8%A8%D8%AD%D8%AB-%D8%B9%D9%86-%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D8%A9-%D9%88%D8%A3%D9%86%D9%88%D8%A7%D8%B9%D9%87%D8%A7&corid=012e2f08-4611-26e1-78e6-620e7b2f084a",
+      "label": "بحث عن التعرية وانواعها",
+      "pages": [
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16"
+      ],
+      "units": [
+        "التّعرية"
+      ],
+      "level": "warning",
+      "notes": [
+        "Unusual response (HTTP 417). Manual check recommended."
+      ],
+      "status": 417,
+      "error": null,
+      "finalUrl": "https://outlook.office.com/mail/safelink.html?url=https://geolougy.com/k/%D8%A8%D8%AD%D8%AB-%D8%B9%D9%86-%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D8%A9-%D9%88%D8%A3%D9%86%D9%88%D8%A7%D8%B9%D9%87%D8%A7&corid=012e2f08-4611-26e1-78e6-620e7b2f084a",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/sandykakish1/eyzt012lhxelt7oa",
+      "label": "eyzt012lhxelt7oa",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "warning",
+      "notes": [
+        "Padlet access blocked (HTTP 403). Board may be private/expired — open and confirm sharing."
+      ],
+      "status": 403,
+      "error": null,
+      "finalUrl": "https://padlet.com/sandykakish1/human-body-systems-eyzt012lhxelt7oa",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/sandykakish1/testing-the-prototype-4a-gi6em1lwig2hkv8t",
+      "label": "Testing the product 4A",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "warning",
+      "notes": [
+        "Padlet access blocked (HTTP 403). Board may be private/expired — open and confirm sharing."
+      ],
+      "status": 403,
+      "error": null,
+      "finalUrl": "https://padlet.com/sandykakish1/testing-the-prototype-4a-gi6em1lwig2hkv8t",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/sandykakish1/testing-the-prototype-4b-k0hmi45ld2ztlrnn",
+      "label": "TESTING THE PRODUCT 4B",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "warning",
+      "notes": [
+        "Padlet access blocked (HTTP 403). Board may be private/expired — open and confirm sharing."
+      ],
+      "status": 403,
+      "error": null,
+      "finalUrl": "https://padlet.com/sandykakish1/testing-the-prototype-4b-k0hmi45ld2ztlrnn",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/sandykakish1/testing-the-prototype-4c-5exkslpla3ep2msz",
+      "label": "TESTING THE PRODUCT 4C",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "warning",
+      "notes": [
+        "Padlet access blocked (HTTP 403). Board may be private/expired — open and confirm sharing."
+      ],
+      "status": 403,
+      "error": null,
+      "finalUrl": "https://padlet.com/sandykakish1/testing-the-prototype-4c-5exkslpla3ep2msz",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://quickdraw.withgoogle.com/",
+      "label": "qd",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "warning",
+      "notes": [
+        "Server error (HTTP 500) when checked. May be temporarily down."
+      ],
+      "status": 500,
+      "error": null,
+      "finalUrl": "https://quickdraw.withgoogle.com/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    }
+  ],
+  "all": [
+    {
+      "href": "https://qubitsedu.com/",
+      "label": "Qubits",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://qubitsedu.com/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=BtIwCBLhTkuovh-tfqgEveBPYFxvSbBNh0X9VW7WwRFUODZaNTYyUDRVTzBMV0RLRFhNUFJOS0pZRy4u&route=shorturl",
+      "label": "Microsoft Form",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=BtIwCBLhTkuovh-tfqgEveBPYFxvSbBNh0X9VW7WwRFUODZaNTYyUDRVTzBMV0RLRFhNUFJOS0pZRy4u&route=shorturl",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://forms.gle/RNovaH2VYuByL9bq8",
+      "label": "Google Form",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeVkGqXIABZcz07BcS5UIw3WwM7jXjxtMDvqtE5mDUeBYOyGw/viewform?usp=send_form",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ictusefulsites.weebly.com/digital-citizenship-games.html",
+      "label": "whatsapp image 2019 09 16 at 6 18 57 pm",
+      "pages": [
+        "home",
+        "grade-5"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ictusefulsites.weebly.com/digital-citizenship-games.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/search-engines.html",
+      "label": "1454079641",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/search-engines.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/typing.html",
+      "label": "425479",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/typing.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.kidsa-z.com/main/Login",
+      "label": "Raz-Kids",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.kidsa-z.com/ng/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.brainpop.com/games/sortifycomputertechnology/?topic_id=",
+      "label": "BrainPOP",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://www.brainpop.com/unit/sortifycomputertechnology/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.abcya.com/games/find_the_tech",
+      "label": "ABCya",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.abcya.com/games/find_the_tech",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://kahoot.it/",
+      "label": "Kahoot!",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://kahoot.it/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://scratch.mit.edu/projects/editor/?tutorial=getStarted",
+      "label": "Scratch",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://scratch.mit.edu/projects/editor/?tutorial=getStarted",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.toddleapp.com/",
+      "label": "Toddle",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.toddleapp.com/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/",
+      "label": "3d printing in manufacturing1",
+      "pages": [
+        "home",
+        "grade-1",
+        "grade-2",
+        "grade-3",
+        "grade-4",
+        "grade-5",
+        "pe-videos",
+        "franccedilais",
+        "robotics",
+        "search-engines",
+        "typing",
+        "kg-1--2",
+        "word-wall",
+        "vr-videos",
+        "canva-grade-5",
+        "how-we-express-ourselves---videos",
+        "16051606-160615811606---15751580160715861577-15751604158015871605",
+        "157516041584160315751569-157516041573158915911606157515931610",
+        "157516041605160716051577-15751604158215781575160516101577",
+        "15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590",
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16",
+        "158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604"
+      ],
+      "units": [
+        "Who we are",
+        "How the world works",
+        "Sharing the planet",
+        "Where we are in place and time",
+        "How we express ourselves",
+        "الجهاز العضلي",
+        "التّرسيب",
+        "استبانة: دور الإنسان في الحفاظ على أغلفة الأرض"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.office.com/",
+      "label": "Microsoft Office",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://m365.cloud.microsoft/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://nearpod.com/",
+      "label": "Nearpod",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://nearpod.com/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.edu-nation.net/",
+      "label": "Edu-Nation",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.edu-nation.net/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "home"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/grade-1.html",
+      "label": "Grade 1",
+      "pages": [
+        "home",
+        "grade-1",
+        "grade-2",
+        "grade-3",
+        "grade-4",
+        "grade-5",
+        "pe-videos",
+        "franccedilais",
+        "robotics",
+        "search-engines",
+        "typing",
+        "kg-1--2",
+        "word-wall",
+        "vr-videos",
+        "canva-grade-5",
+        "how-we-express-ourselves---videos",
+        "16051606-160615811606---15751580160715861577-15751604158015871605",
+        "157516041584160315751569-157516041573158915911606157515931610",
+        "157516041605160716051577-15751604158215781575160516101577",
+        "15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590",
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16",
+        "158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604"
+      ],
+      "units": [
+        "Who we are",
+        "Sharing the planet",
+        "Where we are in place and time",
+        "How we express ourselves",
+        "How the world works",
+        "الجهاز العضلي",
+        "التّرسيب",
+        "استبانة: دور الإنسان في الحفاظ على أغلفة الأرض"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/grade-1.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/grade-2.html",
+      "label": "Grade 2",
+      "pages": [
+        "home",
+        "grade-1",
+        "grade-2",
+        "grade-3",
+        "grade-4",
+        "grade-5",
+        "pe-videos",
+        "franccedilais",
+        "robotics",
+        "search-engines",
+        "typing",
+        "kg-1--2",
+        "word-wall",
+        "vr-videos",
+        "canva-grade-5",
+        "how-we-express-ourselves---videos",
+        "16051606-160615811606---15751580160715861577-15751604158015871605",
+        "157516041584160315751569-157516041573158915911606157515931610",
+        "157516041605160716051577-15751604158215781575160516101577",
+        "15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590",
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16",
+        "158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604"
+      ],
+      "units": [
+        "Who we are",
+        "Sharing the planet",
+        "Where we are in place and time",
+        "How we express ourselves",
+        "How the world works",
+        "الجهاز العضلي",
+        "التّرسيب",
+        "استبانة: دور الإنسان في الحفاظ على أغلفة الأرض"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/grade-2.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/grade-3.html",
+      "label": "Grade 3",
+      "pages": [
+        "home",
+        "grade-1",
+        "grade-2",
+        "grade-3",
+        "grade-4",
+        "grade-5",
+        "pe-videos",
+        "franccedilais",
+        "robotics",
+        "search-engines",
+        "typing",
+        "kg-1--2",
+        "word-wall",
+        "vr-videos",
+        "canva-grade-5",
+        "how-we-express-ourselves---videos",
+        "16051606-160615811606---15751580160715861577-15751604158015871605",
+        "157516041584160315751569-157516041573158915911606157515931610",
+        "157516041605160716051577-15751604158215781575160516101577",
+        "15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590",
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16",
+        "158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604"
+      ],
+      "units": [
+        "Who we are",
+        "Sharing the planet",
+        "Where we are in place and time",
+        "How we express ourselves",
+        "How the world works",
+        "الجهاز العضلي",
+        "التّرسيب",
+        "استبانة: دور الإنسان في الحفاظ على أغلفة الأرض"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/grade-3.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/grade-4.html",
+      "label": "Grade 4",
+      "pages": [
+        "home",
+        "grade-1",
+        "grade-2",
+        "grade-3",
+        "grade-4",
+        "grade-5",
+        "pe-videos",
+        "franccedilais",
+        "robotics",
+        "search-engines",
+        "typing",
+        "kg-1--2",
+        "word-wall",
+        "vr-videos",
+        "canva-grade-5",
+        "how-we-express-ourselves---videos",
+        "16051606-160615811606---15751580160715861577-15751604158015871605",
+        "157516041584160315751569-157516041573158915911606157515931610",
+        "157516041605160716051577-15751604158215781575160516101577",
+        "15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590",
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16",
+        "158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604"
+      ],
+      "units": [
+        "Who we are",
+        "Sharing the planet",
+        "Where we are in place and time",
+        "How we express ourselves",
+        "How the world works",
+        "الجهاز العضلي",
+        "التّرسيب",
+        "استبانة: دور الإنسان في الحفاظ على أغلفة الأرض"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/grade-4.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/grade-5.html",
+      "label": "Grade 5",
+      "pages": [
+        "home",
+        "grade-1",
+        "grade-2",
+        "grade-3",
+        "grade-4",
+        "grade-5",
+        "pe-videos",
+        "franccedilais",
+        "robotics",
+        "search-engines",
+        "typing",
+        "kg-1--2",
+        "word-wall",
+        "vr-videos",
+        "canva-grade-5",
+        "how-we-express-ourselves---videos",
+        "16051606-160615811606---15751580160715861577-15751604158015871605",
+        "157516041584160315751569-157516041573158915911606157515931610",
+        "157516041605160716051577-15751604158215781575160516101577",
+        "15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590",
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16",
+        "158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604"
+      ],
+      "units": [
+        "Who we are",
+        "Sharing the planet",
+        "Where we are in place and time",
+        "How we express ourselves",
+        "How the world works",
+        "الجهاز العضلي",
+        "التّرسيب",
+        "استبانة: دور الإنسان في الحفاظ على أغلفة الأرض"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/grade-5.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/pe-videos.html",
+      "label": "PE Videos",
+      "pages": [
+        "home",
+        "grade-1",
+        "grade-2",
+        "grade-3",
+        "grade-4",
+        "grade-5",
+        "pe-videos",
+        "franccedilais",
+        "robotics",
+        "search-engines",
+        "typing",
+        "kg-1--2",
+        "word-wall",
+        "vr-videos",
+        "canva-grade-5",
+        "how-we-express-ourselves---videos",
+        "16051606-160615811606---15751580160715861577-15751604158015871605",
+        "157516041584160315751569-157516041573158915911606157515931610",
+        "157516041605160716051577-15751604158215781575160516101577",
+        "15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590",
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16",
+        "158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604"
+      ],
+      "units": [
+        "Who we are",
+        "Sharing the planet",
+        "Where we are in place and time",
+        "How we express ourselves",
+        "How the world works",
+        "الجهاز العضلي",
+        "التّرسيب",
+        "استبانة: دور الإنسان في الحفاظ على أغلفة الأرض"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/pe-videos.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/franccedilais.html",
+      "label": "Français",
+      "pages": [
+        "home",
+        "grade-1",
+        "grade-2",
+        "grade-3",
+        "grade-4",
+        "grade-5",
+        "pe-videos",
+        "franccedilais",
+        "robotics",
+        "search-engines",
+        "typing",
+        "kg-1--2",
+        "word-wall",
+        "vr-videos",
+        "canva-grade-5",
+        "how-we-express-ourselves---videos",
+        "16051606-160615811606---15751580160715861577-15751604158015871605",
+        "157516041584160315751569-157516041573158915911606157515931610",
+        "157516041605160716051577-15751604158215781575160516101577",
+        "15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590",
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16",
+        "158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604"
+      ],
+      "units": [
+        "Who we are",
+        "Sharing the planet",
+        "Where we are in place and time",
+        "How we express ourselves",
+        "How the world works",
+        "الجهاز العضلي",
+        "التّرسيب",
+        "استبانة: دور الإنسان في الحفاظ على أغلفة الأرض"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/franccedilais.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/robotics.html",
+      "label": "Robotics",
+      "pages": [
+        "home",
+        "grade-1",
+        "grade-2",
+        "grade-3",
+        "grade-4",
+        "grade-5",
+        "pe-videos",
+        "franccedilais",
+        "robotics",
+        "search-engines",
+        "typing",
+        "kg-1--2",
+        "word-wall",
+        "vr-videos",
+        "canva-grade-5",
+        "how-we-express-ourselves---videos",
+        "16051606-160615811606---15751580160715861577-15751604158015871605",
+        "157516041584160315751569-157516041573158915911606157515931610",
+        "157516041605160716051577-15751604158215781575160516101577",
+        "15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590",
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16",
+        "158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604"
+      ],
+      "units": [
+        "Who we are",
+        "Sharing the planet",
+        "Where we are in place and time",
+        "How we express ourselves",
+        "How the world works",
+        "الجهاز العضلي",
+        "التّرسيب",
+        "استبانة: دور الإنسان في الحفاظ على أغلفة الأرض"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/robotics.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.abcya.com/snowman.htm",
+      "label": "ABCya",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.abcya.com/games/snowman",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.abcya.com/make_a_face.htm",
+      "label": "ABCya",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.abcya.com/games/make_a_face",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.abcya.com/make_a_pumpkin.htm",
+      "label": "ABCya",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.abcya.com/games/make_a_pumpkin",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/100828621",
+      "label": "Wordwall",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/100828621/ict/fact-or-fiction-open-the-box",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/64247504/sort-into-2-groups-activities-using-electronic-devices-and",
+      "label": "Wordwall",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/64247504/sort-into-2-groups-activities-using-electronic-devices-and",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/100642992",
+      "label": "Game 1",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/100642992/kindness",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/27889033",
+      "label": "Game 2",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/27889033/acts-of-kindness-i",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://paint.js.org/",
+      "label": "paint",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://paint.js.org/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.abcya.com/games/abcya_paint",
+      "label": "ABCya",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we express ourselves",
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.abcya.com/games/abcya_paint",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/63231667/digital-citizen-characters",
+      "label": "Wordwall",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/63231667/digital-citizen-characters",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.sesamestreet.org/games?id=26550",
+      "label": "job for me orig",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.sesamestreet.org/games?id=26550",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/17460334/english/jobs-and-occupations-memory-game",
+      "label": "Wordwall",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/17460334/english/jobs-and-occupations-memory-game",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.storyboardthat.com/",
+      "label": "storyboard that 1415830878 1428744750 1428752530",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we organize ourselves",
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.storyboardthat.com/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/3552334/jobs",
+      "label": "Wordwall",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/3552334/jobs",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://archive.econedlink.org/interactives/html/454/em310_dragndrop_v2_save_html5.php",
+      "label": "1479665919",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://archive.econedlink.org/interactives/html/454/em310_dragndrop_v2_save_html5.php",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.tinytap.com/activities/g49og/play/jobs",
+      "label": "jobs 3 orig",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.tinytap.com/activities/g49og/play/jobs",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.mathsisfun.com/games/direction-nsew-.html",
+      "label": "direction",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.mathsisfun.com/games/direction-nsew-.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://games.ozoblockly.com/shapetracer-basic",
+      "label": "shape orig",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://games.ozoblockly.com/shapetracer-basic",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.google.com/logos/2017/logo17/logo17.html?hl=en",
+      "label": "unnamed",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.google.com/logos/2017/logo17/logo17.html?hl=en",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/12644552/geography/landforms-matching",
+      "label": "Wordwall",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/12644552/geography/landforms-matching",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.sciencekids.co.nz/gamesactivities/plantsanimals.html",
+      "label": "untitled 2",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.sciencekids.co.nz/gamesactivities/plantsanimals.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://pbskids.org/sesame/games/seasons-spinner/",
+      "label": "sesame street seasons spinner",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://pbskids.org/games/play/sesame-street-seasons-spinner/31241",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.abcya.com/games/dress_for_the_weather",
+      "label": "ABCya",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.abcya.com/games/dress_for_the_weather",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://kids.nationalgeographic.com/games/action-adventure/article/space-explorer",
+      "label": "National Geographic",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://kids.nationalgeographic.com/games/action-adventure/article/space-explorer",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://virtualzoolive.com/index%20all%20cams.html",
+      "label": "capture",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://virtualzoolive.com/index%20all%20cams.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.almawajordan.org/our-animals/",
+      "label": "sukkar scaled",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.almawajordan.org/our-animals/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.edinburghzoo.org.uk/animals/webcams",
+      "label": "yangguang webcambanner",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.edinburghzoo.org.uk/animals/webcams",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://zoo.sandiegozoo.org/live-cams",
+      "label": "san diego orig",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://zoo.sandiegozoo.org/live-cameras",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://nationalzoo.si.edu/webcams",
+      "label": "spike on cam2 orig",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://nationalzoo.si.edu/webcams",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://pbskids.org/plumlanding/games/nature_changer/index.html",
+      "label": "animals",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://pbskids.org/videos/plum-landing",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.brainpop.com/games/sortifyanimals/?topic_id=",
+      "label": "BrainPOP",
+      "pages": [
+        "grade-1",
+        "grade-3"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://www.brainpop.com/unit/sortifyanimals/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://sdzwildlifeexplorers.org/",
+      "label": "sdzoo orig",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://sdzwildlifeexplorers.org/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.sesamestreet.org/games?id=18007",
+      "label": "school",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.sesamestreet.org/games?id=18007",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.makebeliefscomix.com/Comix/",
+      "label": "untitled 8",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://makebeliefscomix.com/Comix/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/grade-1.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "grade-1"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/grade-1.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.abcya.com/kids_make_a_gingerbread_house.htm",
+      "label": "ABCya",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.abcya.com/games/kids_make_a_gingerbread_house",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.abcya.com/games/make_a_treehouse",
+      "label": "ABCya",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.abcya.com/games/make-a-treehouse",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.abcya.com/build_a_house.htm",
+      "label": "ABCya",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.abcya.com/games/make-a-house",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.ict.mic.ul.ie/websites/2002/Imelda_Fitzgerald/Homes%20Around%20the%20World-1.htm",
+      "label": "386554",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "http://www.ict.mic.ul.ie/websites/2002/Imelda_Fitzgerald/Homes%20Around%20the%20World-1.htm",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.abcya.com/games/adventure_man_dash_shapes_colors",
+      "label": "ABCya",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.abcya.com/games/adventure_man_dash_shapes_colors",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://kidspicturedictionary.com/english-through-pictures/place-english-through-pictures/types-of-housing-and-communities/",
+      "label": "types of housing and communities",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "http://kidspicturedictionary.com/english-through-pictures/place-english-through-pictures/types-of-housing-and-communities/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/wasanalzawaidah/how-we-express-ourselves-9s4fox2wk199md4r",
+      "label": "how we express ourselves 9s4fox2wk199md4r",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://padlet.com/wasanalzawaidah/how-do-you-feel-9s4fox2wk199md4r",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/wasanalzawaidah/how-do-you-feel-9s4fox2wk199md4r",
+      "label": "2A - 2B - 2C - 2D - 2E - 2F",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://padlet.com/wasanalzawaidah/how-do-you-feel-9s4fox2wk199md4r",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.eslgamesplus.com/question-words-what-where-who-why-when-which-how-grammar-activity/",
+      "label": "resource",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.eslgamesplus.com/question-words-what-where-who-why-when-which-how-grammar-activity/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.eslgamesplus.com/verb-to-be-auxiliary-verb-am-is-are-esl-grammar-activity/",
+      "label": "mono2",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.eslgamesplus.com/verb-to-be-auxiliary-verb-am-is-are-esl-grammar-activity/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/how-we-express-ourselves---videos.html",
+      "label": "How we express ourselves - videos",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/how-we-express-ourselves---videos.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ssec.si.edu/habitats",
+      "label": "habitat2 smithsonianscienceeducationcenter",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ssec.si.edu/habitats",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://pbskids.org/sesame/games/go-green/",
+      "label": "go green",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://pbskids.org/games/play/go-green/133996",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://sites.google.com/view/grade22tworesources/home",
+      "label": "مصادر خاصّة بوحدات البحث",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://sites.google.com/view/grade22tworesources/home",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.cserc.org/sierra-fun/games/match-habitat/",
+      "label": "habitats",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.cserc.org/sierra-fun/games/match-habitat/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://app.nearpod.com/?pin=9GPK6",
+      "label": "Nearpod",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://app.nearpod.com/?pin=9GPK6",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.jordantour360.com/",
+      "label": "jordan tour 360",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.jordantour360.com/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.jordan360.com/#s=pano567",
+      "label": "thumbnail 1",
+      "pages": [
+        "grade-2",
+        "grade-3"
+      ],
+      "units": [
+        "How we organize ourselves",
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.jordan360.com/#s=pano567",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.geoguessr.com/vgp/3426?locale=ar",
+      "label": "capture",
+      "pages": [
+        "grade-2",
+        "grade-3"
+      ],
+      "units": [
+        "How we organize ourselves",
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.geoguessr.com/vgp/3426?locale=ar",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.softschools.com/language_arts/grammar/verb/balloon_game/",
+      "label": "softschools balloon pop verbs",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.softschools.com/language_arts/grammar/verb/balloon_game/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.eslkidsworld.com/Interactive%20games/Grammar%20Games/Action%20Verbs/action%20verbs%20basketball%20quiz.html",
+      "label": "untitled 10",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.eslkidsworld.com/Interactive%20games/Grammar%20Games/Action%20Verbs/action%20verbs%20basketball%20quiz.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.peepandthebigwideworld.com/en/kids/pathways/4/light-and-color/games/html5/2/shadow-shapes/",
+      "label": "capture sh orig",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.peepandthebigwideworld.com/en/kids/pathways/4/light-and-color/games/html5/2/shadow-shapes/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://musiclab.chromeexperiments.com/Experiments",
+      "label": "musiclab orig",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 202,
+      "error": null,
+      "finalUrl": "https://musiclab.chromeexperiments.com/Experiments",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/69631837",
+      "label": "Math day",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/69631837/%D9%8A%D9%88%D9%85-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.commonsensemedia.org/",
+      "label": "1",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.commonsensemedia.org/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.sesamestreet.org/games?id=28015",
+      "label": "c orig",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.sesamestreet.org/games?id=28015",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/grade-2.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "grade-2"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/grade-2.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://sites.google.com/view/decision2018",
+      "label": "google sites",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://sites.google.com/view/decision2018",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/Eu7IeoUKyEVKqb2kxSOgMPcBDebw1GCyLi1-RLE_eHUnzQ?e=bSYcB9",
+      "label": "2003501171 orig",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQU5HV3NpV0srZG81OUpnNVhVUjJmQ2dHYWNPWDM4K1pScEVCa1hLUDBjMDlnNHE0Z3NvWVhNY1JCTXNycWcyY0QvM1Iza3BIYjh3THlSMkJVWGMvalUvbHFsQTh6T09lRzJST2hqZmZtTE1vVkdaYkRDdXBQV255OUN1OFVvM2NuQUFBQUJobzRDWTlLb2NEckE1VlFKYy9YQ25DdFRlUUJmR2FENVU9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1OR1dzaVdLK2RvNTlKZzVYVVIyZkNnR2FjT1gzOCtaUnBFQmtYS1AwYzA5ZzRxNGdzb1lYTWNSQk1zcnFnMmNEdz09IiwieSI6IkFBQUFNUDNSM2twSGI4d0x5UjJCVVhjL2pVL2xxbEE4ek9PZUcyUk9oamZmbUxNb1ZHWmJEQ3VwUFdueTlDdThVbzNjbkE9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=FEB1532FE6BCA600E83A60253F696834DFFD5C303E95A0D6%2D6321F675B4E01AFA01B924CF77FC9D494137F9B21D02FD4CC3507710611AFDA2&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aGc0cFhJaTVLdTlDa3dwRTFHJTJCU09uTDlGNGh2OUk3Qm9jR1hhWTNHQU5UN3FVc1FoS3NKcm1NYzBmM2hsb2FZZ09OQ0JJdW12TG1zR1paanpHVzglMkZXdDJDam0lMkZ3T1Rlbjh0STRSUnh0Y0VndU91eFBFaHFSdDYzTjA0c25qMFZUSlJNcjNuOFlZY043UE4xam1JbHN1eVR4TFF3dU9jajJvUXprTzhpeG9aOTNzdThvJTJCWjVMaUdsb3Vpa2xXS252dVU3dzRVJTJGOFZORmpWU216U0J2VVZLNDNXcGptZEc2ZGJxVWxEQTd3UkwxSzRsVCUyRiUyQlZmTjVrMmpFbVlBWTF1TTNheXdpblZlQUdjUTlicHdnUWRLayUyQjZoMmxhUXdwMzUzNEpVdTlCeUdKb3Jwck5MTmhERXV1Q2x2SiUyQjREcjU1dVMxT2g0ZjI3NjZMQSUyQjJvbUxJN3VFZ2V0OWtjQSUzRCUzRA&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e49237a2%2Dd0fc%2D3001%2D143d%2D05d1a14b6a51",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.draw.io/",
+      "label": "draw",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Who we are",
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://app.diagrams.net/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/Es1KaoYUDrJElwLzIPp3EUkB2yXlZUiI9D0NMQFPE5SYSQ?e=wdvy1a",
+      "label": "pic orig",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQUE1OEtOcUQvUzhGd2RXSVJxRUVDamJ4cVFSTFdoTUFmQ0Y2MUwwVXU2a2NKaEZHbmZJek8rSEZUT1NWclo2Z3phRlE0eEtxdnRDZU1WUlBNblptRC92MjM0Nkx0TnhERzZXaFIvK2dZM2x3SFJFdVdYdkQ0ZGhXUDU5cDF2MzJMZ0FBQUJpYkhRdUR2bzN1ZzN2N3o5c1l6dnVRcDdFSHk3WUhndFU9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1BNThLTnFEL1M4RndkV0lScUVFQ2pieHFRUkxXaE1BZkNGNjFMMFV1NmtjSmhGR25mSXpPK0hGVE9TVnJaNmd6UT09IiwieSI6IkFBQUFNS0ZRNHhLcXZ0Q2VNVlJQTW5abUQvdjIzNDZMdE54REc2V2hSLytnWTNsd0hSRXVXWHZENGRoV1A1OXAxdjMyTGc9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=DCE5A9506EF22E1EC99A9C4BFE0D0DF04F347F1DD1014C12%2DBD5C79F70AE6ED478480F5D13958DA4E858A510AAC20C5719C881FA0C0B4A81B&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aG9id3NnJTJGMVRBOUxrNjhLN3J3diUyRnNsTlFnT0VXJTJGTEs1Q0hobk93bXRIWEQwOUZadWh3eSUyRk5NTktQQmJZVWxsSWRCcHFrS2NMYlNZbmhjalhIRE1JcGdTTm5BM0FTRSUyRjdSbm1iSjhOVVhER0F0ajZSMzVrVXRzdlo4RXN3ejBRUkFYdktneDZNVDF3TWVQJTJCWFJGellBNFFGVXMzTWdqd3UxMXNRRmt4cWNQTDY0Y3IySHI4dHgyWG1oUFBMdHhGTlpWcEVTNXNCZTklMkJIJTJCUDY0cngzMnJrWVBCaWpQcEg2SGs0VmRiOE9CNWxxJTJGakF5dTliZ253TkdldVY3eHRQMm41ejdhV0NPUEpIaDJoTElGUk1rWW92UGRGMklxUXA2ckI1T0VCUmlVZEZaUktvNkF0d2MzQlE2dzZaSExnWVp2TyUyRkJIOGh2c3pCUmNnQXo4NSUyRlJia2NadVEyYjBHVSUzRA&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e49237a2%2D10e1%2D3001%2D3882%2D370f099050a7",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.airpano.com/",
+      "label": "china eng",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.airpano.com/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.360cities.net/",
+      "label": "360cities",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.360cities.net/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://solarsystem.nasa.gov/solar-system/our-solar-system/overview/",
+      "label": "nasa",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://science.nasa.gov/solar-system/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://earth.google.com/web/",
+      "label": "earth",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://earth.google.com/web/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://maps.google.jo/",
+      "label": "google maps",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://maps.google.jo/maps",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/asgschool/3aa",
+      "label": "Share your thoughts 3A",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://padlet.com/asgschool/where-we-are-in-place-and-time-evnk9dep7iz7",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/asgschool/3bb",
+      "label": "Share your thoughts 3B",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://padlet.com/asgschool/where-we-are-in-place-and-time-qi5tlceblj0s",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/asgschool/3cc",
+      "label": "Share your thoughts 3C",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://padlet.com/asgschool/where-we-are-in-place-and-time-ly1w0v1z2eb9",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.readwritethink.org/files/resources/interactives/timeline_2/",
+      "label": "timeline",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.readwritethink.org/sites/default/files/resources/interactives/timeline_2/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/EsCeD9NRyiBOlSmVaOoImBQBzXY5rJvJ1jKxPcjWASbMAw?e=9zFE7l",
+      "label": "560275948 orig",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQUppcHlHajIrb0VzcGFjemh3N1M4aCttSHZZT3oxcU04cFRrRktqZWhEeS9wQ1pUeUMxNzlnNjVQOUh2RkZwUm81Y0RxTUJUSTdTRjZDWHdhS1ZxR0hqZWxUNG5MTjRlNFhSYkxrVEdzWFdzQWhhdVQzeUFUdHpNVklVRVJzM3d5UUFBQUJqZWlBMGl3UnAzU1M2LzFLUFJrdU9rTHhtMktmNVAzNVE9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1KaXB5R2oyK29Fc3BhY3podzdTOGgrbUh2WU96MXFNOHBUa0ZLamVoRHkvcENaVHlDMTc5ZzY1UDlIdkZGcFJvdz09IiwieSI6IkFBQUFNSmNEcU1CVEk3U0Y2Q1h3YUtWcUdIamVsVDRuTE40ZTRYUmJMa1RHc1hXc0FoYXVUM3lBVHR6TVZJVUVSczN3eVE9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=1A13AB3E1963EB569FDD02972B3B8EF1296AFAE366BEFEF1%2DEF07856E7A39BE3326AD11C68E6BC5DEFE13BA9C617601F0ADFB0322F71E5117&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aG9DYm84QkxpN1pEdCUyQnhVamVqeHBWU1ZwemcweUhuWTVGOEphdHJubzVzOWtSUG5hS3ZvOThBWXg5aUdXUXV1VUtwJTJCT0JjQWNMYW9ZY3BHVnM0RDNFWm5NVE9BUkp2V0lSNlk3N1ZZYWhDeUh1R1ZJYjlraGhWJTJGdyUyQkdkdTZNQyUyQkFPMDdKZ1NSU1hzdjR6blElMkZTZktKZlJhc3ZIJTJCMDJvNFR3Tk05NFg3QU5RaEZsRXZBQ3MxQWhoSmUlMkI3emxxRXE3NDhFT3IyMlg1NmdKSXVueXpSN3Y3elolMkJGV2glMkI3NEt2M0MwU1RjRnU4ZkUlMkJJVVRxNjV2NVNSbjdiNXBmbDRGa0doWGVyamklMkZIWmR4RFhYcWdKT1huRUpZR3Z5T2FMWnpmZmJLMVRtclI3MmQ3OUNHRHlKRk9qa1drcjF5OER3bXdOY1M2eW5pVHJ5b00zbDRsOGJmdXJ6YXlDS0ElM0QlM0Q&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e59237a2%2D601d%2D3001%2D143d%2D054aa86182bd",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://bookcreator.com/",
+      "label": "book creator web banner",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://bookcreator.com/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/EvQhQ0VkFwRDqL3pe6SbVBABujy76-_cr5ew5eLfKeutLA?e=GOw1G8",
+      "label": "sources",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQUo3akZGeVVjNGYxdGVhV09WM0QrNldkZ2JLY3F3L0JXQ0llaU5RYkkrZFRuVDVzbWY3b0JVWkRnMExTWCtENjcvRnRQSi9XRzFrVUkwQmY0RTk0VDNnaXM3R2pjNEdYVkh6VkN2YnBvblVuOVFOeVQ1cjRqTG5ZREZsNmZldVRaUUFBQUJoMSs5U1ZwOXdWMWR0MlBnUzJrbXIvelZhcXRDWFN2SVk9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1KN2pGRnlVYzRmMXRlYVdPVjNEKzZXZGdiS2Nxdy9CV0NJZWlOUWJJK2RUblQ1c21mN29CVVpEZzBMU1grRDY3dz09IiwieSI6IkFBQUFNUEZ0UEovV0cxa1VJMEJmNEU5NFQzZ2lzN0dqYzRHWFZIelZDdmJwb25VbjlRTnlUNXI0akxuWURGbDZmZXVUWlE9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=795BED23692B5C4055CF77B0C2A5F3BD18E448E528A944A8%2DA24C1367B00D0846DB74FD6E81DC3FB5E5D4DBEB44D9AE3C27F5D7DC1136190D&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aGhiQWNDRjdEOXRBb2QlMkY4ZlJPSFNvVjNOVmVPVHpNWXd0WGhzdVNrNWRtMmNMTENxbmpiQ3VndGJLeVA3TnlZUW51Y25mRlN6UkFrNGQ2a2I3c1lHb01ZT1ViNmlLUWttOHh4SllzQTdjUGdDOGJHWHZPUnQzV2NlUWFGSmZvd2lic2c0SXhLZGdBOVN0a3llTHE1JTJCUlY2MkFUbWhDNnFpTmg0RDdJdlliQjdjUExNOXlWM1JOM1BKUTNaNiUyQkRCVSUyQkFpUW1BeXdpQmUyY0Q3UVBVTXZFamk1WUs5MnJZSThUQlh2U1hkY2FocjRRJTJGRGxCVE14UVh3T1R6N2VlWTBuMlZKR1dRdW1RVSUyQkp0VHdZMXlMNHE0cEtWUkpjJTJGZEk3bFAwSUxFYlIlMkI3dkNZc1JoRHpOVGxLMm9WRVpnRUtvT1JCZTNVRmpWNHB0b0FqJTJCQm16QjJVZHdoSVB3bWlvJTNE&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e59237a2%2D2044%2D3001%2D3882%2D34e86cee89e5",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://interactivesites.weebly.com/plants.html",
+      "label": "1454861636",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "http://interactivesites.weebly.com/plants.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/EpbokljfKcxDlMoB69-_RxcB1VBU9sZZSAJpx7wD22xZCg?e=81BQju",
+      "label": "2003501171 orig orig",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQUJvU1ZodDFjMXArNVVURndGUFh4NmFzRnBDZWM2Wm5FZy82WHhBa25PYzloZk8yb3Y2TUVYUk9PUE54T0paWUdsQWJETUtRd2lzcUhnRU15VWlNdHpMQTlFYWFaZmFhUEF3VUlHTm9xajlaRTJCNmxxTFAyeFhPSmVwVldxaTBDQUFBQUJpRnpuWUFPczNkNGFTOWRTY29jL1l2YlpmWEt3MDBKbXc9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1Cb1NWaHQxYzFwKzVVVEZ3RlBYeDZhc0ZwQ2VjNlpuRWcvNlh4QWtuT2M5aGZPMm92Nk1FWFJPT1BOeE9KWllHZz09IiwieSI6IkFBQUFNRkFiRE1LUXdpc3FIZ0VNeVVpTXR6TEE5RWFhWmZhYVBBd1VJR05vcWo5WkUyQjZscUxQMnhYT0plcFZXcWkwQ0E9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=05635235D21EA44EA47417A6434550E93F3E9FE5773D2822%2D7D0979755CDA60048ADFFE9884E9A0404F77EA3F58A5500BB4CBFB5C1527C901&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aHZmS3lZZ0RBMGxMazNjRkdxY0xsVUNNV1dtdDJlbjkxNSUyQnlKUm1veVJweVlsRGNCYTJLQUFqJTJCZXl0NjZMcktTVSUyQlhtSVlkME5pTkVJZFlGYSUyQnRwUkJ4VHJ4bmlLTWZEelprekFVeDA4N2hpQjZhSnE3aXdpJTJGV1NGZCUyQlEzRXp1S0tiZ2xlS3ZiTXI5UlpYZnVWUHFueG5yamVncDRCRDZBMCUyQml5cDhBRHNkd3djYjlyT2htOVNYVTFyOU5XMTV0MThpMDJWY0ZhbDVMcCUyQlJzVCUyRllmaGRvRmFFV1hvdHpqSlNoak0lMkZJTjV2QU54Tk16ZXZSbFhSdE9aJTJGTFhUbUhMYjIweUVYQzFqRVFKM2M4eUZ3MUFUT0dFUnk0ZiUyRnhKdVRSbWNjMnRLSEpLTHd4VCUyQmVKQUFRRG9aVSUyQnZXODdBRXpOUDhQT2slMkJLRTMwb3lKY1RFJTJGb013bE1QakY&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e59237a2%2Df035%2D3001%2D3882%2D33580f83af8e",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/63232179",
+      "label": "Wordwall",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/63232179/e-waste-quiz",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/",
+      "label": "Padlet",
+      "pages": [
+        "grade-3",
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves",
+        "Sharing the planet",
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://padlet.com/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://sites.google.com/view/resourcesgr3/%D8%A3%D9%81%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86",
+      "label": "untitled 15",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://sites.google.com/view/resourcesgr3/%D8%A3%D9%81%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/Eke9aRMHQEtBoTOhNe0iuQUBtr_0drFWzpxOmNLYEIOMoA?e=Ca3p2l",
+      "label": "pic orig orig",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQU45UlFGaHZhb2Y4bXdJY1ZUNWFDTDhLaEdaNkdBeGNURGtyOXlKYzNvcWlqV1hjMXZBem9yWU5ka0dzMXJqekVQSUhpdzYzRHJhTzZvTXo1SzBvNE1obGZWQ21XMCtNSnJZSzVsQWkxa0hDTWtJMXB1bTdZTnY0bHplM09yOCtkUUFBQUJqaTVIWSt0WVdKSllkOGd6eGR4QS84WTN0NHlPL1dpc0U9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1OOVJRRmh2YW9mOG13SWNWVDVhQ0w4S2hHWjZHQXhjVERrcjl5SmMzb3FpaldYYzF2QXpvcllOZGtHczFyanpFQT09IiwieSI6IkFBQUFNUElIaXc2M0RyYU82b016NUswbzRNaGxmVkNtVzArTUpyWUs1bEFpMWtIQ01rSTFwdW03WU52NGx6ZTNPcjgrZFE9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=593B84D59AF1B830C816FDEA5D3D1AC538DF2C65A71C0B24%2D7D99DA2488AE614A515C1D69853E870AEC636A0A616F3AF9DA609FCFBC0BB703&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aHBHNnNGOEQxYjVKbmJGS1dRTUxaZE5ZQ0pGUU9KaEp0M216NFlpemJTJTJCdUwySjA3Rzc0UmhLN3owNXBrREpVbW5wOGR4JTJGJTJCck9jWFVOdDEzeFh0dkQ4bEdtJTJCY2w2M2J3VzEwbjhobFMlMkJzN0lBNk5OS0pBeXRmTnJqZmRVJTJCeHJadjJQRDVlREJpWUpaUHByZFZaRVRIUHJQRkh1MUF4MFZieXdGVUM4YUl6dExDTW44NmolMkZoMFowTTBYYmQwbTQ1MkhVNHdjUzZoUWdoOG1HSWxuZjFXa3ZKbER1c3V6UmgzRG0zd013NXdpdkdJaUlwb0M0OSUyRjlIZ3hjQ1JCJTJGY1VnYzZJYkp2WTJBT2QlMkZVVGJPJTJCamRJT0lTQTJaQk1HUUgxUWRnNFQ0UjRWbU5KMEJWJTJCN0lVMWNGJTJCcTladExMVnJVTmVZWW9vWlolMkI2RndsQWZHT2RyVndvWjZLSVN3JTNEJTNE&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e59237a2%2Df059%2D2001%2De7db%2D34fc499c533d",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://jr.brainpop.com/science/animals/classifyinganimals/movie",
+      "label": "BrainPOP",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://jr.brainpop.com/topic/classifying-animals/movie/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/grade-3.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "grade-3"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/grade-3.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://forms.office.com/r/hh0wiRJuLb",
+      "label": "Microsoft Office",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=BtIwCBLhTkuovh-tfqgEvT5JsEvAa69EmmnrDb1r4WhUQ01YMFVZOUVLRTZaWTlXM0dQQ0tPQkQzVy4u&route=shorturl",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/Eo94eYTynABNm821pox7G7cB1WLV7oZHThVU0KzoPn_rDw?e=Q7TeW8",
+      "label": "1163076739",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQUxJVllhczhxQkpOdXVValBxeFVXWGJET0dFSmhCbEs3UXZBTVVQUzQ5bGZuUzVRTXZhVDlPL1lNcXdDV0taTk9aV2V2elN3bS9NMXZBVktkQytNTHlBQ3BlWGNiRmVQUDZQTTR5TU5WUXVJTnB1ZU5WamFabGpEZnV1b3BDK3FJZ0FBQUJqMU54aUQyVXQrbzJ4eG1vcXpFVHgvemg3V0RIR294eGc9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1MSVZZYXM4cUJKTnV1VWpQcXhVV1hiRE9HRUpoQmxLN1F2QU1VUFM0OWxmblM1UU12YVQ5Ty9ZTXF3Q1dLWk5PUT09IiwieSI6IkFBQUFNSldldnpTd20vTTF2QVZLZEMrTUx5QUNwZVhjYkZlUFA2UE00eU1OVlF1SU5wdWVOVmphWmxqRGZ1dW9wQytxSWc9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=B3B99CEB4A66D621B8EB59AA98B871229511D386CF82A5C3%2D7C34484CBFE96E79EC0831330609393FBF5B7AD71F3C3679996AEBDC79D3F5B6&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aHFMV2pzczUyNU5HdUZFSlduRW5ETGY4aXlIalhYcURnTFBRQVc5dFFjVjlreFFJaDdUZ3ExMlczZFZoRGRsd1RmbkttQ2dxVGhSWXhNZHMlMkZxUnFYV1VsakFkJTJGYnRPTGJPalVHOGN0REQxYUNRSWdaYjV6T3kwWWtWM2NtJTJGSUFMalpiTHUlMkJZdlNYNVgzOExPYzBvTzFUc1ByaWF3d0d5Rnc0U0JBeVZLdFVSdE9pQUxKUXduUUQ2eHViZGpOUFNUdktiTTRGJTJCeUhWaUZRZWIlMkIxWlkwTHFraGhKSmt5Z0dmbyUyRkRXeW5EdDFKdVZCc244aTdzSTlQT01DeGklMkJBJTJGS0FhS1pnRVdaQmlXMG9SJTJCb1lkTm5LSUg5M3lVWWt6NDVvejdBOGo3V0hlRDN2cnhCekZkMnlsZVltM2JjWGV1SjdPQ3BZQ0R5SyUyRmFZdDBxVnhIWjNGbEhrNUU4b3NnJTNEJTNE&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e59237a2%2D9063%2D3001%2D143d%2D0c49e29d10d9",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/En6UCof47lhGrgrltOFtui0BTHaWpJ9lW3noDgEWnYNhhA?e=CeQV2d",
+      "label": "741439537",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQUtUSWQ1ZFRvMndBdE9LT3JlNEpjVXlwb1I5bVBaek5XQ2VHOWUrVlg1dk9RWFpMOVl3NlRtNWhUcS9ROUkwVjExVXBhM2hibFRka0hOR2l0RmUxcnBTTUdjTW8vMnkyck5yWHo5SDVDQTRrLzhLV3plWTVXVTRzeUJFUGh0eWV2Z0FBQUJqbDBaV2w3SzI1RFZMbUU4bjFQMDFPVFlhb3ZRNjVqWm89In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1LVElkNWRUbzJ3QXRPS09yZTRKY1V5cG9SOW1QWnpOV0NlRzllK1ZYNXZPUVhaTDlZdzZUbTVoVHEvUTlJMFYxdz09IiwieSI6IkFBQUFNRlVwYTNoYmxUZGtITkdpdEZlMXJwU01HY01vLzJ5MnJOclh6OUg1Q0E0ay84S1d6ZVk1V1U0c3lCRVBodHlldmc9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=BC54F101132B50A6C9A102CDB634D0B45B0D7064CF14C995%2DC18F4BA12E2D636170F87BCCFA012E3601BBBAFC8E56CF102773F584CBF2FFA7&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aGlhY2dBZFRWQ3hBcSUyRnYlMkJNcjVIYzNLTGRuRmtxaUZrNDlGRGdCMHAlMkZKMWRDUldJYWt1eUtWZHgwNFB3Y1RRb2RrdFhQdHRLR016b0I2bk5iUmJURDAzdlBxSGNkWU1xVzhkbUFSV2lqckE1UklFYzhkcUxxZjRKOTJQNWoxOHVWSVlQb0tkWDI3R2RjUG5EZHlpOCUyRmYlMkZyNWoyQ3lZbyUyQm42NXNwWHVoalNRblBrWlZVTVhXRVNyaDFGNlF5T1NSJTJCT1RxNVdVVlB4Tmk3MENLSFlvc3B1UzFGRFhVblJNQnZnT3VSWkJ3cHA2MDRkdTFMUVdaSSUyQkNQODQ2cEZ6aGZjekFsMzhxWDk2NTZaWDBaVE45cDc0ZFc2ZE5PbURLQ3dJV0tDRXBVU1J4TEZwWDhMZ2Y1MjR5YzlyZSUyRm9xQmZNalNqNUU2MzdzTklNdkJSY0JZZHYxRzglMkJpcTlna3dv&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e59237a2%2De072%2D3001%2D143d%2D01a7b99fbf75",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.nationalgeographic.com/",
+      "label": "National Geographic",
+      "pages": [
+        "grade-4",
+        "grade-5"
+      ],
+      "units": [
+        "How we express ourselves",
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.nationalgeographic.com/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.mybib.com/#/projects/eBXJ2J/citations",
+      "label": "MyBib",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.mybib.com/#/projects/eBXJ2J/citations",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/EnplK1DqXGFFlo1tzsQukFsB9P5TdEeZdTvv4xYu7jJHSg?e=K4r0YP",
+      "label": "1163076739 1",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQVBQSEphSDhKV3B5UWZPenVjUGRUbTR2VDk2YWFla0kvWWdwWGV6NjdXWE1IZll2elBxV2g0WTRYR3laWVNyMW9iTGtsR1Y0SFV1MnV1dzI5VEEra2tYTGozOUsrRml3Z2R2NVUwdlV1OVRpMmNUbFBuUkFzT2xNR25SMzNVQXhxQUFBQUJoeEVEeWs5Q3YyNmFxNnJpaTQ0RkRZM3Y2cm9hUGlmZzQ9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1QUEhKYUg4SldweVFmT3p1Y1BkVG00dlQ5NmFhZWtJL1lncFhlejY3V1hNSGZZdnpQcVdoNFk0WEd5WllTcjFvUT09IiwieSI6IkFBQUFNTExrbEdWNEhVdTJ1dXcyOVRBK2trWExqMzlLK0Zpd2dkdjVVMHZVdTlUaTJjVGxQblJBc09sTUduUjMzVUF4cUE9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=E182BC0EBD2F3AB92E96FB3E0AEFC03F9B4514182B3C9506%2DB42D0C2D30A17BEDC3B5DD89868B72DE5ACA66B8345A02E1E3020AD7B3F8A703&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aHBIQnlhTVAyaFpEdVRDeUlpenFGaGwzQW5jbzJXbms4MUVMM1hXa0VBYUVXcVlUN3FDVlIwbXd6emNscEpUZkI0NTFyNDB3WEFoVGtQVFEwUUdFSG9YMDZBdEIlMkZPb0JsOUVaY2Z4ZU5lNEw3UmlCUGs2JTJCSHNMQkM5VU5KazZ2YWltVGlWcVhQV0NpQVFzcFNVRWZsYkxyJTJGWTMwZ0NkVWJyZ3JRUjlZRkVjS1clMkJlejFPJTJGZk1GQSUyRm50WW1yVEVOdk1ueHpFRHpKQkdSc25LYVpDRTVZRUNsZHhCNjVMdkxmNnZ2UUtFWE5YY29BJTJGeURmWVN0VWFOMDlkOERyWk8lMkJzU05oRnYlMkJPa0tuTEJHUTBFZUlkOVZJU2pUemlYUzElMkJBTDNxdUxHc0tIWW42QjZ1T0FSckpCbiUyRnY1aHlJZU1aVmNZRnVhOXdMRTdpUTRwaDhGcGhTOURRcGFlNFR4SSUzRA&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e59237a2%2D008a%2D3001%2D3882%2D328fb0b9e674",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/16051606-160615811606---15751580160715861577-15751604158015871605.html",
+      "label": "34mpkxfv7pizud6hklrdfn",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/16051606-160615811606---15751580160715861577-15751604158015871605.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://thehumanbodygame.co.uk/#home",
+      "label": "human body",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://thehumanbodygame.co.uk/#home",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/vr-videos.html",
+      "label": "adobestock cardboard vr goggles lede",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/vr-videos.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/sandykakish1/eyzt012lhxelt7oa",
+      "label": "eyzt012lhxelt7oa",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "warning",
+      "notes": [
+        "Padlet access blocked (HTTP 403). Board may be private/expired — open and confirm sharing."
+      ],
+      "status": 403,
+      "error": null,
+      "finalUrl": "https://padlet.com/sandykakish1/human-body-systems-eyzt012lhxelt7oa",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/brand/join?token=9QiLGXbs1-hQI85TGxLmBQ&brandingVariant=edu&invitationDestinationType=group",
+      "label": "Grade 4A",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/signup/?brandAccessToken=9QiLGXbs1-hQI85TGxLmBQ&invitationToken=9QiLGXbs1-hQI85TGxLmBQ&invitationDestinationType=group&brandingVariant=edu&signupRedirect=%2Fbrand%2Fjoin%3Ftoken%3D9QiLGXbs1-hQI85TGxLmBQ%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup&loginRedirect=%2Fbrand%2Fjoin%3Ftoken%3D9QiLGXbs1-hQI85TGxLmBQ%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/brand/join?token=1ibomuJOVqapeoE26uvJxw&brandingVariant=edu&invitationDestinationType=group",
+      "label": "Grade 4b",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/signup/?brandAccessToken=1ibomuJOVqapeoE26uvJxw&invitationToken=1ibomuJOVqapeoE26uvJxw&invitationDestinationType=group&brandingVariant=edu&signupRedirect=%2Fbrand%2Fjoin%3Ftoken%3D1ibomuJOVqapeoE26uvJxw%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup&loginRedirect=%2Fbrand%2Fjoin%3Ftoken%3D1ibomuJOVqapeoE26uvJxw%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/brand/join?token=-OfF0fZg461MPTNbta1LPA&brandingVariant=edu&invitationDestinationType=group",
+      "label": "Grade 4c",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/signup/?brandAccessToken=-OfF0fZg461MPTNbta1LPA&invitationToken=-OfF0fZg461MPTNbta1LPA&invitationDestinationType=group&brandingVariant=edu&signupRedirect=%2Fbrand%2Fjoin%3Ftoken%3D-OfF0fZg461MPTNbta1LPA%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup&loginRedirect=%2Fbrand%2Fjoin%3Ftoken%3D-OfF0fZg461MPTNbta1LPA%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/brand/join?token=cuRsJygzgc3gs491lkFlHw&brandingVariant=edu&invitationDestinationType=group",
+      "label": "Grade 4d",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/signup/?brandAccessToken=cuRsJygzgc3gs491lkFlHw&invitationToken=cuRsJygzgc3gs491lkFlHw&invitationDestinationType=group&brandingVariant=edu&signupRedirect=%2Fbrand%2Fjoin%3Ftoken%3DcuRsJygzgc3gs491lkFlHw%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup&loginRedirect=%2Fbrand%2Fjoin%3Ftoken%3DcuRsJygzgc3gs491lkFlHw%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/brand/join?token=5Y-OYgkhJyZbeeFZ85yb3g&brandingVariant=edu&invitationDestinationType=group",
+      "label": "Grade 4e",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/signup/?brandAccessToken=5Y-OYgkhJyZbeeFZ85yb3g&invitationToken=5Y-OYgkhJyZbeeFZ85yb3g&invitationDestinationType=group&brandingVariant=edu&signupRedirect=%2Fbrand%2Fjoin%3Ftoken%3D5Y-OYgkhJyZbeeFZ85yb3g%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup&loginRedirect=%2Fbrand%2Fjoin%3Ftoken%3D5Y-OYgkhJyZbeeFZ85yb3g%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/brand/join?token=rOXn2FL65UJJdW9Zr3fIXw&brandingVariant=edu&invitationDestinationType=group",
+      "label": "Grade 4f",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/signup/?brandAccessToken=rOXn2FL65UJJdW9Zr3fIXw&invitationToken=rOXn2FL65UJJdW9Zr3fIXw&invitationDestinationType=group&brandingVariant=edu&signupRedirect=%2Fbrand%2Fjoin%3Ftoken%3DrOXn2FL65UJJdW9Zr3fIXw%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup&loginRedirect=%2Fbrand%2Fjoin%3Ftoken%3DrOXn2FL65UJJdW9Zr3fIXw%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=167&ct=1733724908&rver=7.5.2211.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26deeplink%3dowa%252f%253fstate%253d1%2526redirectTo%253daHR0cHM6Ly9vdXRsb29rLmxpdmUuY29tL21haWwv%26RpsCsrfState%3d092331ba-5615-e579-cf80-796ce262f3e4&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c",
+      "label": "oip",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=167&ct=1733724908&rver=7.5.2211.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26deeplink%3dowa%252f%253fstate%253d1%2526redirectTo%253daHR0cHM6Ly9vdXRsb29rLmxpdmUuY29tL21haWwv%26RpsCsrfState%3d092331ba-5615-e579-cf80-796ce262f3e4&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/video-editor/",
+      "label": "Canva",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/video-editor/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/EqJ424W954FCvD24Hby52WYBgjysBIZXXQSyfLXfYuDxqA?e=z6gwew",
+      "label": "1958229735",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQUJKRVBKSTZ1a1hrTmJuS2h4ek9DREt4MFlhQjBBRm5LRENaRmRrUTV3c29yUTNNWFM3OENXRjlNb3ZvZXZWdXZzK2NBSDJuNXpuZFUwMXdsQnFHTGN1ZDRZZlJuNnZNL0xvc2NtYndFU2UrMStWOTdCSW5SUVFlcm1teU9ZZCtvZ0FBQUJnZnBuc3FtTlB0R0tFYXBFdjd2a25kNnBZREpOZTRJWFk9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1CSkVQSkk2dWtYa05ibktoeHpPQ0RLeDBZYUIwQUZuS0RDWkZka1E1d3NvclEzTVhTNzhDV0Y5TW92b2V2VnV2Zz09IiwieSI6IkFBQUFNTStjQUgybjV6bmRVMDF3bEJxR0xjdWQ0WWZSbjZ2TS9Mb3NjbWJ3RVNlKzErVjk3QkluUlFRZXJtbXlPWWQrb2c9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=88EB8D857D242BAE8900789C7F7DCA6DCE4CE5BA351B2C3D%2DD0037D1E1E5E6C28745C93088DC3DC9F62CB91D8C3E36BC4D7F00CD4D49FE00D&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aGlWNEdySjNpT3RIcGs2TmwyTkxiR0hFckFkc045QTE0S2VVJTJCTEM2OGNtM2p0QlNFZ3NaSkJEMUtEbnhZOWhRSFFpZVNWSXZkbUQxTWpZRW5WdVI2QUlTOTdUNE8lMkJ5V2sxTUdnJTJGY25Bb3l6WjdIZTM3V3V4QkklMkJjJTJGSUtqciUyQmhhZyUyQmRSY1psUXJlcHVOcWhBODBYdCUyRldES1JDdEJZZkttYW40Uk9tSlVQcUZhcmFsS1hhbWY0UHZFMjlweE51b0NBWFdkaklRdG5UQ0k2VVBaOFZnZDdqc0xtc2ZOWVNuM1FNTHNJU0hsU3JJODRNNHJhanBDcDV6TEh1ZVRCaGo4S2g1WXRLT25GYlhyMVE3VSUyRmU5RkVEMWtZM01iTjQ5OVBaS3BDOSUyRjhGUDJRMzMlMkI2THJZayUyQnRmTUpYSUx6QzNsZG5ockFwSTJ5OUtnRFYlMkY1THk0UzRmQ052RExMUSUzRCUzRA&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e59237a2%2D70cd%2D3001%2D3882%2D32e8c63de5e9",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://studyjams.scholastic.com/studyjams/jams/science/energy-light-sound/light.htm",
+      "label": "untitled6",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://studyjams.scholastic.com/studyjams/jams/science/energy-light-sound/light.htm",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.science4us.com/elementary-physical-science/energy/light-energy/",
+      "label": "untitled7",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://science4us.explorelearning.com/elementary-physical-science/energy/light-energy/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/EjqVmti6A0hPiHdiy170nYoB_dtkMpzYoUEAil4BtHJ-rA?e=NKhsPM",
+      "label": "2003501171 orig orig",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQU9tY1J5L2pTQitoV3ZLSGtURXpJNjgvMEk1dnpoV2dZN24wQ3kzRWh5SEFIM3c2M212ZWFEZ2FBNGd5UFBQYW8yb0lmVTV5aVVYcE52Ujl3TFVpd3hXM2dOUlJiT0NQeGw2bHgxbHV6Q0V3QnFpMVk5RkdVWkhHQXgwRkovNU45Z0FBQUJpV2xNN0hlSDl6cFFmNUNJaEk3RVZVanFCVERMaXVKemM9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1PbWNSeS9qU0IraFd2S0hrVEV6STY4LzBJNXZ6aFdnWTduMEN5M0VoeUhBSDN3NjNtdmVhRGdhQTRneVBQUGFvdz09IiwieSI6IkFBQUFNR29JZlU1eWlVWHBOdlI5d0xVaXd4VzNnTlJSYk9DUHhsNmx4MWx1ekNFd0JxaTFZOUZHVVpIR0F4MEZKLzVOOWc9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=E5BE49C67A36D1AECC350B592585734E940375E4A2312E90%2DB35A04839D47DD4CF8E3DD42068B3B12A273E8CA7B440E54A4FE755010616D9D&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aG1kQllGT0RXYXhHdVRBM01YT2t6bWlDcWZTajRVSFpiamk0bGdFSnVTJTJGMjBuSWkzNEpHMjJIcFl1SGhvaWk3RzF4ZzF0REY0TlNydFhRWm9SbFRGb3NTZjM1Z0lPN3Q2dkJnYVJtb04lMkJha29sU1NKSVZBJTJCSUoxSE1GWWtzTkRmV21KUnVCckFWR1BrUmowWXNZT2RiYmpnQXBuVE0lMkJYbW5YczdCalljNHZuMzlTVWElMkZBMGsxOVNMVGo0N2dGTXBHNjdDJTJGaWpZT0YlMkJ1Rllqam9TSHRaYThpcVhRWDFtc0t4VlJIVkZzWkZVUzNTJTJGVHRSU3BCOW1lU084elRSVHJzeDBHU2Z0b0hhMkJJcE5RQzJFcmpVJTJCa3drMXh3aEJ0SzRabzdOYmhJMlh4ZlBMSG9uUkR2dTJmd3UlMkJ5d2ZyTTJRd0NmNTVSWEp4RTM2a21CVlFKWUxZNTBpc0I&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e59237a2%2D90c7%2D3001%2D143d%2D093ad5e739e4",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/sandykakish1/testing-the-prototype-4a-gi6em1lwig2hkv8t",
+      "label": "Testing the product 4A",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "warning",
+      "notes": [
+        "Padlet access blocked (HTTP 403). Board may be private/expired — open and confirm sharing."
+      ],
+      "status": 403,
+      "error": null,
+      "finalUrl": "https://padlet.com/sandykakish1/testing-the-prototype-4a-gi6em1lwig2hkv8t",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/wasanalzawaidah/testing-the-product-4d-2024-w31e20me9l7b7b5",
+      "label": "TESTING THE PRODUCT 4D",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://padlet.com/wasanalzawaidah/testing-the-product-4d-2024-w31e20me9l7b7b5",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/sandykakish1/testing-the-prototype-4b-k0hmi45ld2ztlrnn",
+      "label": "TESTING THE PRODUCT 4B",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "warning",
+      "notes": [
+        "Padlet access blocked (HTTP 403). Board may be private/expired — open and confirm sharing."
+      ],
+      "status": 403,
+      "error": null,
+      "finalUrl": "https://padlet.com/sandykakish1/testing-the-prototype-4b-k0hmi45ld2ztlrnn",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/wasanalzawaidah/testing-the-product-4e-2024-x7gclphhzzjpq0c6",
+      "label": "TESTING THE PRODUCT 4E",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead Padlet (HTTP 404). Board missing, removed, or private — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://padlet.com/wasanalzawaidah/testing-the-product-4e-2024-x7gclphhzzjpq0c6",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/sandykakish1/testing-the-prototype-4c-5exkslpla3ep2msz",
+      "label": "TESTING THE PRODUCT 4C",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "warning",
+      "notes": [
+        "Padlet access blocked (HTTP 403). Board may be private/expired — open and confirm sharing."
+      ],
+      "status": 403,
+      "error": null,
+      "finalUrl": "https://padlet.com/sandykakish1/testing-the-prototype-4c-5exkslpla3ep2msz",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/wasanalzawaidah/testing-the-product-4f-2024-s1j3sepgzli3mqhq",
+      "label": "TESTING THE PRODUCT 4F",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "How we organize ourselves"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead Padlet (HTTP 404). Board missing, removed, or private — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://padlet.com/wasanalzawaidah/testing-the-product-4f-2024-s1j3sepgzli3mqhq",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/Em1lIu01drVGoGlmKxM3FAQBPqJIkeXPoh67XN7E3YtgUQ?e=4d51aW",
+      "label": "1149796323",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQURVdHd5K1FhNU0rc1o3eUlTUjJTa05BZUlpeVR5Unl1QW5UYm42QjB4alNMN2R5T3R6blErTURwWE51b1QvOW5TSE16WkMrTDQzUGlZbm9LVm9LNUFWTmNFaG1ORlJQclVXTTU2RnVkc0FMNGZ1YVpqTEpmcGNyWU5IM0NlcjNQQUFBQUJnRXAxT05QZmduL2FUOEM4SDh5SVd3TWN1ZnhkUDlSRTQ9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1EVXR3eStRYTVNK3NaN3lJU1IyU2tOQWVJaXlUeVJ5dUFuVGJuNkIweGpTTDdkeU90em5RK01EcFhOdW9ULzluUT09IiwieSI6IkFBQUFNQ0hNelpDK0w0M1BpWW5vS1ZvSzVBVk5jRWhtTkZSUHJVV001NkZ1ZHNBTDRmdWFaakxKZnBjcllOSDNDZXIzUEE9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=9BE4318AE2FBC730C715F3AA8F28671602D874B164131B0A%2D3235108D63442852955E4E67916CEA4BD3770DD5374A61EFC236AD2A2EA276B5&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aGpOOG1CNUJrUEZBaE15ejFWRkY1SzVHbUVIRHlITGtXTkRLSHdUaEJCMFFyRFoyMjBmZUVlbkRpUEh6dHY4Z1oxNU1RSVRVaGhSN0JlUlA0cVJOeWRmTkslMkZvMGJWbEdZOFJlc1E4WENscjhsdHZHaVNHMSUyRjFqYiUyQiUyQkFkc3Fqc29UbXQ3TkQyQ3ZmYW9EWEZrU0ZLdlBaQkVZV1FPUkVIUWdEN3N5c3Z2ODBuUDF3N3d5WTRNdFA3VllUWU5SNmdsd2xkMFp5M291bVlzVlB2bFJPRHV1MXpaUU1scEZhaTYyVlZLbVV3Vnl1eiUyRld2Zld2Y3RzUVQycHNpbzJZJTJGJTJCY2cybmV6TklTUXhFWnQxek16JTJCbk5ueWttMGRUV0tmR3NFc1Q3Y2wzb1Y4SHYlMkI2Q2JwQjBMWjdRJTJCY1JERjVJTE9DZzhmSFFDeFlPeXhLRklVUjBqcnkwT29KcGFXWUElM0Q&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e59237a2%2D70de%2D2001%2De7db%2D32a899b40817",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/EsaJqc-KO6pBj6hJ3mgJWx0BZY2SwkYJQsfLUVzeUKk9kg?e=8qsfa7",
+      "label": "1016723193 orig",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQUNpMTlwNUY5TTdQcnVBcnRraTBaMGcwMlA5N2RnSUwvK3VqS3ozTW1qZWo5dXVOQ3JQR3ZSVlljbzBrbmF2d0RHYmpzOUJEZWc5VThCQzBEZkJwR1NwN1Z3NjNXQ244MlV3QjZobElWU0hIS0E1UHJwazRmL0JuSmpqL21veG8zQUFBQUJpUXdyY2dMSmkzZ08ySnBTWldGUnFpd08yN3hWQ1dDc0k9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1DaTE5cDVGOU03UHJ1QXJ0a2kwWjBnMDJQOTdkZ0lMLyt1akt6M01tamVqOXV1TkNyUEd2UlZZY28wa25hdndEQT09IiwieSI6IkFBQUFNR2JqczlCRGVnOVU4QkMwRGZCcEdTcDdWdzYzV0NuODJVd0I2aGxJVlNISEtBNVBycGs0Zi9Cbkpqai9tb3hvM0E9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=86C2BDAB661FA5B22ED7488A1B0AC9880E1A05221D180695%2DB8841B0AC7E250FB5287BD6563E1607A13D8F1527059BF464A8B65215402AE69&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aHRXNjBNM1YxSjVKbUVFcnh1TVVYTVNVTXliJTJCaGowaHlaeCUyRkx3b0sxdGY5YkVLTGw3JTJGaFdib0pkRFJUSnV0ZTBRU1oweElObkZyZFh3MHoxMUJ6RW1MSzExS0IzdmVXUW44OHFkTG1Oa3F2WU9GZkx2VGE0OFRvZkIwNnpwd1RqQ0FaMzB5JTJGand1VHQ3dFh2NUxxV3dFUk1KVEQ5RWdlYSUyQkRSejNhTjlhTmxGVlh4d2lRZHJkbHFac3RUUEhCUnhpb1ZXek0xWjVhTU1YRXB5V3lFM3lzSTZlREJCYW9lJTJCVkRvM2NpT0pTbUVzNG9aTEFtZ1h2USUyRjVGcyUyQm9DV3JHMkdWNzJXWjluNXd1RXdNNUQlMkZjaDc4azVZU3olMkZjNTN1MGNNN1M3aUZTaSUyQktyUFZ0Z3YxVUZuJTJGY24wY2FnMTVweUklMkZqU0didTdMWnlTNmFJNVREJTJGR2xGS3RmeVozayUzRA&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e59237a2%2Dc0ef%2D3001%2D143d%2D0d24a71118b6",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/grade-4.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "grade-4"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/grade-4.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/93045635",
+      "label": "Wordwall",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/93045635/technology-group",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/canva-grade-5.html",
+      "label": "canva",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/canva-grade-5.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/ElPD_rwIWxlLoxKjlnGTIWkBx3r4cwaKVvylSrxzVtCQOw?e=gDKNo6",
+      "label": "pic orig",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQUw4azU1RXkyU0R3ZCtJTnZjMTduZXMrRmY1Vng4YXBDenJVNWR2Z3Y1MGZDUnE3RlpFUDlCS2V5M2IzV3BsWDBDQklPWTJSVTNLZjlIeFUvR3B6R092S1BwMkQrY1JpSXhISWFFMVllNy9RaDYwRUdZVzZPU3dBWjJaVndWdHBrd0FBQUJpRlhWdjR6SlBQSGRVSXkwNHdjbnU2WTl0UEQweCtVUE09In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1MOGs1NUV5MlNEd2QrSU52YzE3bmVzK0ZmNVZ4OGFwQ3pyVTVkdmd2NTBmQ1JxN0ZaRVA5QktleTNiM1dwbFgwQT09IiwieSI6IkFBQUFNQ0JJT1kyUlUzS2Y5SHhVL0dwekdPdktQcDJEK2NSaUl4SElhRTFZZTcvUWg2MEVHWVc2T1N3QVoyWlZ3VnRwa3c9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=F793A92140392003F99D3845085C1BF580E5D295EEF22871%2D324CF8E9FD6078EDF2A7E434FA15D0042156DE22ABB3CAD08408CD1C489DE1FC&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aGhKdzRlJTJCcTg3dEpsQXcwMmxCSXlWbVNJcXVDWEJGYkNSNUNVbGJQSlhGdVRNVlNNN2JDWUxLR0RSZ0p5ZnA1YVdoJTJCODNsVzVQc283QWVDayUyQlluR1lTQjVjcmw3NVh3SW1PSkdjb2lsR0FVWXM5SUtoVWdaS092c2kzSjk3Mm5FM3FocyUyQiUyQkcyTWZyc1J0R0kyMk1qam0lMkZJSTNrZ2hXSG9aV0hCV0R2bzgxY2Y1RWpzZjF2anJpYTk0clR2bHRxbldaR0pHZThjS1JyNjI2JTJCMmRzd1BaQW4xWjF3eHN6cEF5OXElMkJjVkxDR1pxWE1XeXUyazVRTEtkNFR4aU5UJTJGYjRaRTNjVU9IV3ZzJTJCR0NoYXRvWVp5bmVZWHY5JTJCSEprVEtVTUlaVWNJaSUyRmF4ZmoyTGxvRU1PWWI1Vzl0dGZHWktZSXkycHpJbHNKR0xGenhpMGRRVUhTV2tvJTJCMjBXdyUzRCUzRA&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e69237a2%2D3003%2D3001%2D3882%2D34b667f7427e",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.mybib.com/",
+      "label": "MyBib",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.mybib.com/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://quickdraw.withgoogle.com/",
+      "label": "qd",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "warning",
+      "notes": [
+        "Server error (HTTP 500) when checked. May be temporarily down."
+      ],
+      "status": 500,
+      "error": null,
+      "finalUrl": "https://quickdraw.withgoogle.com/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.annajah.net/%D8%A5%D9%8A%D8%AC%D8%A7%D8%A8%D9%8A%D8%A7%D8%AA-%D9%88%D8%B3%D9%84%D8%A8%D9%8A%D8%A7%D8%AA-%D8%AA%D9%82%D9%86%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-article-38921",
+      "label": "ai",
+      "pages": [
+        "grade-5",
+        "157516041584160315751569-157516041573158915911606157515931610"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.annajah.net/%D8%A5%D9%8A%D8%AC%D8%A7%D8%A8%D9%8A%D8%A7%D8%AA-%D9%88%D8%B3%D9%84%D8%A8%D9%8A%D8%A7%D8%AA-%D8%AA%D9%82%D9%86%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-article-38921",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://scratch.mit.edu/",
+      "label": "Scratch",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://scratch.mit.edu/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=4iDCjavukHs",
+      "label": "youtube.com",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=4iDCjavukHs",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/157516041584160315751569-157516041573158915911606157515931610.html",
+      "label": "الذكاء الإصطناعي",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/157516041584160315751569-157516041573158915911606157515931610.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=-lXTmWF4iP4",
+      "label": "الفوضى الخلاقة",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=-lXTmWF4iP4",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/157516041605160716051577-15751604158215781575160516101577.html",
+      "label": "المهمة الختامية",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Where we are in place and time"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/157516041605160716051577-15751604158215781575160516101577.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/Enstpot3jipIrBOlB2HGGsABcF_r0vTk4KJI6UCVgAnBQg?e=tIsuc8",
+      "label": "2003501171 orig",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQUhhS0NmSHhWamF0ODVLejJBT1hVRVB6K3RWRWlyeUhIUjVQZVJGRWZFT1QyQkY4QVVwR3NRVVNYRTJNSU1XYXlGcGwxOGc1WitJUTFzd0p6REJyRGQrZUM0V0Qwa24wZmIxRHhrOHBLOEVwcmtFSWl1eThHNVdrMjYrZHMxTTAzQUFBQUJqTE5ZMFhjMzBTTnJxTnNDSTZMRThZRUJYYlFWblNtK1E9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1IYUtDZkh4VmphdDg1S3oyQU9YVUVQeit0VkVpcnlISFI1UGVSRkVmRU9UMkJGOEFVcEdzUVVTWEUyTUlNV2F5QT09IiwieSI6IkFBQUFNRnBsMThnNVorSVExc3dKekRCckRkK2VDNFdEMGtuMGZiMUR4azhwSzhFcHJrRUlpdXk4RzVXazI2K2RzMU0wM0E9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=4FF40425D2C0E600B1A06092DFBFBD572A60417768CC33E5%2DC25650067FF9A7F60552A1A2ADAF4C1C34C95738072AB437D8C20E5C7C32916D&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aGtWdTkwTU1tYzlJcEVIdFZEYlBFSFBFdmNteEFMR3hVNWRCWmVzWXROQUpUZmd5Tk95NExHTldBQW1jQkh3aU1ZekpERHFrYVRJQ2ZFemR6WTlDNjluU2xTZ2kzZ1AzRVBQRE1JSFBLS2oyWlNzZ0F6TzBVJTJGWFNKQkswRmslMkZRYXFkT2lBQ04yUDR6VGZNa2glMkZ0SWVvZlFvNjBxNzhVMVlZWWZmUGx5amh5TTcwc3J6WjUxVyUyRjNuME8zM29SUGM0c0RvY0RiRDVkaWJWMVFWZ2d6MWZjQUE5bFZoRVZqU0NJOHZVTjFNbTJoZHlXTCUyRjlxbVBXaUR5MWN1VVhzOXJLQTNVYVpSR295SEVNWkJNQ0VYOVBQNk9xWlB6a25wRGNCNGtydzVvT3Zkc2NBOE9URkNNQ0piT0ppejhseHA0U1g3dWdWYiUyRjNWTVozMVN1bWJ5SkIlMkZMTW15cDNobFElM0Q&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e69237a2%2Dd023%2D3001%2D3882%2D3cd610d2446b",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.exploratorium.edu/ronh/weight/index.html",
+      "label": "asg",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.exploratorium.edu/explore/solar-system/weight",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://padlet.com/wasanalzawaidah/padlet-74i49i0tamr7ndsh",
+      "label": "padlet 74i49i0tamr7ndsh",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead Padlet (HTTP 404). Board missing, removed, or private — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://padlet.com/wasanalzawaidah/padlet-74i49i0tamr7ndsh",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://asgbsa-my.sharepoint.com/:f:/g/personal/sandy_kakish_ahliyyahmutran_edu_jo/EtddAU36G4FCplS2CpsfEpMBLFkKT-4fUX6iSV2TgxCtTw?e=qrRHjy",
+      "label": "pic orig orig",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://login.microsoftonline.com/0830d206-e112-4b4e-a8be-1fad7ea804bd/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&ear%5Fjwe%5Fcrypto=eyJhbGciOiJFQ0RILUVTIiwiZW5jIjoiQTI1NkdDTSIsImFwdiI6IkFBQUFDVVZoY2tOc2FXVnVkR2dBQUFCRlEwc3pNQUFBQUJwMTBVNkUvS3ZLWW5HWnBqL1JkQU1hak1QR3VwTjlXUmdmNEF2T3Z5Q1V5NlBlRFlENmVKWVpuMC9jTlVkcktMRHJXNFdEVncrZEgvMFZ0eEs0OGRxaWc4QTNnUzZLWHFHcWJyYnZhY3hTUzVvR045ZVhrdzlaNW9RY3JYU0ppd0FBQUJpU040dmxmRHlKUUJ5NDhtdGt3dnNBT1pXSFYrUzMwNWs9In0%3D&ear%5Fjwk=eyJhbGciOiJFQ0RILUVTIiwiY3J2IjoiUC0zODQiLCJ4IjoiQUFBQU1CcDEwVTZFL0t2S1luR1pwai9SZEFNYWpNUEd1cE45V1JnZjRBdk92eUNVeTZQZURZRDZlSllabjAvY05VZHJLQT09IiwieSI6IkFBQUFNTERyVzRXRFZ3K2RILzBWdHhLNDhkcWlnOEEzZ1M2S1hxR3FicmJ2YWN4U1M1b0dOOWVYa3c5WjVvUWNyWFNKaXc9PSIsImt0eSI6IkVDIn0%3D&spa%5Fclient%5Fid=08e18876%2D6177%2D487e%2Db8b5%2Dcf950c1e598c&client%5Finfo=1&response%5Ftype=code%20id%5Ftoken%20spa%5Frt&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=DB4362324958B717CF6982B23CF5A99CFD1F3D757F3A059F%2D50BC5FC3CAC163036F53B175DE53428065EC677A452FC557551D949EC4A438DC&redirect%5Furi=https%3A%2F%2Fasgbsa%2Dmy%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0wJjMyPUFBTGQyd0FBQUJRNzI4MlFkU1lLamZBU0pYSiUyRmI4aVo4VzV2aGpmeEo4aVQlMkJjSkdpc0tmTjFTVlJMYzJlaWRYTmN5M0dvanUlMkJ4Qm9PdGdYTFJ2MWdpUUNkQXdvejdleHd3NlFXSnF6ZjhTeGIyVzY3NURZU0p1VVNGJTJGNXI5bkpGRmRLV1YyVXNScVdhTHFMbHlrTnUyaXoyUHVieVNRWG84SUElMkZHVlpTZEJSNjIyZGFYRmpvaTY4aTdRVUpOS3hQc2hOZ2twVDYyMW1raSUyRjVmdlZsVnVMN1d0ZlQlMkJRelYlMkZDM3A3allUUGwlMkJBSDBOTEQ5dzJzczhzQ3UyQXoxQWx5VyUyRlAlMkJrY3Q3N0dUQ3p5aENPQkd4a1dFb1hFZGNCclluU2hIQiUyRk4wMHo1dTQ5cWZSaGs3a1BHcUNBMiUyQldpJTJCbmVoQU5pcWlvcHVUNTNtSWdIVDd3MkZhR2s2eW13VGl3VktaZUdTbGMxdXNuR094aXdZZERTOTMxbXpVcTBqWTVpNFklM0Q&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=e69237a2%2D1021%2D3001%2D3882%2D31d64d0ca7bf",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590.html",
+      "label": "الخطّ الأوّل: مكوّنات الأرض",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16.html",
+      "label": "الخطّ الثاني: العوامل الخارجيّة المؤثّرة في سطح الأرض",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604.html",
+      "label": "خطّ البحث الثّالث: دور الإنسان في الحفاظ على أغلفة الأرض",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "Sharing the planet"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://forms.office.com/r/dRaieW43L6",
+      "label": "5E & 5F form",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=BtIwCBLhTkuovh-tfqgEvcB8BIYDY4hMiF2zb8VUO4ZUMjdHTDhUU0haOUJIRDlFS1hLSlM3TlRGNi4u&route=shorturl",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://docs.google.com/forms/d/e/1FAIpQLScBp8kSqt9Y5PLvV8aNY8LiML86793N2GC4-HmYvHRpukfxLg/viewform?usp=sf_link",
+      "label": "5A & 5c Form",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://docs.google.com/forms/d/e/1FAIpQLScBp8kSqt9Y5PLvV8aNY8LiML86793N2GC4-HmYvHRpukfxLg/viewform?usp=sf_link",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://forms.office.com/r/NjHQ5w1ZcZ",
+      "label": "انتخابات مجلس الطلبة",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=BtIwCBLhTkuovh-tfqgEveQcFJ7JMKRFktKRL8NiEK9UNUtaMUZaUzIzWTkyTk5aNkhEU0pYMFM3MS4u&route=shorturl",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/grade-5.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "grade-5"
+      ],
+      "units": [
+        "How we express ourselves"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/grade-5.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/pe-videos.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "pe-videos"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/pe-videos.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://learningapps.org/13311559",
+      "label": "1",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://learningapps.org/13311559",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://forms.gle/shLbX3bpsD2UwZZU6",
+      "label": "Google Form",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdmg1irdMLRXBbBA1u3wzdsco3ibNeJfgeiPKIOdYAM9jgs3Q/viewform?usp=send_form",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.lumni.fr/jeu/les-mots-caches-des-vacances-d-ete",
+      "label": "3",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.lumni.fr/jeu/les-mots-caches-des-vacances-d-ete",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://unetassedefle.weebly.com/vive-les-grandes-vacances.html",
+      "label": "2",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://unetassedefle.weebly.com/vive-les-grandes-vacances.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.lumni.fr/jeu/les-mots-de-l-ecole-caches-par-la-maitresse#containerType=folder&containerSlug=jeux-d-eveil-3-7-ans",
+      "label": "4",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.lumni.fr/jeu/les-mots-de-l-ecole-caches-par-la-maitresse#containerType=folder&containerSlug=jeux-d-eveil-3-7-ans",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://learningapps.org/13254836",
+      "label": "5",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://learningapps.org/13254836",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.languagesonline.org.uk/French/Primary/Body/Body1.htm",
+      "label": "https://www.languagesonline.org.uk/French/Primary/Body/Body1.htm",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.languagesonline.org.uk/French/Primary/Body/Body1.htm",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.languagesonline.org.uk/French/Primary/Clothes/Clothes1.htm",
+      "label": "https://www.languagesonline.org.uk/French/Primary/Clothes/Clothes1.htm",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.languagesonline.org.uk/French/Primary/Clothes/Clothes1.htm",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/6321698/french/les-fournitures-scolaires",
+      "label": "https://wordwall.net/resource/6321698/french/les-fournitures-scolaires",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/6321698/french/les-fournitures-scolaires",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/12615496/french/s1-activit%c3%a9-7",
+      "label": "https://wordwall.net/resource/12615496/french/s1-activit%c3%a9-7",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/12615496/french/s1-activit%c3%a9-7",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/54599265/french/s3-exam-22-23-weather",
+      "label": "https://wordwall.net/resource/54599265/french/s3-exam-22-23-weather",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/54599265/french/s3-exam-22-23-weather",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/41079/french",
+      "label": "https://wordwall.net/resource/41079/french",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/41079/french",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/5086179/french/french-days-of-the-week-match-up",
+      "label": "https://wordwall.net/resource/5086179/french/french-days-of-the-week-match-up",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/5086179/french/french-days-of-the-week-match-up",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/517740/french/s1-french-numbers-1-20",
+      "label": "https://wordwall.net/resource/517740/french/s1-french-numbers-1-20",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/517740/french/s1-french-numbers-1-20",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/10473474/french/et-quart-moins-le-quart-et-heure",
+      "label": "https://wordwall.net/resource/10473474/french/et-quart-moins-le-quart-et-heure",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/10473474/french/et-quart-moins-le-quart-et-heure",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/5642302/french/les-pi%C3%A8ces-de-la-maison",
+      "label": "Les pièces de la maison - Labelled diagram",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/5642302/french/les-pi%C3%A8ces-de-la-maison",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/33091021/les-pi%C3%A8ces-de-la-maison",
+      "label": "Les pièces de la maison - Find the match",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/33091021/les-pi%C3%A8ces-de-la-maison",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/10833493/french/f2-aller-les-endroits",
+      "label": "F2 aller + les endroits – Quiz",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/10833493/french/f2-aller-les-endroits",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/10833663/french/f1-les-endroits-de-la-ville",
+      "label": "F1: les endroits de la ville -",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/10833663/french/f1-les-endroits-de-la-ville",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/4319692/french/les-pi%C3%A8ces-dune-maison",
+      "label": "Wordwall",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/4319692/french/les-pi%C3%A8ces-dune-maison",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/2554681/lheure",
+      "label": "https://wordwall.net/resource/2554681/lheure",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/2554681/lheure",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/fr/resource/12553396/la-routine-quotidienne-daily-routine",
+      "label": "https://wordwall.net/fr/resource/12553396/la-routine-quotidienne-daily-routine",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/fr/resource/12553396/la-routine-quotidienne-daily-routine",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/56032518/les-moments-de-la-journ%C3%A9e",
+      "label": "https://wordwall.net/resource/56032518/les-moments-de-la-journ%C3%A9e",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/56032518/les-moments-de-la-journ%C3%A9e",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/resource/13114297/french/paques",
+      "label": "https://wordwall.net/resource/13114297/french/",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/resource/13114297/french/paques",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/franccedilais.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "franccedilais"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/franccedilais.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=pJjTsYd3GaI",
+      "label": "Dog Robot",
+      "pages": [
+        "robotics"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=pJjTsYd3GaI",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=3EF_JqJKlS8",
+      "label": "Drilling machine",
+      "pages": [
+        "robotics"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=3EF_JqJKlS8",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=80K8JOiweLA",
+      "label": "Motorcycle",
+      "pages": [
+        "robotics"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=80K8JOiweLA",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=Yvg3TYjdw-0",
+      "label": "Cleaning Robot",
+      "pages": [
+        "robotics"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=Yvg3TYjdw-0",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=bQSIaKAwAKk",
+      "label": "Carrousel",
+      "pages": [
+        "robotics"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=bQSIaKAwAKk",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=t_3zSZrqdLA",
+      "label": "Goal Kicker",
+      "pages": [
+        "robotics"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=t_3zSZrqdLA",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=Mp_n2kgmlPQ",
+      "label": "Racing in the Snow",
+      "pages": [
+        "robotics"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=Mp_n2kgmlPQ",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=8XRuMaa5wTY",
+      "label": "Racing Game with Real Steering Wheel",
+      "pages": [
+        "robotics"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=8XRuMaa5wTY",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/robotics.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "robotics"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/robotics.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.kiddle.co/",
+      "label": "531457",
+      "pages": [
+        "search-engines"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.kiddle.co/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.kidzsearch.com/",
+      "label": "967464 orig",
+      "pages": [
+        "search-engines"
+      ],
+      "units": [],
+      "level": "warning",
+      "notes": [
+        "Access restricted (HTTP 403). Resource may be private or removed."
+      ],
+      "status": 403,
+      "error": null,
+      "finalUrl": "https://www.kidzsearch.com/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://kids.sandiegozoo.org/",
+      "label": "sdzoo",
+      "pages": [
+        "search-engines"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://sdzwildlifeexplorers.org/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/search-engines.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "search-engines"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/search-engines.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.abcya.com/games/keyboard_challenge",
+      "label": "ABCya",
+      "pages": [
+        "typing"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.abcya.com/games/keyboard_challenge",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://create.kahoot.it/share/keyboard-parts-and-functions/d692a14d-f56c-44d4-a742-1dec2c5b2262",
+      "label": "Kahoot!",
+      "pages": [
+        "typing"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://create.kahoot.it/share/keyboard-parts-and-functions/d692a14d-f56c-44d4-a742-1dec2c5b2262",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.typingclub.com/kids-typing",
+      "label": "junior1",
+      "pages": [
+        "typing"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.edclub.com/library/jungle-junior",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.rapidtyping.com/downloads.html",
+      "label": "2193689 orig",
+      "pages": [
+        "typing"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://rapidtyping.com/downloads.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.typingclub.com/",
+      "label": "typingclubwebsitess1",
+      "pages": [
+        "typing"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.typingclub.com/",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.edclub.com/sportal/program-115.game",
+      "label": "arabic typing",
+      "pages": [
+        "typing"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.edclub.com/sportal/program-115.game",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.bbc.co.uk/guides/z3c6tfr",
+      "label": "719610 orig",
+      "pages": [
+        "typing"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.bbc.co.uk/bitesize/articles/z3c6tfr",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.typing.com/student/login",
+      "label": "typing",
+      "pages": [
+        "typing"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.typing.com/student/login",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://bgps.sharpschool.net/curriculum/computers/kid_links/first_grade_kid_links/first_grade_keyboarding/",
+      "label": "typingadventure vscgameicons 300x225 300x225",
+      "pages": [
+        "typing"
+      ],
+      "units": [],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://bgps.sharpschool.net/curriculum/computers/kid_links/first_grade_kid_links/first_grade_keyboarding/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/typing.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "typing"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/typing.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://pbskids.org/curiousgeorge/games/build_a_bot/",
+      "label": "splash",
+      "pages": [
+        "kg-1--2"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://pbskids.org/curiousgeorge/games/build_a_bot",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://pbskids.org/curiousgeorge/games/monkey_faces/monkey_faces.html",
+      "label": "untitled 7",
+      "pages": [
+        "kg-1--2"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "critical",
+      "notes": [
+        "Dead link (HTTP 404). Page missing — replace or remove."
+      ],
+      "status": 404,
+      "error": null,
+      "finalUrl": "https://pbskids.org/curiousgeorge/games/monkey_faces/monkey_faces.html",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.sheppardsoftware.com/nutritionforkids/games/foodgroupsgame.html",
+      "label": "nutrition for kids food groups game",
+      "pages": [
+        "kg-1--2"
+      ],
+      "units": [
+        "Who we are"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.sheppardsoftware.com/nutritionforkids/games/foodgroupsgame.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://www.sciencekids.co.nz/gamesactivities/foodchains.html",
+      "label": "6820038 orig",
+      "pages": [
+        "kg-1--2"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.sciencekids.co.nz/gamesactivities/foodchains.html",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.turacogames.com/games/living-non-living/",
+      "label": "download orig",
+      "pages": [
+        "kg-1--2"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "critical",
+      "notes": [
+        "SSL certificate problem. Browsers will show a security warning."
+      ],
+      "status": 0,
+      "error": "SELF_SIGNED_CERT_IN_CHAIN",
+      "finalUrl": "https://www.turacogames.com/games/living-non-living/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "http://downloads.bbc.co.uk/bitesize/ks1/science/living_things/play/container.swf",
+      "label": "4534752 orig",
+      "pages": [
+        "kg-1--2"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "http://downloads.bbc.co.uk/bitesize/ks1/science/living_things/play/container.swf",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/kg-1--2.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "kg-1--2"
+      ],
+      "units": [
+        "How the world works"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/kg-1--2.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/play/65216/867/515",
+      "label": "الطّاقة المتجّددة و الغير المتجدّدة",
+      "pages": [
+        "word-wall"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/play/65216/867/515",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/play/65420/616/646",
+      "label": "تحوّلات الطّاقة (1)",
+      "pages": [
+        "word-wall"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/play/65420/616/646",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://wordwall.net/play/65423/935/409",
+      "label": "تحوّلات الطّاقة (2)",
+      "pages": [
+        "word-wall"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://wordwall.net/play/65423/935/409",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/word-wall.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "word-wall"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/word-wall.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=r8-6Z1Efgzg&amp;t=4s",
+      "label": "Human Digestive System in VR",
+      "pages": [
+        "vr-videos"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=r8-6Z1Efgzg&amp;t=4s",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://youtu.be/iQZPs4NuQF0",
+      "label": "Human Brain in VR",
+      "pages": [
+        "vr-videos"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=iQZPs4NuQF0&feature=youtu.be",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=VBaTWiZ7g-M",
+      "label": "360 Inside Human Body 2 Vr 360 Video Roller Coaster",
+      "pages": [
+        "vr-videos"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=VBaTWiZ7g-M",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/vr-videos.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "vr-videos"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/vr-videos.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/brand/join?token=ekvU6jwDsVfOOk9zdMIkNw&brandingVariant=edu&invitationDestinationType=group",
+      "label": "Grade 5A",
+      "pages": [
+        "canva-grade-5"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/signup/?brandAccessToken=ekvU6jwDsVfOOk9zdMIkNw&invitationToken=ekvU6jwDsVfOOk9zdMIkNw&invitationDestinationType=group&brandingVariant=edu&signupRedirect=%2Fbrand%2Fjoin%3Ftoken%3DekvU6jwDsVfOOk9zdMIkNw%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup&loginRedirect=%2Fbrand%2Fjoin%3Ftoken%3DekvU6jwDsVfOOk9zdMIkNw%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/brand/join?token=FX0orZSRhCU3qTnegytS7w&brandingVariant=edu&invitationDestinationType=group",
+      "label": "GRADE 5B",
+      "pages": [
+        "canva-grade-5"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/signup/?brandAccessToken=FX0orZSRhCU3qTnegytS7w&invitationToken=FX0orZSRhCU3qTnegytS7w&invitationDestinationType=group&brandingVariant=edu&signupRedirect=%2Fbrand%2Fjoin%3Ftoken%3DFX0orZSRhCU3qTnegytS7w%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup&loginRedirect=%2Fbrand%2Fjoin%3Ftoken%3DFX0orZSRhCU3qTnegytS7w%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/brand/join?token=IEJiRGne5MZ0Z9nRdrx0Sw&brandingVariant=edu&invitationDestinationType=group",
+      "label": "Grade 5C",
+      "pages": [
+        "canva-grade-5"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/signup/?brandAccessToken=IEJiRGne5MZ0Z9nRdrx0Sw&invitationToken=IEJiRGne5MZ0Z9nRdrx0Sw&invitationDestinationType=group&brandingVariant=edu&signupRedirect=%2Fbrand%2Fjoin%3Ftoken%3DIEJiRGne5MZ0Z9nRdrx0Sw%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup&loginRedirect=%2Fbrand%2Fjoin%3Ftoken%3DIEJiRGne5MZ0Z9nRdrx0Sw%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/brand/join?token=K9A2OPM0vyCVoDWbTqxWkQ&brandingVariant=edu&invitationDestinationType=group",
+      "label": "gRADE 5D",
+      "pages": [
+        "canva-grade-5"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/signup/?brandAccessToken=K9A2OPM0vyCVoDWbTqxWkQ&invitationToken=K9A2OPM0vyCVoDWbTqxWkQ&invitationDestinationType=group&brandingVariant=edu&signupRedirect=%2Fbrand%2Fjoin%3Ftoken%3DK9A2OPM0vyCVoDWbTqxWkQ%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup&loginRedirect=%2Fbrand%2Fjoin%3Ftoken%3DK9A2OPM0vyCVoDWbTqxWkQ%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/brand/join?token=kK9a3Mt3_stCBb0h6IEOvA&brandingVariant=edu&invitationDestinationType=group",
+      "label": "GRADE 5E",
+      "pages": [
+        "canva-grade-5"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/signup/?brandAccessToken=kK9a3Mt3_stCBb0h6IEOvA&invitationToken=kK9a3Mt3_stCBb0h6IEOvA&invitationDestinationType=group&brandingVariant=edu&signupRedirect=%2Fbrand%2Fjoin%3Ftoken%3DkK9a3Mt3_stCBb0h6IEOvA%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup&loginRedirect=%2Fbrand%2Fjoin%3Ftoken%3DkK9a3Mt3_stCBb0h6IEOvA%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.canva.com/brand/join?token=Nmen5k_FWsEoGQSNL_bz-w&brandingVariant=edu&invitationDestinationType=group",
+      "label": "GRADE 5F",
+      "pages": [
+        "canva-grade-5"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.canva.com/signup/?brandAccessToken=Nmen5k_FWsEoGQSNL_bz-w&invitationToken=Nmen5k_FWsEoGQSNL_bz-w&invitationDestinationType=group&brandingVariant=edu&signupRedirect=%2Fbrand%2Fjoin%3Ftoken%3DNmen5k_FWsEoGQSNL_bz-w%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup&loginRedirect=%2Fbrand%2Fjoin%3Ftoken%3DNmen5k_FWsEoGQSNL_bz-w%26brandingVariant%3Dedu%26invitationDestinationType%3Dgroup",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/canva-grade-5.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "canva-grade-5"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/canva-grade-5.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/how-we-express-ourselves---videos.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "how-we-express-ourselves---videos"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/how-we-express-ourselves---videos.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=9_q6o_7CT_U",
+      "label": "circulatorysystem",
+      "pages": [
+        "16051606-160615811606---15751580160715861577-15751604158015871605"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=9_q6o_7CT_U",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=ydX8Lw4q2Mk",
+      "label": "2301 major respiratory organs",
+      "pages": [
+        "16051606-160615811606---15751580160715861577-15751604158015871605"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=ydX8Lw4q2Mk",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=w6k5tzFbfa4",
+      "label": "muscles thumb",
+      "pages": [
+        "16051606-160615811606---15751580160715861577-15751604158015871605"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=w6k5tzFbfa4",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.youtube.com/watch?v=eKaBQrFdNtw",
+      "label": "digestive system",
+      "pages": [
+        "16051606-160615811606---15751580160715861577-15751604158015871605"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.youtube.com/watch?v=eKaBQrFdNtw",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/16051606-160615811606---15751580160715861577-15751604158015871605.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "16051606-160615811606---15751580160715861577-15751604158015871605"
+      ],
+      "units": [
+        "الجهاز العضلي"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/16051606-160615811606---15751580160715861577-15751604158015871605.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://mawdoo3.com/%D9%85%D8%AC%D8%A7%D9%84_%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1_%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
+      "label": "مجال الذكاء الاصطناعي",
+      "pages": [
+        "157516041584160315751569-157516041573158915911606157515931610"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://mawdoo3.com/%D9%85%D8%AC%D8%A7%D9%84_%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1_%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://cardoo.co/ar/technology-news-ar/%D9%85%D9%85%D9%8A%D8%B2%D8%A7%D8%AA-%D9%88-%D8%B9%D9%8A%D9%88%D8%A8-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A3%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%D9%85%D9%85%D9%8A%D8%B2%D8%A7%D8%AA/",
+      "label": "مميزات و عيوب الذكاء الأصطناعي",
+      "pages": [
+        "157516041584160315751569-157516041573158915911606157515931610"
+      ],
+      "units": [],
+      "level": "critical",
+      "notes": [
+        "SSL certificate problem. Browsers will show a security warning."
+      ],
+      "status": 0,
+      "error": "SELF_SIGNED_CERT_IN_CHAIN",
+      "finalUrl": "https://cardoo.co/ar/technology-news-ar/%D9%85%D9%85%D9%8A%D8%B2%D8%A7%D8%AA-%D9%88-%D8%B9%D9%8A%D9%88%D8%A8-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A3%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%D9%85%D9%85%D9%8A%D8%B2%D8%A7%D8%AA/",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/157516041584160315751569-157516041573158915911606157515931610.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "157516041584160315751569-157516041573158915911606157515931610"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/157516041584160315751569-157516041573158915911606157515931610.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://tinyurl.com/y4vgzvkx",
+      "label": "tinyurl.com/y4vgzvkx",
+      "pages": [
+        "157516041605160716051577-15751604158215781575160516101577"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://mawdoo3.com/%D8%AD%D9%84%D9%88%D9%84_%D8%A7%D9%84%D8%AA%D9%84%D9%88%D8%AB",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://tinyurl.com/e93cdvfw",
+      "label": "https://tinyurl.com/e93cdvfw",
+      "pages": [
+        "157516041605160716051577-15751604158215781575160516101577"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.annajah.net/8-%D8%AD%D9%84%D9%88%D9%84-%D9%84%D9%84%D8%AD%D8%AF-%D9%85%D9%86-%D8%B8%D8%A7%D9%87%D8%B1%D8%A9-%D8%A7%D9%84%D8%AA%D9%84%D9%88%D8%AB-%D8%A7%D9%84%D8%A8%D9%8A%D8%A6%D9%8A-article-22502",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://tinyurl.com/y5fxhjq6",
+      "label": "tinyurl.com/y5fxhjq6",
+      "pages": [
+        "157516041605160716051577-15751604158215781575160516101577"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.hellooha.com/articles/289-%D8%A7%D9%84%D8%AA%D8%BA%D9%84%D8%A8-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%AA%D9%86%D9%85%D8%B1",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://tinyurl.com/45cmxy4x",
+      "label": "tinyurl.com/45cmxy4x",
+      "pages": [
+        "157516041605160716051577-15751604158215781575160516101577"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://eijaby.com/e/%D8%A7%D9%84%D9%82%D8%B6%D8%A7%D8%A1-%D8%B9%D9%84%D9%89-%D8%B8%D8%A7%D9%87%D8%B1%D8%A9-%D8%A7%D9%84%D8%AA%D9%86%D9%85%D8%B1",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://tinyurl.com/yxgjmm27",
+      "label": "tinyurl.com/yxgjmm27",
+      "pages": [
+        "157516041605160716051577-15751604158215781575160516101577"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 302,
+      "error": null,
+      "finalUrl": "https://asgbsa-my.sharepoint.com/_forms/default.aspx?ReturnUrl=%2fpersonal%2fsallam_hourani_ahliyyahmutran_edu_jo%2f_layouts%2f15%2fAuthenticate.aspx%3fSource%3d%252Fpersonal%252Fsallam%255Fhourani%255Fahliyyahmutran%255Fedu%255Fjo%252F%255Flayouts%252F15%252Fdoc2%252Easpx%253Fsourcedoc%253D%25257B35bf24d7%252D34ec%252D4b3b%252Da9e9%252D79532666e2b4%25257D%2526action%253Ddefault%2526slrid%253De79237a2%252D7015%252D3001%252D3882%252D3fc17dcbdcf8%2526originalPath%253DaHR0cHM6Ly9hc2dic2EtbXkuc2hhcmVwb2ludC5jb20vOnc6L2cvcGVyc29uYWwvc2FsbGFtX2hvdXJhbmlfYWhsaXl5YWhtdXRyYW5fZWR1X2pvL0lRRFhKTDgxN0RRN1M2bnBlVk1tWnVLMEFVa0JVWE9lY0dBNTROd293elBKd1VFP3J0aW1lPUlROVJwcTBKMzBn%2526CID%253D07cd39a9%252D91fd%252D4af0%252D8a11%252Dcd24a327eb04%2526%255FSRM%253D0%253AG%253A100&Source=cookie",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://tinyurl.com/mry4pc2e",
+      "label": "tinyurl.com/mry4pc2e",
+      "pages": [
+        "157516041605160716051577-15751604158215781575160516101577"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://bunean.com/u/%D9%83%D9%8A%D9%81-%D9%8A%D9%85%D9%83%D9%86-%D8%A7%D9%84%D9%88%D9%82%D8%A7%D9%8A%D8%A9-%D9%85%D9%86-%D8%B9%D9%85%D8%A7%D9%84%D8%A9-%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://www.hellooha.com/articles/289-%D8%A7%D9%84%D8%AA%D8%BA%D9%84%D8%A8-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%AA%D9%86%D9%85%D8%B1",
+      "label": "التغلب على التنمر",
+      "pages": [
+        "157516041605160716051577-15751604158215781575160516101577"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://www.hellooha.com/articles/289-%D8%A7%D9%84%D8%AA%D8%BA%D9%84%D8%A8-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%AA%D9%86%D9%85%D8%B1",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/157516041605160716051577-15751604158215781575160516101577.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "157516041605160716051577-15751604158215781575160516101577"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/157516041605160716051577-15751604158215781575160516101577.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590"
+      ],
+      "units": [],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/15751604158215911617-157516041571160816171604-1605160316081617160615751578-15751604157115851590.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://geolougy.com/k/%D9%85%D8%A7-%D9%87%D9%8A-%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%A9-%D9%88%D9%85%D8%A7-%D8%A3%D9%86%D9%88%D8%A7%D8%B9%D9%87%D8%A7",
+      "label": "ما هي التجوية وما أنواعها؟",
+      "pages": [
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16"
+      ],
+      "units": [
+        "التّجوية"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://geolougy.com/k/%D9%85%D8%A7-%D9%87%D9%8A-%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%A9-%D9%88%D9%85%D8%A7-%D8%A3%D9%86%D9%88%D8%A7%D8%B9%D9%87%D8%A7",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://outlook.office.com/mail/safelink.html?url=https://geolougy.com/k/%D8%A8%D8%AD%D8%AB-%D8%B9%D9%86-%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D8%A9-%D9%88%D8%A3%D9%86%D9%88%D8%A7%D8%B9%D9%87%D8%A7&corid=012e2f08-4611-26e1-78e6-620e7b2f084a",
+      "label": "بحث عن التعرية وانواعها",
+      "pages": [
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16"
+      ],
+      "units": [
+        "التّعرية"
+      ],
+      "level": "warning",
+      "notes": [
+        "Unusual response (HTTP 417). Manual check recommended."
+      ],
+      "status": 417,
+      "error": null,
+      "finalUrl": "https://outlook.office.com/mail/safelink.html?url=https://geolougy.com/k/%D8%A8%D8%AD%D8%AB-%D8%B9%D9%86-%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D8%A9-%D9%88%D8%A3%D9%86%D9%88%D8%A7%D8%B9%D9%87%D8%A7&corid=012e2f08-4611-26e1-78e6-620e7b2f084a",
+      "ok": false,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16"
+      ],
+      "units": [
+        "التّرسيب"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/15751604158215911617-157516041579157516061610-1575160415931608157516051604-157516041582157515851580161016171577-15751604160515721579161715851577-16.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    },
+    {
+      "href": "https://ahliyyahmutranpyp.weebly.com/158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604.html#",
+      "label": "ahliyyahmutranpyp.weebly.com",
+      "pages": [
+        "158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604"
+      ],
+      "units": [
+        "استبانة: دور الإنسان في الحفاظ على أغلفة الأرض"
+      ],
+      "level": "ok",
+      "notes": [],
+      "status": 200,
+      "error": null,
+      "finalUrl": "https://ahliyyahmutranpyp.weebly.com/158215911617-15751604157615811579-1575160415791617157516041579-158316081585-1575160415731606158715751606-16011610-157516041581160115751592-15931604.html#",
+      "ok": true,
+      "checkedAt": "2026-09-03T11:22:18.592Z"
+    }
+  ]
+}

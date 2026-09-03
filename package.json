@@ -1,0 +1,14 @@
+{
+  "name": "am-pyp-links",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AM-PYP-LINKS — Padlet link hub migrated from Weebly",
+  "scripts": {
+    "extract": "node scripts/extract-from-weebly.js",
+    "scrape": "node scripts/scrape-live-weebly.js",
+    "mirror-images": "node scripts/mirror-images.js",
+    "mirror-files": "node scripts/mirror-files.js",
+    "audit-links": "node scripts/audit-links.js",
+    "start": "npx --yes serve -l 5173 ."
+  }
+}
