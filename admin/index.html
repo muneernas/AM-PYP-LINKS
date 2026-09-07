@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin · AM-PYP-LINKS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div id="loginView" class="login-view">
+      <form id="loginForm" class="login-card">
+        <p class="eyebrow">AM-PYP-LINKS</p>
+        <h1>Admin</h1>
+        <p class="lede">Manage pages, units, and resource links.</p>
+        <label>
+          Password
+          <input id="password" type="password" autocomplete="current-password" required />
+        </label>
+        <button type="submit">Sign in</button>
+        <p id="loginError" class="error" hidden>Wrong password.</p>
+      </form>
+    </div>
+
+    <div id="appView" class="app-view" hidden>
+      <header class="topbar">
+        <div>
+          <strong>AM-PYP-LINKS Admin</strong>
+          <small id="statusLine">Loading…</small>
+        </div>
+        <div class="top-actions">
+          <a href="../" target="_blank" rel="noopener">Open site</a>
+          <button type="button" id="saveDraftBtn" class="ghost">Save draft</button>
+          <button type="button" id="publishBtn">Publish to GitHub</button>
+          <button type="button" id="logoutBtn" class="ghost">Log out</button>
+        </div>
+      </header>
+
+      <div class="layout">
+        <aside class="sidebar">
+          <h2>Pages</h2>
+          <ul id="pageList"></ul>
+          <button type="button" id="addPageBtn" class="ghost full">+ New page</button>
+        </aside>
+
+        <main class="main">
+          <section class="panel">
+            <div class="panel-head">
+              <h2 id="pageHeading">Select a page</h2>
+              <button type="button" id="addUnitBtn" class="ghost" hidden>+ Unit</button>
+            </div>
+            <div id="unitsHost"></div>
+          </section>
+
+          <section class="panel">
+            <h2>Add link</h2>
+            <form id="addLinkForm" class="form-grid">
+              <label>
+                Page
+                <select id="linkPage" required></select>
+              </label>
+              <label>
+                Unit
+                <select id="linkUnit" required></select>
+              </label>
+              <label class="span-2">
+                Label
+                <input id="linkLabel" type="text" required placeholder="e.g. Grade 2A Padlet" />
+              </label>
+              <label class="span-2">
+                URL
+                <input id="linkHref" type="url" required placeholder="https://..." />
+              </label>
+              <label class="span-2">
+                Image URL (optional)
+                <input id="linkImg" type="url" placeholder="https://... or leave blank" />
+              </label>
+              <div class="span-2 actions">
+                <button type="submit">Add link</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel">
+            <h2>GitHub publish settings</h2>
+            <p class="help">
+              To publish live changes, paste a GitHub Personal Access Token with
+              <strong>Contents: Read and write</strong> on
+              <code>muneernas/AM-PYP-LINKS</code>. Stored only in this browser session.
+            </p>
+            <label>
+              Token
+              <input id="ghToken" type="password" autocomplete="off" placeholder="ghp_..." />
+            </label>
+            <p id="publishMsg" class="help" hidden></p>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <dialog id="unitDialog">
+      <form method="dialog" id="unitForm" class="dialog-card">
+        <h3>Add unit</h3>
+        <label>
+          Arabic title
+          <input id="unitAr" type="text" dir="rtl" />
+        </label>
+        <label>
+          English title
+          <input id="unitEn" type="text" required />
+        </label>
+        <label>
+          Central Idea
+          <textarea id="unitIdea" rows="3"></textarea>
+        </label>
+        <div class="actions">
+          <button type="submit" value="ok">Save unit</button>
+          <button type="button" id="unitCancel" class="ghost" value="cancel">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

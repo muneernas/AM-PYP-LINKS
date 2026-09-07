@@ -138,6 +138,7 @@ function renderNav(activeId) {
       <div class="more-panel">
         ${more.map((id) => linkHtml(id)).join('')}
         <a href="#/link-audit"${auditCurrent}>Link audit</a>
+        <a href="admin/">Admin</a>
       </div>
     </div>
   `;
@@ -333,9 +334,22 @@ function route() {
 }
 
 async function boot() {
-  const res = await fetch('data/site.json');
-  if (!res.ok) throw new Error('Could not load data/site.json');
-  site = await res.json();
+  let loadedFromDraft = false;
+  try {
+    const draft = localStorage.getItem('am-pyp-links-draft');
+    if (draft) {
+      site = JSON.parse(draft);
+      loadedFromDraft = true;
+    }
+  } catch {
+    loadedFromDraft = false;
+  }
+
+  if (!site) {
+    const res = await fetch('data/site.json');
+    if (!res.ok) throw new Error('Could not load data/site.json');
+    site = await res.json();
+  }
 
   try {
     const auditRes = await fetch('data/link-audit.json');
@@ -344,7 +358,9 @@ async function boot() {
     audit = null;
   }
 
-  el.stamp.textContent = `synced ${new Date(site.generatedAt).toLocaleString()}`;
+  el.stamp.textContent = loadedFromDraft
+    ? `local draft ${new Date(site.generatedAt || Date.now()).toLocaleString()}`
+    : `synced ${new Date(site.generatedAt).toLocaleString()}`;
   el.menuToggle?.addEventListener('click', () => {
     const open = document.body.classList.toggle('nav-open');
     el.menuToggle.setAttribute('aria-expanded', String(open));
