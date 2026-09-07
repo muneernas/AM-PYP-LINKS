@@ -143,6 +143,48 @@ function guessLabel(href, imgAlt, imgSrc, anchorText) {
   }
 }
 
+function extractEmbedsFromHtml(html, pageUrl) {
+  const links = [];
+  const seen = new Set();
+  const re = /<iframe\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi;
+  let m;
+  while ((m = re.exec(html))) {
+    let href = absolute(m[1].startsWith('//') ? `https:${m[1]}` : m[1], pageUrl);
+    if (!href) continue;
+    href = href.split('?')[0];
+
+    let label = 'Embedded video';
+    let img = null;
+    if (/youtube\.com\/embed\/|youtube-nocookie\.com\/embed\/|youtu\.be\//i.test(href)) {
+      const id = (href.match(/embed\/([\w-]{6,})/) || href.match(/youtu\.be\/([\w-]{6,})/) || [])[1];
+      if (!id) continue;
+      href = `https://www.youtube.com/watch?v=${id}`;
+      label = 'YouTube video';
+      img = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+    } else if (/player\.vimeo\.com\/video\//i.test(href)) {
+      const id = (href.match(/video\/(\d+)/) || [])[1];
+      if (!id) continue;
+      href = `https://vimeo.com/${id}`;
+      label = 'Vimeo video';
+    } else if (/google\.com\/maps|docs\.google|onedrive|canva\.com/i.test(href)) {
+      label = 'Embedded content';
+    } else {
+      continue; // skip unknown iframes / ads
+    }
+
+    if (seen.has(href)) continue;
+    seen.add(href);
+    links.push({
+      href,
+      label,
+      img,
+      internal: false,
+      kind: 'video',
+    });
+  }
+  return links;
+}
+
 function extractLinksFromHtml(html, pageUrl) {
   const links = [];
   const seen = new Set();
@@ -182,6 +224,12 @@ function extractLinksFromHtml(html, pageUrl) {
       img: imgSrc,
       internal: isInternal,
     });
+  }
+
+  for (const embed of extractEmbedsFromHtml(html, pageUrl)) {
+    if (seen.has(embed.href)) continue;
+    seen.add(embed.href);
+    links.push(embed);
   }
   return links;
 }
@@ -364,11 +412,28 @@ function applyImageMap(pages) {
         }
       }
     }
-    // flat links convenience
     for (const link of page.links || []) {
       if (link.img && map[link.img]) {
         link.imgRemote = link.imgRemote || link.img;
         link.img = map[link.img];
+      }
+    }
+  }
+  return pages;
+}
+
+function applyFileMap(pages) {
+  const mapFile = path.join(__dirname, '..', 'data', 'file-map.json');
+  if (!fs.existsSync(mapFile)) return pages;
+  const { map } = JSON.parse(fs.readFileSync(mapFile, 'utf8'));
+  for (const page of pages) {
+    const buckets = [];
+    if (page.units) for (const u of page.units) buckets.push(...(u.links || []));
+    buckets.push(...(page.links || []));
+    for (const link of buckets) {
+      if (link.href && map[link.href]) {
+        link.hrefRemote = link.href;
+        link.href = map[link.href];
       }
     }
   }
@@ -419,6 +484,7 @@ async function main() {
   }
 
   applyImageMap(pages);
+  applyFileMap(pages);
 
   const data = {
     siteName: 'AM-PYP-LINKS',

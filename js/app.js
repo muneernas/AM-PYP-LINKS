@@ -144,6 +144,27 @@ function renderNav(activeId) {
   `;
 }
 
+function youtubeId(url) {
+  try {
+    const u = new URL(url);
+    if (u.hostname.includes('youtu.be')) return u.pathname.slice(1);
+    if (u.searchParams.get('v')) return u.searchParams.get('v');
+    const m = u.pathname.match(/\/embed\/([\w-]{6,})/);
+    return m ? m[1] : null;
+  } catch {
+    return null;
+  }
+}
+
+function vimeoId(url) {
+  try {
+    const m = String(url).match(/vimeo\.com\/(?:video\/)?(\d+)/i);
+    return m ? m[1] : null;
+  } catch {
+    return null;
+  }
+}
+
 function tileHtml(link) {
   const label = niceLabel(link);
   const internalId = weeblyPathToId(link.href);
@@ -152,11 +173,21 @@ function tileHtml(link) {
   const href = migrated ? `#/${internalId}` : link.href;
   const external = !href.startsWith('#/');
   const isLocalFile = href.startsWith('assets/files/');
-  const actionTag = !external ? 'Page' : isLocalFile ? 'Download' : 'Open';
-  const media = link.img
-    ? `<div class="tile-media"><img src="${escapeHtml(link.img)}" alt="" loading="lazy" /></div>`
+  const yt = youtubeId(link.href);
+  const vim = vimeoId(link.href);
+  const isVideo = link.kind === 'video' || yt || vim;
+
+  let actionTag = !external ? 'Page' : isLocalFile ? 'Download' : 'Open';
+  if (isVideo) actionTag = 'Watch';
+
+  const thumb =
+    link.img ||
+    (yt ? `https://img.youtube.com/vi/${yt}/hqdefault.jpg` : null);
+
+  const media = thumb
+    ? `<div class="tile-media"><img src="${escapeHtml(thumb)}" alt="" loading="lazy" /></div>`
     : `<div class="tile-media"><div class="tile-fallback">${escapeHtml(
-        label.slice(0, 2).toUpperCase()
+        isVideo ? '▶' : label.slice(0, 2).toUpperCase()
       )}</div></div>`;
 
   // If the Weebly page was migrated, don't scare people with Weebly-shutdown notes.
@@ -193,13 +224,20 @@ function tileHtml(link) {
       ? ` has-${auditInfo.level}`
       : '';
 
+  const displayLabel =
+    isVideo && (/^YouTube video$/i.test(label) || /^Vimeo video$/i.test(label))
+      ? yt
+        ? 'NetFit / PE video (YouTube)'
+        : 'PE video (Vimeo)'
+      : label;
+
   return `
-    <a class="tile${levelClass}" href="${escapeHtml(href)}" ${
+    <a class="tile${levelClass}${isVideo ? ' tile-video' : ''}" href="${escapeHtml(href)}" ${
       external ? 'target="_blank" rel="noopener noreferrer"' : ''
     }${isLocalFile ? ' download' : ''}>
       ${media}
       <div class="tile-label">
-        ${escapeHtml(label)}
+        ${escapeHtml(displayLabel)}
         <span class="tile-tag">${actionTag}</span>
         ${noteHtml}
       </div>
