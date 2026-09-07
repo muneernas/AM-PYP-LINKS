@@ -7,120 +7,152 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="admin.css" />
   </head>
   <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+
     <div id="loginView" class="login-view">
-      <form id="loginForm" class="login-card">
-        <p class="eyebrow">AM-PYP-LINKS</p>
-        <h1>Admin</h1>
-        <p class="lede">Manage pages, units, and resource links.</p>
-        <label>
-          Password
-          <input id="password" type="password" autocomplete="current-password" required />
-        </label>
-        <button type="submit">Sign in</button>
-        <p id="loginError" class="error" hidden>Wrong password.</p>
-      </form>
+      <div class="login-stage">
+        <aside class="login-brand">
+          <img class="login-logo" src="../assets/logo.png" alt="" width="72" height="72" />
+          <p class="brand-mark">AM-PYP-LINKS</p>
+          <p class="brand-line">Ahliyyah &amp; Mutran · PYP resource studio</p>
+        </aside>
+
+        <form id="loginForm" class="login-card">
+          <p class="eyebrow">Editors only</p>
+          <h1>Sign in</h1>
+          <p class="lede">Update pages, units, and Padlet links before publishing to the live site.</p>
+          <label class="field">
+            <span>Password</span>
+            <input id="password" type="password" autocomplete="current-password" required placeholder="Enter admin password" />
+          </label>
+          <button type="submit" class="btn btn-primary btn-block">Continue</button>
+          <p id="loginError" class="error" hidden>Wrong password.</p>
+        </form>
+      </div>
     </div>
 
     <div id="appView" class="app-view" hidden>
       <header class="topbar">
-        <div>
-          <strong>AM-PYP-LINKS Admin</strong>
-          <small id="statusLine">Loading…</small>
-        </div>
+        <a class="brand-lockup" href="../" target="_blank" rel="noopener">
+          <img class="brand-logo" src="../assets/logo.png" alt="" width="40" height="40" />
+          <span>
+            <strong>AM-PYP-LINKS</strong>
+            <small>Content studio</small>
+          </span>
+        </a>
+
+        <div id="statusLine" class="status-pill" data-state="idle">Loading…</div>
+
         <div class="top-actions">
-          <a href="../" target="_blank" rel="noopener">Open site</a>
-          <button type="button" id="saveDraftBtn" class="ghost">Save draft</button>
-          <button type="button" id="publishBtn">Publish to GitHub</button>
-          <button type="button" id="logoutBtn" class="ghost">Log out</button>
+          <a class="btn btn-ghost" href="../" target="_blank" rel="noopener">View site</a>
+          <button type="button" id="saveDraftBtn" class="btn btn-ghost">Save draft</button>
+          <button type="button" id="publishBtn" class="btn btn-primary">Publish</button>
+          <button type="button" id="logoutBtn" class="btn btn-quiet">Log out</button>
         </div>
       </header>
 
       <div class="layout">
         <aside class="sidebar">
-          <h2>Pages</h2>
+          <div class="sidebar-head">
+            <h2>Pages</h2>
+            <p class="sidebar-note">Choose a page to edit its units and links.</p>
+          </div>
           <ul id="pageList"></ul>
-          <button type="button" id="addPageBtn" class="ghost full">+ New page</button>
+          <button type="button" id="addPageBtn" class="btn btn-ghost btn-block">+ New page</button>
         </aside>
 
         <main class="main">
-          <section class="panel">
-            <div class="panel-head">
-              <h2 id="pageHeading">Select a page</h2>
-              <button type="button" id="addUnitBtn" class="ghost" hidden>+ Unit</button>
-            </div>
-            <div id="unitsHost"></div>
-          </section>
-
-          <section class="panel">
-            <h2>Add link</h2>
-            <form id="addLinkForm" class="form-grid">
-              <label>
-                Page
-                <select id="linkPage" required></select>
-              </label>
-              <label>
-                Unit
-                <select id="linkUnit" required></select>
-              </label>
-              <label class="span-2">
-                Label
-                <input id="linkLabel" type="text" required placeholder="e.g. Grade 2A Padlet" />
-              </label>
-              <label class="span-2">
-                URL
-                <input id="linkHref" type="url" required placeholder="https://..." />
-              </label>
-              <label class="span-2">
-                Image URL (optional)
-                <input id="linkImg" type="url" placeholder="https://... or leave blank" />
-              </label>
-              <div class="span-2 actions">
-                <button type="submit">Add link</button>
+          <section class="workspace">
+            <div class="workspace-head">
+              <div>
+                <p class="eyebrow">Editing</p>
+                <h2 id="pageHeading">Select a page</h2>
+                <p id="pageMeta" class="page-meta"></p>
               </div>
-            </form>
+              <button type="button" id="addUnitBtn" class="btn btn-ghost" hidden>+ Add unit</button>
+            </div>
+            <div id="unitsHost" class="units-host"></div>
           </section>
 
-          <section class="panel">
-            <h2>GitHub publish settings</h2>
-            <p class="help">
-              To publish live changes, paste a GitHub Personal Access Token with
-              <strong>Contents: Read and write</strong> on
-              <code>muneernas/AM-PYP-LINKS</code>. Stored only in this browser session.
-            </p>
-            <label>
-              Token
-              <input id="ghToken" type="password" autocomplete="off" placeholder="ghp_..." />
-            </label>
-            <p id="publishMsg" class="help" hidden></p>
-          </section>
+          <div class="tools">
+            <section class="composer">
+              <div class="section-head">
+                <p class="eyebrow">Quick add</p>
+                <h2>New link</h2>
+                <p class="help">Drop a resource onto any page unit without leaving this screen.</p>
+              </div>
+              <form id="addLinkForm" class="form-grid">
+                <label class="field">
+                  <span>Page</span>
+                  <select id="linkPage" required></select>
+                </label>
+                <label class="field">
+                  <span>Unit</span>
+                  <select id="linkUnit" required></select>
+                </label>
+                <label class="field span-2">
+                  <span>Label</span>
+                  <input id="linkLabel" type="text" required placeholder="e.g. Grade 2A Padlet" />
+                </label>
+                <label class="field span-2">
+                  <span>URL</span>
+                  <input id="linkHref" type="url" required placeholder="https://…" />
+                </label>
+                <label class="field span-2">
+                  <span>Image URL <em>(optional)</em></span>
+                  <input id="linkImg" type="url" placeholder="https://… or leave blank" />
+                </label>
+                <div class="span-2 actions">
+                  <button type="submit" class="btn btn-primary">Add link</button>
+                </div>
+              </form>
+            </section>
+
+            <section class="publish-panel">
+              <div class="section-head">
+                <p class="eyebrow">Go live</p>
+                <h2>Publish settings</h2>
+                <p class="help">
+                  Paste a GitHub token with <strong>Contents: Read and write</strong> on
+                  <code>muneernas/AM-PYP-LINKS</code>. Kept in this browser session only.
+                </p>
+              </div>
+              <label class="field">
+                <span>Personal access token</span>
+                <input id="ghToken" type="password" autocomplete="off" placeholder="ghp_…" />
+              </label>
+              <p id="publishMsg" class="toast" hidden></p>
+            </section>
+          </div>
         </main>
       </div>
     </div>
 
     <dialog id="unitDialog">
       <form method="dialog" id="unitForm" class="dialog-card">
+        <p class="eyebrow">Unit plan</p>
         <h3>Add unit</h3>
-        <label>
-          Arabic title
+        <label class="field">
+          <span>Arabic title</span>
           <input id="unitAr" type="text" dir="rtl" />
         </label>
-        <label>
-          English title
+        <label class="field">
+          <span>English title</span>
           <input id="unitEn" type="text" required />
         </label>
-        <label>
-          Central Idea
+        <label class="field">
+          <span>Central Idea</span>
           <textarea id="unitIdea" rows="3"></textarea>
         </label>
         <div class="actions">
-          <button type="submit" value="ok">Save unit</button>
-          <button type="button" id="unitCancel" class="ghost" value="cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary" value="ok">Save unit</button>
+          <button type="button" id="unitCancel" class="btn btn-ghost" value="cancel">Cancel</button>
         </div>
       </form>
     </dialog>

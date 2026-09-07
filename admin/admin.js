@@ -23,6 +23,7 @@ const el = {
   linkHref: document.getElementById('linkHref'),
   linkImg: document.getElementById('linkImg'),
   statusLine: document.getElementById('statusLine'),
+  pageMeta: document.getElementById('pageMeta'),
   saveDraftBtn: document.getElementById('saveDraftBtn'),
   publishBtn: document.getElementById('publishBtn'),
   logoutBtn: document.getElementById('logoutBtn'),
@@ -62,14 +63,19 @@ function slugify(text) {
     .slice(0, 60) || `page-${Date.now()}`;
 }
 
+function setStatus(msg, state) {
+  el.statusLine.textContent = msg;
+  el.statusLine.dataset.state = state || (dirty ? 'dirty' : 'ok');
+}
+
 function markDirty() {
   dirty = true;
-  el.statusLine.textContent = 'Unsaved changes';
+  setStatus('Unsaved changes', 'dirty');
 }
 
 function clearDirty(msg) {
   dirty = false;
-  el.statusLine.textContent = msg || 'Saved';
+  setStatus(msg || 'Saved', 'ok');
 }
 
 function ensureUnits(page) {
@@ -121,16 +127,25 @@ function selectedPage() {
   return site.pages.find((p) => p.id === selectedPageId) || null;
 }
 
+function pageLinkCount(page) {
+  return (page.units || []).reduce((n, u) => n + ((u.links && u.links.length) || 0), 0)
+    || (page.links || []).length;
+}
+
 function renderPageList() {
   el.pageList.innerHTML = site.pages
-    .map(
-      (p) => `
+    .map((p) => {
+      const count = pageLinkCount(p);
+      return `
       <li>
         <button type="button" data-page="${escapeHtml(p.id)}" class="${
           p.id === selectedPageId ? 'active' : ''
-        }">${escapeHtml(p.navLabel || p.id)}</button>
-      </li>`
-    )
+        }">
+          <span class="page-name">${escapeHtml(p.navLabel || p.id)}</span>
+          <span class="page-count">${count} link${count === 1 ? '' : 's'}</span>
+        </button>
+      </li>`;
+    })
     .join('');
 }
 
@@ -161,18 +176,37 @@ function fillUnitSelector(pageId) {
     .join('');
 }
 
+function thumbFor(link) {
+  if (link.img) {
+    return `<img class="link-thumb" src="${escapeHtml(link.img)}" alt="" loading="lazy" />`;
+  }
+  const initial = String(link.label || 'L').trim().charAt(0).toUpperCase() || 'L';
+  return `<span class="link-thumb placeholder" aria-hidden="true">${escapeHtml(initial)}</span>`;
+}
+
 function renderUnits() {
   const page = selectedPage();
   if (!page) {
     el.pageHeading.textContent = 'Select a page';
-    el.unitsHost.innerHTML = '';
+    if (el.pageMeta) el.pageMeta.textContent = '';
+    el.unitsHost.innerHTML = `
+      <div class="empty-state">
+        <strong>Nothing selected</strong>
+        Pick a page from the left to manage its units and links.
+      </div>`;
     el.addUnitBtn.hidden = true;
     return;
   }
 
   el.pageHeading.textContent = page.navLabel || page.id;
-  el.addUnitBtn.hidden = false;
   const units = ensureUnits(page);
+  const linkCount = pageLinkCount(page);
+  if (el.pageMeta) {
+    el.pageMeta.textContent = `${units.length} unit${units.length === 1 ? '' : 's'} · ${linkCount} link${
+      linkCount === 1 ? '' : 's'
+    }`;
+  }
+  el.addUnitBtn.hidden = false;
 
   el.unitsHost.innerHTML = units
     .map((unit, unitIndex) => {
@@ -180,7 +214,7 @@ function renderUnits() {
       const links = unit.links || [];
       return `
         <article class="unit-card" data-unit="${unitIndex}">
-          <div class="panel-head">
+          <div class="unit-head">
             <div>
               <h3>${escapeHtml(title)}</h3>
               ${
@@ -195,10 +229,11 @@ function renderUnits() {
           </div>
           ${
             links.length
-              ? links
+              ? `<div class="link-list">${links
                   .map(
                     (link, linkIndex) => `
                 <div class="link-row">
+                  ${thumbFor(link)}
                   <div>
                     <strong>${escapeHtml(link.label || 'Untitled')}</strong>
                     <a href="${escapeHtml(link.href)}" target="_blank" rel="noopener">${escapeHtml(
@@ -208,8 +243,8 @@ function renderUnits() {
                   <button type="button" class="danger" data-delete-link="${unitIndex}:${linkIndex}">Delete</button>
                 </div>`
                   )
-                  .join('')
-              : `<p class="help">No links in this unit yet.</p>`
+                  .join('')}</div>`
+              : `<p class="empty-state">No links in this unit yet. Use <strong>New link</strong> below to add one.</p>`
           }
         </article>`;
     })
