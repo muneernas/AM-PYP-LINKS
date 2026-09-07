@@ -4,6 +4,9 @@ const REPO = { owner: 'muneernas', name: 'AM-PYP-LINKS', branch: 'master' };
 const DRAFT_KEY = 'am-pyp-links-draft';
 const AUTH_KEY = 'am-pyp-links-admin';
 const TOKEN_KEY = 'am-pyp-links-gh-token';
+const PENDING_DB = 'am-pyp-links-uploads';
+const PENDING_STORE = 'files';
+const MAX_IMAGE_BYTES = 4 * 1024 * 1024;
 
 const el = {
   loginView: document.getElementById('loginView'),
@@ -22,6 +25,13 @@ const el = {
   linkLabel: document.getElementById('linkLabel'),
   linkHref: document.getElementById('linkHref'),
   linkImg: document.getElementById('linkImg'),
+  linkImgFile: document.getElementById('linkImgFile'),
+  uploadZone: document.getElementById('uploadZone'),
+  uploadEmpty: document.getElementById('uploadEmpty'),
+  uploadPreview: document.getElementById('uploadPreview'),
+  uploadPreviewImg: document.getElementById('uploadPreviewImg'),
+  uploadFileName: document.getElementById('uploadFileName'),
+  clearImgBtn: document.getElementById('clearImgBtn'),
   statusLine: document.getElementById('statusLine'),
   pageMeta: document.getElementById('pageMeta'),
   saveDraftBtn: document.getElementById('saveDraftBtn'),
@@ -40,6 +50,10 @@ const el = {
 let site = null;
 let selectedPageId = null;
 let dirty = false;
+/** @type {Map<string, { base64: string, mime: string, dataUrl: string, name: string }>} */
+const pendingUploads = new Map();
+/** Staged file for the next "Add link" submit */
+let stagedUpload = null;
 
 async function sha256(text) {
   const data = new TextEncoder().encode(text);
@@ -61,6 +75,170 @@ function slugify(text) {
     .replace(/[^a-z0-9\u0600-\u06ff]+/gi, '-')
     .replace(/^-|-$/g, '')
     .slice(0, 60) || `page-${Date.now()}`;
+}
+
+function openPendingDb() {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(PENDING_DB, 1);
+    req.onupgradeneeded = () => {
+      const db = req.result;
+      if (!db.objectStoreNames.contains(PENDING_STORE)) {
+        db.createObjectStore(PENDING_STORE, { keyPath: 'path' });
+      }
+    };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error || new Error('IndexedDB unavailable'));
+  });
+}
+
+async function persistPendingUpload(entry) {
+  pendingUploads.set(entry.path, entry);
+  const db = await openPendingDb();
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction(PENDING_STORE, 'readwrite');
+    tx.objectStore(PENDING_STORE).put(entry);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+  db.close();
+}
+
+async function removePendingUpload(path) {
+  pendingUploads.delete(path);
+  const db = await openPendingDb();
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction(PENDING_STORE, 'readwrite');
+    tx.objectStore(PENDING_STORE).delete(path);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+  db.close();
+}
+
+async function loadPendingUploads() {
+  pendingUploads.clear();
+  try {
+    const db = await openPendingDb();
+    const rows = await new Promise((resolve, reject) => {
+      const tx = db.transaction(PENDING_STORE, 'readonly');
+      const req = tx.objectStore(PENDING_STORE).getAll();
+      req.onsuccess = () => resolve(req.result || []);
+      req.onerror = () => reject(req.error);
+    });
+    db.close();
+    for (const row of rows) {
+      if (row?.path && row?.base64 && row?.dataUrl) pendingUploads.set(row.path, row);
+    }
+  } catch {
+    // Draft still works without pending image previews.
+  }
+}
+
+function extForMime(mime, fallbackName = '') {
+  if (/png/i.test(mime)) return 'png';
+  if (/webp/i.test(mime)) return 'webp';
+  if (/gif/i.test(mime)) return 'gif';
+  if (/jpe?g/i.test(mime)) return 'jpg';
+  const fromName = String(fallbackName).split('.').pop()?.toLowerCase();
+  if (['png', 'jpg', 'jpeg', 'webp', 'gif'].includes(fromName)) {
+    return fromName === 'jpeg' ? 'jpg' : fromName;
+  }
+  return 'jpg';
+}
+
+function readFileAsDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result || ''));
+    reader.onerror = () => reject(reader.error || new Error('Could not read file'));
+    reader.readAsDataURL(file);
+  });
+}
+
+function loadImage(src) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error('Could not decode image'));
+    img.src = src;
+  });
+}
+
+async function prepareImageUpload(file) {
+  if (!file || !/^image\/(png|jpe?g|webp|gif)$/i.test(file.type)) {
+    throw new Error('Please choose a PNG, JPG, WebP, or GIF image.');
+  }
+  if (file.size > MAX_IMAGE_BYTES) {
+    throw new Error('Image is too large. Please use a file under 4 MB.');
+  }
+
+  const originalDataUrl = await readFileAsDataUrl(file);
+  let mime = file.type || 'image/jpeg';
+  let dataUrl = originalDataUrl;
+
+  // Resize large photos so GitHub Pages stays snappy.
+  if (!/gif$/i.test(mime)) {
+    const img = await loadImage(originalDataUrl);
+    const maxEdge = 1400;
+    const scale = Math.min(1, maxEdge / Math.max(img.width, img.height));
+    if (scale < 0.999) {
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.max(1, Math.round(img.width * scale));
+      canvas.height = Math.max(1, Math.round(img.height * scale));
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      if (/png$/i.test(mime)) {
+        dataUrl = canvas.toDataURL('image/png');
+        mime = 'image/png';
+      } else {
+        dataUrl = canvas.toDataURL('image/jpeg', 0.86);
+        mime = 'image/jpeg';
+      }
+    }
+  }
+
+  const base64 = dataUrl.split(',')[1];
+  if (!base64) throw new Error('Could not prepare image upload.');
+  const ext = extForMime(mime, file.name);
+  const stamp = Date.now().toString(36);
+  const base = slugify(file.name.replace(/\.[^.]+$/, '')) || 'image';
+  const path = `assets/images/${base}-${stamp}.${ext}`;
+  return {
+    path,
+    base64,
+    mime,
+    dataUrl,
+    name: file.name,
+  };
+}
+
+function clearStagedUpload() {
+  stagedUpload = null;
+  if (el.linkImgFile) el.linkImgFile.value = '';
+  if (el.uploadPreview) el.uploadPreview.hidden = true;
+  if (el.uploadEmpty) el.uploadEmpty.hidden = false;
+  if (el.uploadZone) el.uploadZone.classList.remove('has-file', 'is-dragover');
+  if (el.uploadPreviewImg) el.uploadPreviewImg.removeAttribute('src');
+  if (el.uploadFileName) el.uploadFileName.textContent = 'Ready';
+}
+
+function showStagedUpload(entry) {
+  stagedUpload = entry;
+  if (el.uploadEmpty) el.uploadEmpty.hidden = true;
+  if (el.uploadPreview) el.uploadPreview.hidden = false;
+  if (el.uploadZone) el.uploadZone.classList.add('has-file');
+  if (el.uploadPreviewImg) el.uploadPreviewImg.src = entry.dataUrl;
+  if (el.uploadFileName) el.uploadFileName.textContent = entry.name || entry.path.split('/').pop();
+  if (el.linkImg) el.linkImg.value = '';
+}
+
+function resolveImgSrc(img) {
+  if (!img) return '';
+  if (/^(data:|https?:|blob:)/i.test(img)) return img;
+  const pending = pendingUploads.get(img);
+  if (pending?.dataUrl) return pending.dataUrl;
+  if (img.startsWith('assets/')) return `../${img}`;
+  return img;
 }
 
 function setStatus(msg, state) {
@@ -178,7 +356,7 @@ function fillUnitSelector(pageId) {
 
 function thumbFor(link) {
   if (link.img) {
-    return `<img class="link-thumb" src="${escapeHtml(link.img)}" alt="" loading="lazy" />`;
+    return `<img class="link-thumb" src="${escapeHtml(resolveImgSrc(link.img))}" alt="" loading="lazy" />`;
   }
   const initial = String(link.label || 'L').trim().charAt(0).toUpperCase() || 'L';
   return `<span class="link-thumb placeholder" aria-hidden="true">${escapeHtml(initial)}</span>`;
@@ -277,6 +455,7 @@ el.loginForm.addEventListener('submit', async (e) => {
     return;
   }
   sessionStorage.setItem(AUTH_KEY, '1');
+  await loadPendingUploads();
   await loadSite();
   showApp();
 });
@@ -298,7 +477,57 @@ el.linkPage.addEventListener('change', () => {
   fillUnitSelector(el.linkPage.value);
 });
 
-el.addLinkForm.addEventListener('submit', (e) => {
+async function handleImageFile(file) {
+  if (!file) return;
+  try {
+    const entry = await prepareImageUpload(file);
+    showStagedUpload(entry);
+  } catch (err) {
+    clearStagedUpload();
+    alert(err.message || String(err));
+  }
+}
+
+if (el.linkImgFile) {
+  el.linkImgFile.addEventListener('change', () => {
+    handleImageFile(el.linkImgFile.files?.[0]);
+  });
+}
+
+if (el.clearImgBtn) {
+  el.clearImgBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    clearStagedUpload();
+  });
+}
+
+if (el.uploadZone) {
+  ['dragenter', 'dragover'].forEach((type) => {
+    el.uploadZone.addEventListener(type, (e) => {
+      e.preventDefault();
+      el.uploadZone.classList.add('is-dragover');
+    });
+  });
+  ['dragleave', 'drop'].forEach((type) => {
+    el.uploadZone.addEventListener(type, (e) => {
+      e.preventDefault();
+      el.uploadZone.classList.remove('is-dragover');
+    });
+  });
+  el.uploadZone.addEventListener('drop', (e) => {
+    const file = e.dataTransfer?.files?.[0];
+    if (file) handleImageFile(file);
+  });
+}
+
+if (el.linkImg) {
+  el.linkImg.addEventListener('input', () => {
+    if (el.linkImg.value.trim()) clearStagedUpload();
+  });
+}
+
+el.addLinkForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const page = site.pages.find((p) => p.id === el.linkPage.value);
   if (!page) return;
@@ -307,10 +536,17 @@ el.addLinkForm.addEventListener('submit', (e) => {
   const unit = units[unitIndex];
   if (!unit) return;
   if (!Array.isArray(unit.links)) unit.links = [];
+
+  let img = el.linkImg.value.trim() || null;
+  if (stagedUpload) {
+    await persistPendingUpload(stagedUpload);
+    img = stagedUpload.path;
+  }
+
   unit.links.push({
     href: el.linkHref.value.trim(),
     label: el.linkLabel.value.trim(),
-    img: el.linkImg.value.trim() || null,
+    img,
     internal: /ahliyyahmutranpyp\.weebly\.com/i.test(el.linkHref.value),
   });
   syncPageLinks(page);
@@ -319,6 +555,7 @@ el.addLinkForm.addEventListener('submit', (e) => {
   el.linkLabel.value = '';
   el.linkHref.value = '';
   el.linkImg.value = '';
+  clearStagedUpload();
   renderAll();
 });
 
@@ -423,6 +660,55 @@ el.ghToken.addEventListener('change', () => {
   else sessionStorage.removeItem(TOKEN_KEY);
 });
 
+async function githubPutFile(token, path, base64Content, message) {
+  const url = `https://api.github.com/repos/${REPO.owner}/${REPO.name}/contents/${path}`;
+  const headers = {
+    Accept: 'application/vnd.github+json',
+    Authorization: `Bearer ${token}`,
+    'Content-Type': 'application/json',
+  };
+
+  let sha;
+  const metaRes = await fetch(`${url}?ref=${REPO.branch}`, { headers });
+  if (metaRes.ok) {
+    const meta = await metaRes.json();
+    sha = meta.sha;
+  } else if (metaRes.status !== 404) {
+    throw new Error(`Could not check ${path} (${metaRes.status}).`);
+  }
+
+  const putRes = await fetch(url, {
+    method: 'PUT',
+    headers,
+    body: JSON.stringify({
+      message,
+      content: base64Content,
+      branch: REPO.branch,
+      ...(sha ? { sha } : {}),
+    }),
+  });
+
+  if (!putRes.ok) {
+    const err = await putRes.json().catch(() => ({}));
+    throw new Error(err.message || `Upload failed for ${path} (${putRes.status})`);
+  }
+}
+
+async function publishPendingImages(token) {
+  const entries = [...pendingUploads.values()];
+  for (let i = 0; i < entries.length; i += 1) {
+    const entry = entries[i];
+    el.publishMsg.textContent = `Uploading image ${i + 1} of ${entries.length}…`;
+    await githubPutFile(
+      token,
+      entry.path,
+      entry.base64,
+      `Add image ${entry.path.split('/').pop()} from admin`
+    );
+    await removePendingUpload(entry.path);
+  }
+}
+
 async function publishToGitHub() {
   const token = el.ghToken.value.trim() || sessionStorage.getItem(TOKEN_KEY) || '';
   if (!token) {
@@ -440,15 +726,19 @@ async function publishToGitHub() {
     site.generatedAt = new Date().toISOString();
     saveDraft();
 
+    if (pendingUploads.size) {
+      await publishPendingImages(token);
+    }
+
+    el.publishMsg.textContent = 'Updating site content…';
     const path = 'data/site.json';
+    const headers = {
+      Accept: 'application/vnd.github+json',
+      Authorization: `Bearer ${token}`,
+    };
     const metaRes = await fetch(
       `https://api.github.com/repos/${REPO.owner}/${REPO.name}/contents/${path}?ref=${REPO.branch}`,
-      {
-        headers: {
-          Accept: 'application/vnd.github+json',
-          Authorization: `Bearer ${token}`,
-        },
-      }
+      { headers }
     );
     if (!metaRes.ok) {
       throw new Error(`Could not read site.json (${metaRes.status}). Check token permissions.`);
@@ -461,8 +751,7 @@ async function publishToGitHub() {
       {
         method: 'PUT',
         headers: {
-          Accept: 'application/vnd.github+json',
-          Authorization: `Bearer ${token}`,
+          ...headers,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -493,6 +782,7 @@ el.publishBtn.addEventListener('click', publishToGitHub);
 
 async function boot() {
   if (sessionStorage.getItem(AUTH_KEY) === '1') {
+    await loadPendingUploads();
     await loadSite();
     showApp();
   }

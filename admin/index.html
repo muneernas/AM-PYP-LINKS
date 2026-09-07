@@ -104,10 +104,32 @@
                   <span>URL</span>
                   <input id="linkHref" type="url" required placeholder="https://…" />
                 </label>
-                <label class="field span-2">
-                  <span>Image URL <em>(optional)</em></span>
-                  <input id="linkImg" type="url" placeholder="https://… or leave blank" />
-                </label>
+                <div class="field span-2">
+                  <span>Image <em>(optional)</em></span>
+                  <div class="upload-zone" id="uploadZone">
+                    <input
+                      id="linkImgFile"
+                      class="upload-input"
+                      type="file"
+                      accept="image/png,image/jpeg,image/webp,image/gif"
+                    />
+                    <div id="uploadEmpty" class="upload-empty">
+                      <strong>Upload a picture</strong>
+                      <span>PNG, JPG, WebP, or GIF · up to 4&nbsp;MB</span>
+                    </div>
+                    <div id="uploadPreview" class="upload-preview" hidden>
+                      <img id="uploadPreviewImg" alt="" />
+                      <div class="upload-preview-meta">
+                        <strong id="uploadFileName">Ready</strong>
+                        <button type="button" id="clearImgBtn" class="btn btn-quiet">Remove</button>
+                      </div>
+                    </div>
+                  </div>
+                  <details class="url-fallback">
+                    <summary>Or paste an image URL</summary>
+                    <input id="linkImg" type="url" placeholder="https://…" />
+                  </details>
+                </div>
                 <div class="span-2 actions">
                   <button type="submit" class="btn btn-primary">Add link</button>
                 </div>
@@ -120,7 +142,8 @@
                 <h2>Publish settings</h2>
                 <p class="help">
                   Paste a GitHub token with <strong>Contents: Read and write</strong> on
-                  <code>muneernas/AM-PYP-LINKS</code>. Kept in this browser session only.
+                  <code>muneernas/AM-PYP-LINKS</code>. Uploaded images and content changes go live
+                  together on Publish. Kept in this browser session only.
                 </p>
               </div>
               <label class="field">

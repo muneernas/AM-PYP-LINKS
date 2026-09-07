@@ -747,6 +747,124 @@ textarea:focus {
   border: 1px solid rgba(31, 92, 77, 0.12);
 }
 
+.upload-zone {
+  position: relative;
+  min-height: 132px;
+  border: 1.5px dashed rgba(31, 92, 77, 0.35);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(247, 243, 234, 0.9));
+  overflow: hidden;
+  transition:
+    border-color 160ms var(--ease),
+    background 160ms var(--ease),
+    box-shadow 160ms var(--ease);
+}
+
+.upload-zone:hover,
+.upload-zone:focus-within,
+.upload-zone.is-dragover {
+  border-color: var(--teal);
+  background: rgba(31, 92, 77, 0.06);
+  box-shadow: 0 0 0 4px rgba(31, 92, 77, 0.08);
+}
+
+.upload-zone.has-file {
+  border-style: solid;
+  border-color: rgba(31, 92, 77, 0.2);
+}
+
+.upload-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.upload-empty {
+  display: grid;
+  place-content: center;
+  gap: 0.25rem;
+  min-height: 132px;
+  padding: 1rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.upload-empty strong {
+  font-family: var(--font-brand);
+  color: var(--teal-deep);
+  font-size: 1.02rem;
+}
+
+.upload-empty span {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.upload-preview {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 0.75rem;
+  position: relative;
+  z-index: 3;
+}
+
+.upload-preview img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: rgba(31, 92, 77, 0.08);
+}
+
+.upload-preview-meta {
+  display: grid;
+  gap: 0.35rem;
+  justify-items: start;
+  min-width: 0;
+}
+
+.upload-preview-meta strong {
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.upload-zone.has-file .upload-input {
+  pointer-events: none;
+}
+
+.url-fallback {
+  margin-top: 0.55rem;
+}
+
+.url-fallback summary {
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  list-style: none;
+}
+
+.url-fallback summary::-webkit-details-marker {
+  display: none;
+}
+
+.url-fallback[open] summary {
+  margin-bottom: 0.45rem;
+  color: var(--teal-deep);
+}
+
+.url-fallback input {
+  margin-top: 0.15rem;
+}
+
 dialog {
   border: 0;
   padding: 0;
