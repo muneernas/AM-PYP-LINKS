@@ -225,7 +225,9 @@ function renderAll() {
 
 function showApp() {
   el.loginView.hidden = true;
+  el.loginView.style.display = 'none';
   el.appView.hidden = false;
+  el.appView.style.display = '';
   const token = sessionStorage.getItem(TOKEN_KEY);
   if (token) el.ghToken.value = token;
   renderAll();
