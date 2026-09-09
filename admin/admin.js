@@ -449,7 +449,7 @@ function resolveImgSrc(img) {
   if (/^(data:|https?:|blob:)/i.test(img)) return img;
   const pending = pendingUploads.get(img);
   if (pending?.dataUrl) return pending.dataUrl;
-  if (img.startsWith('assets/')) return `../${img}`;
+  if (img.startsWith('assets/')) return `/${img}`;
   return img;
 }
 
@@ -532,7 +532,7 @@ async function loadSite() {
   }
 
   try {
-    const live = await fetch('../api/site', { cache: 'no-store' });
+    const live = await fetch('/api/site', { cache: 'no-store' });
     if (live.ok) {
       site = await live.json();
       if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
@@ -544,7 +544,7 @@ async function loadSite() {
     // fall through to bundled JSON
   }
 
-  const res = await fetch('../data/site.json', { cache: 'no-store' });
+  const res = await fetch('/data/site.json', { cache: 'no-store' });
   if (!res.ok) throw new Error('Could not load site.json');
   site = await res.json();
   if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
