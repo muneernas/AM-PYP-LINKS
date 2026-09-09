@@ -76,28 +76,39 @@ function weeblyPathToId(href) {
 }
 
 function niceLabel(link) {
+  let label = decodeEntities(link.label || '').trim();
+  // Respect editor-set titles on the public tiles.
+  if (label && label.length > 1 && !/^\d+$/.test(label)) {
+    const junk = /^(whatsapp image|download|editor|published|picture|image|untitled)$/i.test(
+      label
+    );
+    if (!junk) return label;
+  }
+
   const hay = `${link.href} ${link.img || ''} ${link.imgRemote || ''} ${link.label || ''}`;
   for (const rule of LABEL_OVERRIDES) {
     if (rule.test.test(hay) && rule.label) return rule.label;
   }
-  let label = decodeEntities(link.label || '');
-  if (!label || /^\d+$/.test(label) || /whatsapp image|download|editor|published|picture/i.test(label)) {
-    if (/padlet\.com/i.test(link.href)) {
-      try {
-        const parts = new URL(link.href).pathname.split('/').filter(Boolean);
-        label = parts[parts.length - 1].replace(/-/g, ' ');
-      } catch {
-        label = 'Padlet';
-      }
-    } else {
-      try {
-        label = new URL(link.href).hostname.replace(/^www\./, '');
-      } catch {
-        label = 'Resource';
-      }
+
+  if (String(link.href || '').startsWith('assets/files/')) {
+    const file = link.href.split('/').pop() || 'Download';
+    return file.replace(/-[a-z0-9]+\./i, '.').replace(/[-_]/g, ' ');
+  }
+
+  if (/padlet\.com/i.test(link.href)) {
+    try {
+      const parts = new URL(link.href).pathname.split('/').filter(Boolean);
+      return parts[parts.length - 1].replace(/-/g, ' ') || 'Padlet';
+    } catch {
+      return 'Padlet';
     }
   }
-  return label;
+
+  try {
+    return new URL(link.href).hostname.replace(/^www\./, '');
+  } catch {
+    return 'Resource';
+  }
 }
 
 function isChromeLink(link, currentPageId) {
@@ -187,7 +198,11 @@ function tileHtml(link) {
   const media = thumb
     ? `<div class="tile-media"><img src="${escapeHtml(thumb)}" alt="" loading="lazy" /></div>`
     : `<div class="tile-media"><div class="tile-fallback">${escapeHtml(
-        isVideo ? '▶' : label.slice(0, 2).toUpperCase()
+        isVideo
+          ? '▶'
+          : isLocalFile
+            ? (link.href.split('.').pop() || 'FILE').slice(0, 4).toUpperCase()
+            : label.slice(0, 2).toUpperCase()
       )}</div></div>`;
 
   // If the Weebly page was migrated, don't scare people with Weebly-shutdown notes.
@@ -237,7 +252,7 @@ function tileHtml(link) {
     }${isLocalFile ? ' download' : ''}>
       ${media}
       <div class="tile-label">
-        ${escapeHtml(displayLabel)}
+        <span class="tile-title">${escapeHtml(displayLabel)}</span>
         <span class="tile-tag">${actionTag}</span>
         ${noteHtml}
       </div>

@@ -7,6 +7,24 @@ const TOKEN_KEY = 'am-pyp-links-gh-token';
 const PENDING_DB = 'am-pyp-links-uploads';
 const PENDING_STORE = 'files';
 const MAX_IMAGE_BYTES = 4 * 1024 * 1024;
+const MAX_FILE_BYTES = 20 * 1024 * 1024;
+const ALLOWED_FILE_EXT = new Set([
+  'pdf',
+  'doc',
+  'docx',
+  'xls',
+  'xlsx',
+  'ppt',
+  'pptx',
+  'zip',
+  'mp4',
+  'mov',
+  'txt',
+  'csv',
+  'odt',
+  'ods',
+  'odp',
+]);
 
 const el = {
   loginView: document.getElementById('loginView'),
@@ -26,12 +44,32 @@ const el = {
   linkHref: document.getElementById('linkHref'),
   linkImg: document.getElementById('linkImg'),
   linkImgFile: document.getElementById('linkImgFile'),
+  linkFile: document.getElementById('linkFile'),
+  typeLink: document.getElementById('typeLink'),
+  typeFile: document.getElementById('typeFile'),
+  hrefField: document.getElementById('hrefField'),
+  fileField: document.getElementById('fileField'),
+  fileUploadZone: document.getElementById('fileUploadZone'),
+  fileUploadEmpty: document.getElementById('fileUploadEmpty'),
+  fileUploadPreview: document.getElementById('fileUploadPreview'),
+  fileUploadName: document.getElementById('fileUploadName'),
+  fileBadge: document.getElementById('fileBadge'),
+  clearFileBtn: document.getElementById('clearFileBtn'),
+  existingFileNote: document.getElementById('existingFileNote'),
   uploadZone: document.getElementById('uploadZone'),
   uploadEmpty: document.getElementById('uploadEmpty'),
   uploadPreview: document.getElementById('uploadPreview'),
   uploadPreviewImg: document.getElementById('uploadPreviewImg'),
   uploadFileName: document.getElementById('uploadFileName'),
   clearImgBtn: document.getElementById('clearImgBtn'),
+  resourceSubmitBtn: document.getElementById('resourceSubmitBtn'),
+  cancelEditBtn: document.getElementById('cancelEditBtn'),
+  composerEyebrow: document.getElementById('composerEyebrow'),
+  composerHeading: document.getElementById('composerHeading'),
+  composerHelp: document.getElementById('composerHelp'),
+  editPageId: document.getElementById('editPageId'),
+  editUnitIndex: document.getElementById('editUnitIndex'),
+  editLinkIndex: document.getElementById('editLinkIndex'),
   statusLine: document.getElementById('statusLine'),
   pageMeta: document.getElementById('pageMeta'),
   saveDraftBtn: document.getElementById('saveDraftBtn'),
@@ -50,10 +88,14 @@ const el = {
 let site = null;
 let selectedPageId = null;
 let dirty = false;
-/** @type {Map<string, { base64: string, mime: string, dataUrl: string, name: string }>} */
+/** @type {Map<string, { path: string, base64: string, mime: string, dataUrl?: string, name: string }>} */
 const pendingUploads = new Map();
-/** Staged file for the next "Add link" submit */
+/** Staged tile image for the next submit */
 let stagedUpload = null;
+/** Staged resource file for the next submit */
+let stagedFile = null;
+/** Existing file path kept while editing without replacing the file */
+let existingFilePath = null;
 
 async function sha256(text) {
   const data = new TextEncoder().encode(text);
@@ -127,7 +169,7 @@ async function loadPendingUploads() {
     });
     db.close();
     for (const row of rows) {
-      if (row?.path && row?.base64 && row?.dataUrl) pendingUploads.set(row.path, row);
+      if (row?.path && row?.base64) pendingUploads.set(row.path, row);
     }
   } catch {
     // Draft still works without pending image previews.
@@ -232,6 +274,177 @@ function showStagedUpload(entry) {
   if (el.linkImg) el.linkImg.value = '';
 }
 
+function clearStagedFile() {
+  stagedFile = null;
+  if (el.linkFile) el.linkFile.value = '';
+  if (el.fileUploadPreview) el.fileUploadPreview.hidden = true;
+  if (el.fileUploadEmpty) el.fileUploadEmpty.hidden = false;
+  if (el.fileUploadZone) el.fileUploadZone.classList.remove('has-file', 'is-dragover');
+  if (el.fileUploadName) el.fileUploadName.textContent = 'Ready';
+  if (el.fileBadge) el.fileBadge.textContent = 'FILE';
+}
+
+function showStagedFile(entry) {
+  stagedFile = entry;
+  existingFilePath = null;
+  if (el.fileUploadEmpty) el.fileUploadEmpty.hidden = true;
+  if (el.fileUploadPreview) el.fileUploadPreview.hidden = false;
+  if (el.fileUploadZone) el.fileUploadZone.classList.add('has-file');
+  if (el.fileUploadName) el.fileUploadName.textContent = entry.name || entry.path.split('/').pop();
+  if (el.fileBadge) {
+    const ext = entry.path.split('.').pop() || 'FILE';
+    el.fileBadge.textContent = ext.slice(0, 4).toUpperCase();
+  }
+  if (el.existingFileNote) {
+    el.existingFileNote.hidden = true;
+    el.existingFileNote.textContent = '';
+  }
+}
+
+function arrayBufferToBase64(buffer) {
+  const bytes = new Uint8Array(buffer);
+  let binary = '';
+  const chunk = 0x8000;
+  for (let i = 0; i < bytes.length; i += chunk) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + chunk));
+  }
+  return btoa(binary);
+}
+
+async function prepareResourceFile(file) {
+  if (!file) throw new Error('Please choose a file.');
+  const ext = String(file.name.split('.').pop() || '').toLowerCase();
+  if (!ALLOWED_FILE_EXT.has(ext)) {
+    throw new Error('Supported files: PDF, Word, Excel, PowerPoint, ZIP, video, TXT, CSV.');
+  }
+  if (file.size > MAX_FILE_BYTES) {
+    throw new Error('File is too large. Please use a file under 20 MB.');
+  }
+  const buffer = await file.arrayBuffer();
+  const base64 = arrayBufferToBase64(buffer);
+  const stamp = Date.now().toString(36);
+  const base = slugify(file.name.replace(/\.[^.]+$/, '')) || 'file';
+  const path = `assets/files/${base}-${stamp}.${ext}`;
+  return {
+    path,
+    base64,
+    mime: file.type || 'application/octet-stream',
+    name: file.name,
+  };
+}
+
+function resourceType() {
+  return el.typeFile?.checked ? 'file' : 'link';
+}
+
+function syncResourceTypeUi() {
+  const isFile = resourceType() === 'file';
+  if (el.hrefField) el.hrefField.hidden = isFile;
+  if (el.fileField) el.fileField.hidden = !isFile;
+  if (el.linkHref) {
+    el.linkHref.required = !isFile;
+    if (isFile) el.linkHref.removeAttribute('required');
+  }
+}
+
+function isEditing() {
+  return el.editPageId?.value !== '' && el.editLinkIndex?.value !== '';
+}
+
+function setComposerMode(mode) {
+  const editing = mode === 'edit';
+  const composer = document.querySelector('.composer');
+  if (composer) composer.classList.toggle('is-editing', editing);
+  if (el.composerEyebrow) el.composerEyebrow.textContent = editing ? 'Editing' : 'Quick add';
+  if (el.composerHeading) el.composerHeading.textContent = editing ? 'Edit resource' : 'New resource';
+  if (el.composerHelp) {
+    el.composerHelp.textContent = editing
+      ? 'Update the title, destination, or tile picture, then save.'
+      : 'Give every resource a title for the tile. Choose a web link or upload a file — clicking the tile opens it.';
+  }
+  if (el.resourceSubmitBtn) {
+    el.resourceSubmitBtn.textContent = editing ? 'Save changes' : 'Add resource';
+  }
+  if (el.cancelEditBtn) el.cancelEditBtn.hidden = !editing;
+}
+
+function resetComposerForm({ keepPage = true } = {}) {
+  const pageId = keepPage ? el.linkPage.value || selectedPageId : selectedPageId;
+  el.editPageId.value = '';
+  el.editUnitIndex.value = '';
+  el.editLinkIndex.value = '';
+  existingFilePath = null;
+  el.linkLabel.value = '';
+  el.linkHref.value = '';
+  el.linkImg.value = '';
+  if (el.typeLink) el.typeLink.checked = true;
+  clearStagedUpload();
+  clearStagedFile();
+  if (el.existingFileNote) {
+    el.existingFileNote.hidden = true;
+    el.existingFileNote.textContent = '';
+  }
+  syncResourceTypeUi();
+  setComposerMode('add');
+  if (pageId) {
+    el.linkPage.value = pageId;
+    fillUnitSelector(pageId);
+  }
+}
+
+function startEditLink(pageId, unitIndex, linkIndex) {
+  const page = site.pages.find((p) => p.id === pageId);
+  if (!page) return;
+  const units = ensureUnits(page);
+  const link = units[unitIndex]?.links?.[linkIndex];
+  if (!link) return;
+
+  selectedPageId = pageId;
+  renderPageList();
+  el.linkPage.value = pageId;
+  fillUnitSelector(pageId);
+  el.linkUnit.value = String(unitIndex);
+
+  el.editPageId.value = pageId;
+  el.editUnitIndex.value = String(unitIndex);
+  el.editLinkIndex.value = String(linkIndex);
+
+  el.linkLabel.value = link.label || '';
+  el.linkImg.value = link.img && !String(link.img).startsWith('assets/') ? link.img : '';
+  clearStagedUpload();
+  clearStagedFile();
+
+  const isFile = String(link.href || '').startsWith('assets/files/');
+  if (isFile) {
+    el.typeFile.checked = true;
+    existingFilePath = link.href;
+    if (el.existingFileNote) {
+      el.existingFileNote.hidden = false;
+      el.existingFileNote.textContent = `Current file: ${link.href.split('/').pop()} — upload a new file only if you want to replace it.`;
+    }
+    el.linkHref.value = '';
+  } else {
+    el.typeLink.checked = true;
+    existingFilePath = null;
+    el.linkHref.value = link.href || '';
+    if (el.existingFileNote) {
+      el.existingFileNote.hidden = true;
+      el.existingFileNote.textContent = '';
+    }
+  }
+
+  if (link.img && String(link.img).startsWith('assets/')) {
+    // Keep existing local image unless a new one is uploaded / URL pasted.
+    el.linkImg.dataset.keepLocal = link.img;
+  } else if (el.linkImg) {
+    delete el.linkImg.dataset.keepLocal;
+  }
+
+  syncResourceTypeUi();
+  setComposerMode('edit');
+  document.querySelector('.composer')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 function resolveImgSrc(img) {
   if (!img) return '';
   if (/^(data:|https?:|blob:)/i.test(img)) return img;
@@ -320,7 +533,7 @@ function renderPageList() {
           p.id === selectedPageId ? 'active' : ''
         }">
           <span class="page-name">${escapeHtml(p.navLabel || p.id)}</span>
-          <span class="page-count">${count} link${count === 1 ? '' : 's'}</span>
+          <span class="page-count">${count} resource${count === 1 ? '' : 's'}</span>
         </button>
       </li>`;
     })
@@ -358,6 +571,10 @@ function thumbFor(link) {
   if (link.img) {
     return `<img class="link-thumb" src="${escapeHtml(resolveImgSrc(link.img))}" alt="" loading="lazy" />`;
   }
+  if (String(link.href || '').startsWith('assets/files/')) {
+    const ext = (link.href.split('.').pop() || 'FILE').slice(0, 4).toUpperCase();
+    return `<span class="link-thumb placeholder" aria-hidden="true">${escapeHtml(ext)}</span>`;
+  }
   const initial = String(link.label || 'L').trim().charAt(0).toUpperCase() || 'L';
   return `<span class="link-thumb placeholder" aria-hidden="true">${escapeHtml(initial)}</span>`;
 }
@@ -380,7 +597,7 @@ function renderUnits() {
   const units = ensureUnits(page);
   const linkCount = pageLinkCount(page);
   if (el.pageMeta) {
-    el.pageMeta.textContent = `${units.length} unit${units.length === 1 ? '' : 's'} · ${linkCount} link${
+    el.pageMeta.textContent = `${units.length} unit${units.length === 1 ? '' : 's'} · ${linkCount} resource${
       linkCount === 1 ? '' : 's'
     }`;
   }
@@ -408,21 +625,28 @@ function renderUnits() {
           ${
             links.length
               ? `<div class="link-list">${links
-                  .map(
-                    (link, linkIndex) => `
+                  .map((link, linkIndex) => {
+                    const isFile = String(link.href || '').startsWith('assets/files/');
+                    const hrefLabel = isFile
+                      ? `File · ${link.href.split('/').pop()}`
+                      : link.href;
+                    return `
                 <div class="link-row">
                   ${thumbFor(link)}
                   <div>
                     <strong>${escapeHtml(link.label || 'Untitled')}</strong>
-                    <a href="${escapeHtml(link.href)}" target="_blank" rel="noopener">${escapeHtml(
-                      link.href
+                    <a href="${escapeHtml(isFile ? `../${link.href}` : link.href)}" target="_blank" rel="noopener">${escapeHtml(
+                      hrefLabel
                     )}</a>
                   </div>
-                  <button type="button" class="danger" data-delete-link="${unitIndex}:${linkIndex}">Delete</button>
-                </div>`
-                  )
+                  <div class="link-row-actions">
+                    <button type="button" class="btn-edit" data-edit-link="${unitIndex}:${linkIndex}">Edit</button>
+                    <button type="button" class="danger" data-delete-link="${unitIndex}:${linkIndex}">Delete</button>
+                  </div>
+                </div>`;
+                  })
                   .join('')}</div>`
-              : `<p class="empty-state">No links in this unit yet. Use <strong>New link</strong> below to add one.</p>`
+              : `<p class="empty-state">No resources in this unit yet. Use <strong>New resource</strong> below to add one.</p>`
           }
         </article>`;
     })
@@ -443,6 +667,8 @@ function showApp() {
   el.appView.style.display = '';
   const token = sessionStorage.getItem(TOKEN_KEY);
   if (token) el.ghToken.value = token;
+  syncResourceTypeUi();
+  setComposerMode('add');
   renderAll();
 }
 
@@ -482,10 +708,27 @@ async function handleImageFile(file) {
   try {
     const entry = await prepareImageUpload(file);
     showStagedUpload(entry);
+    if (el.linkImg) delete el.linkImg.dataset.keepLocal;
   } catch (err) {
     clearStagedUpload();
     alert(err.message || String(err));
   }
+}
+
+async function handleResourceFile(file) {
+  if (!file) return;
+  try {
+    const entry = await prepareResourceFile(file);
+    showStagedFile(entry);
+  } catch (err) {
+    clearStagedFile();
+    alert(err.message || String(err));
+  }
+}
+
+if (el.typeLink && el.typeFile) {
+  el.typeLink.addEventListener('change', syncResourceTypeUi);
+  el.typeFile.addEventListener('change', syncResourceTypeUi);
 }
 
 if (el.linkImgFile) {
@@ -494,36 +737,62 @@ if (el.linkImgFile) {
   });
 }
 
+if (el.linkFile) {
+  el.linkFile.addEventListener('change', () => {
+    handleResourceFile(el.linkFile.files?.[0]);
+  });
+}
+
 if (el.clearImgBtn) {
   el.clearImgBtn.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
     clearStagedUpload();
+    if (el.linkImg) delete el.linkImg.dataset.keepLocal;
   });
 }
 
-if (el.uploadZone) {
+if (el.clearFileBtn) {
+  el.clearFileBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    clearStagedFile();
+  });
+}
+
+if (el.cancelEditBtn) {
+  el.cancelEditBtn.addEventListener('click', () => resetComposerForm());
+}
+
+function bindDropZone(zone, onFile) {
+  if (!zone) return;
   ['dragenter', 'dragover'].forEach((type) => {
-    el.uploadZone.addEventListener(type, (e) => {
+    zone.addEventListener(type, (e) => {
       e.preventDefault();
-      el.uploadZone.classList.add('is-dragover');
+      zone.classList.add('is-dragover');
     });
   });
   ['dragleave', 'drop'].forEach((type) => {
-    el.uploadZone.addEventListener(type, (e) => {
+    zone.addEventListener(type, (e) => {
       e.preventDefault();
-      el.uploadZone.classList.remove('is-dragover');
+      zone.classList.remove('is-dragover');
     });
   });
-  el.uploadZone.addEventListener('drop', (e) => {
+  zone.addEventListener('drop', (e) => {
     const file = e.dataTransfer?.files?.[0];
-    if (file) handleImageFile(file);
+    if (file) onFile(file);
   });
 }
 
+bindDropZone(el.uploadZone, handleImageFile);
+bindDropZone(el.fileUploadZone, handleResourceFile);
+
 if (el.linkImg) {
   el.linkImg.addEventListener('input', () => {
-    if (el.linkImg.value.trim()) clearStagedUpload();
+    if (el.linkImg.value.trim()) {
+      clearStagedUpload();
+      delete el.linkImg.dataset.keepLocal;
+    }
   });
 }
 
@@ -537,25 +806,76 @@ el.addLinkForm.addEventListener('submit', async (e) => {
   if (!unit) return;
   if (!Array.isArray(unit.links)) unit.links = [];
 
+  const title = el.linkLabel.value.trim();
+  if (!title) {
+    alert('Please enter a title for the tile.');
+    return;
+  }
+
+  let href = '';
+  const type = resourceType();
+  if (type === 'file') {
+    if (stagedFile) {
+      await persistPendingUpload(stagedFile);
+      href = stagedFile.path;
+    } else if (existingFilePath) {
+      href = existingFilePath;
+    } else {
+      alert('Please upload a file for this resource.');
+      return;
+    }
+  } else {
+    href = el.linkHref.value.trim();
+    if (!href) {
+      alert('Please enter a URL for this resource.');
+      return;
+    }
+  }
+
   let img = el.linkImg.value.trim() || null;
   if (stagedUpload) {
     await persistPendingUpload(stagedUpload);
     img = stagedUpload.path;
+  } else if (!img && el.linkImg.dataset.keepLocal) {
+    img = el.linkImg.dataset.keepLocal;
   }
 
-  unit.links.push({
-    href: el.linkHref.value.trim(),
-    label: el.linkLabel.value.trim(),
+  const payload = {
+    href,
+    label: title,
     img,
-    internal: /ahliyyahmutranpyp\.weebly\.com/i.test(el.linkHref.value),
-  });
-  syncPageLinks(page);
+    internal: /ahliyyahmutranpyp\.weebly\.com/i.test(href),
+  };
+
+  if (isEditing()) {
+    const editPage = site.pages.find((p) => p.id === el.editPageId.value) || page;
+    const editUnits = ensureUnits(editPage);
+    const eu = Number(el.editUnitIndex.value);
+    const elIdx = Number(el.editLinkIndex.value);
+    const previous = editUnits[eu]?.links?.[elIdx];
+    if (!previous) {
+      alert('Could not find that resource to edit.');
+      return;
+    }
+
+    // If page/unit changed while editing, move the link.
+    if (editPage.id !== page.id || eu !== unitIndex) {
+      editUnits[eu].links.splice(elIdx, 1);
+      syncPageLinks(editPage);
+      unit.links.push({ ...previous, ...payload });
+    } else {
+      editUnits[eu].links[elIdx] = { ...previous, ...payload };
+    }
+    syncPageLinks(page);
+    if (editPage.id !== page.id) syncPageLinks(editPage);
+  } else {
+    unit.links.push(payload);
+    syncPageLinks(page);
+  }
+
   selectedPageId = page.id;
   markDirty();
-  el.linkLabel.value = '';
-  el.linkHref.value = '';
-  el.linkImg.value = '';
-  clearStagedUpload();
+  resetComposerForm();
   renderAll();
 });
 
@@ -590,16 +910,26 @@ el.unitForm.addEventListener('submit', (e) => {
 });
 
 el.unitsHost.addEventListener('click', (e) => {
+  const editLink = e.target.closest('[data-edit-link]');
   const delLink = e.target.closest('[data-delete-link]');
   const delUnit = e.target.closest('[data-delete-unit]');
   const page = selectedPage();
   if (!page) return;
+
+  if (editLink) {
+    const [u, l] = editLink.dataset.editLink.split(':').map(Number);
+    startEditLink(page.id, u, l);
+    return;
+  }
 
   if (delLink) {
     const [u, l] = delLink.dataset.deleteLink.split(':').map(Number);
     page.units[u]?.links?.splice(l, 1);
     syncPageLinks(page);
     markDirty();
+    if (isEditing() && Number(el.editUnitIndex.value) === u && Number(el.editLinkIndex.value) === l) {
+      resetComposerForm();
+    }
     renderAll();
     return;
   }
@@ -611,6 +941,7 @@ el.unitsHost.addEventListener('click', (e) => {
     if (!page.units.length) ensureUnits(page);
     syncPageLinks(page);
     markDirty();
+    resetComposerForm();
     renderAll();
   }
 });
@@ -698,12 +1029,12 @@ async function publishPendingImages(token) {
   const entries = [...pendingUploads.values()];
   for (let i = 0; i < entries.length; i += 1) {
     const entry = entries[i];
-    el.publishMsg.textContent = `Uploading image ${i + 1} of ${entries.length}…`;
+    el.publishMsg.textContent = `Uploading file ${i + 1} of ${entries.length}…`;
     await githubPutFile(
       token,
       entry.path,
       entry.base64,
-      `Add image ${entry.path.split('/').pop()} from admin`
+      `Add ${entry.path.startsWith('assets/files/') ? 'file' : 'image'} ${entry.path.split('/').pop()} from admin`
     );
     await removePendingUpload(entry.path);
   }

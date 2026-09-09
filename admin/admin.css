@@ -865,6 +865,105 @@ textarea:focus {
   margin-top: 0.15rem;
 }
 
+.type-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.type-option {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.type-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.type-option span {
+  display: grid;
+  place-items: center;
+  min-height: 2.7rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--muted);
+  transition:
+    background 160ms var(--ease),
+    color 160ms var(--ease),
+    border-color 160ms var(--ease),
+    box-shadow 160ms var(--ease);
+}
+
+.type-option input:checked + span {
+  background: linear-gradient(180deg, var(--teal-mid), var(--teal-deep));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 18px rgba(15, 47, 39, 0.18);
+}
+
+.type-option input:focus-visible + span {
+  box-shadow: 0 0 0 4px rgba(31, 92, 77, 0.16);
+}
+
+.file-preview {
+  grid-template-columns: 72px 1fr;
+}
+
+.file-badge {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  background: rgba(31, 92, 77, 0.1);
+  color: var(--teal-deep);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.link-row-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: stretch;
+}
+
+.link-row .btn-edit {
+  background: rgba(31, 92, 77, 0.08);
+  color: var(--teal-deep);
+  border: 1px solid rgba(31, 92, 77, 0.18);
+  padding: 0.38rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: none;
+}
+
+.link-row .btn-edit:hover {
+  background: rgba(31, 92, 77, 0.14);
+}
+
+.composer.is-editing {
+  box-shadow: 0 0 0 2px rgba(184, 137, 45, 0.35), 0 10px 30px rgba(15, 47, 39, 0.05);
+}
+
+@media (max-width: 640px) {
+  .link-row-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 dialog {
   border: 0;
   padding: 0;

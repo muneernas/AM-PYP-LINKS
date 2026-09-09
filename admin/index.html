@@ -83,11 +83,17 @@
           <div class="tools">
             <section class="composer">
               <div class="section-head">
-                <p class="eyebrow">Quick add</p>
-                <h2>New link</h2>
-                <p class="help">Drop a resource onto any page unit without leaving this screen.</p>
+                <p class="eyebrow" id="composerEyebrow">Quick add</p>
+                <h2 id="composerHeading">New resource</h2>
+                <p class="help" id="composerHelp">
+                  Give every resource a title for the tile. Choose a web link or upload a file — clicking the tile opens it.
+                </p>
               </div>
               <form id="addLinkForm" class="form-grid">
+                <input type="hidden" id="editPageId" value="" />
+                <input type="hidden" id="editUnitIndex" value="" />
+                <input type="hidden" id="editLinkIndex" value="" />
+
                 <label class="field">
                   <span>Page</span>
                   <select id="linkPage" required></select>
@@ -96,16 +102,57 @@
                   <span>Unit</span>
                   <select id="linkUnit" required></select>
                 </label>
+
                 <label class="field span-2">
-                  <span>Label</span>
+                  <span>Title <em>(shown on the tile)</em></span>
                   <input id="linkLabel" type="text" required placeholder="e.g. Grade 2A Padlet" />
                 </label>
-                <label class="field span-2">
-                  <span>URL</span>
-                  <input id="linkHref" type="url" required placeholder="https://…" />
-                </label>
+
                 <div class="field span-2">
-                  <span>Image <em>(optional)</em></span>
+                  <span>Resource type</span>
+                  <div class="type-toggle" role="group" aria-label="Resource type">
+                    <label class="type-option">
+                      <input type="radio" name="resourceType" id="typeLink" value="link" checked />
+                      <span>Web link</span>
+                    </label>
+                    <label class="type-option">
+                      <input type="radio" name="resourceType" id="typeFile" value="file" />
+                      <span>Upload file</span>
+                    </label>
+                  </div>
+                </div>
+
+                <label class="field span-2" id="hrefField">
+                  <span>URL</span>
+                  <input id="linkHref" type="url" placeholder="https://…" />
+                </label>
+
+                <div class="field span-2" id="fileField" hidden>
+                  <span>File</span>
+                  <div class="upload-zone" id="fileUploadZone">
+                    <input
+                      id="linkFile"
+                      class="upload-input"
+                      type="file"
+                      accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.zip,.mp4,.mov,.txt,.csv,.odt,.ods,.odp,application/pdf"
+                    />
+                    <div id="fileUploadEmpty" class="upload-empty">
+                      <strong>Upload a file</strong>
+                      <span>PDF, Office, ZIP, video · up to 20&nbsp;MB</span>
+                    </div>
+                    <div id="fileUploadPreview" class="upload-preview file-preview" hidden>
+                      <span class="file-badge" id="fileBadge">FILE</span>
+                      <div class="upload-preview-meta">
+                        <strong id="fileUploadName">Ready</strong>
+                        <button type="button" id="clearFileBtn" class="btn btn-quiet">Remove</button>
+                      </div>
+                    </div>
+                  </div>
+                  <p id="existingFileNote" class="help" hidden></p>
+                </div>
+
+                <div class="field span-2">
+                  <span>Tile picture <em>(optional)</em></span>
                   <div class="upload-zone" id="uploadZone">
                     <input
                       id="linkImgFile"
@@ -130,8 +177,10 @@
                     <input id="linkImg" type="url" placeholder="https://…" />
                   </details>
                 </div>
+
                 <div class="span-2 actions">
-                  <button type="submit" class="btn btn-primary">Add link</button>
+                  <button type="submit" id="resourceSubmitBtn" class="btn btn-primary">Add resource</button>
+                  <button type="button" id="cancelEditBtn" class="btn btn-ghost" hidden>Cancel edit</button>
                 </div>
               </form>
             </section>
@@ -142,8 +191,8 @@
                 <h2>Publish settings</h2>
                 <p class="help">
                   Paste a GitHub token with <strong>Contents: Read and write</strong> on
-                  <code>muneernas/AM-PYP-LINKS</code>. Uploaded images and content changes go live
-                  together on Publish. Kept in this browser session only.
+                  <code>muneernas/AM-PYP-LINKS</code>. Uploaded pictures, files, and content
+                  changes go live together on Publish. Kept in this browser session only.
                 </p>
               </div>
               <label class="field">
