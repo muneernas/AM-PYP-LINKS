@@ -678,7 +678,7 @@ function renderUnits() {
                   ${thumbFor(link)}
                   <div>
                     <strong>${escapeHtml(link.label || 'Untitled')}</strong>
-                    <a href="${escapeHtml(isFile ? `../${link.href}` : link.href)}" target="_blank" rel="noopener">${escapeHtml(
+                    <a href="${escapeHtml(isFile ? `/${link.href}` : link.href)}" target="_blank" rel="noopener">${escapeHtml(
                       hrefLabel
                     )}</a>
                   </div>
@@ -1109,7 +1109,7 @@ async function publishToVercel() {
       el.publishMsg.textContent = `Uploading ${files.length} file${files.length === 1 ? '' : 's'}…`;
     }
 
-    const res = await fetch('../api/publish', {
+    const res = await fetch('/api/publish', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ password, site, files }),
