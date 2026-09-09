@@ -2,12 +2,17 @@ const { put } = require('@vercel/blob');
 const { createHash } = require('crypto');
 
 const SITE_PATH = 'am-pyp/site.json';
+const BLOB_ACCESS = 'private';
 // Same hash as admin login for password PYP@2026 (override with ADMIN_PASSWORD_HASH on Vercel).
 const DEFAULT_PASS_HASH =
   '9e6d2d7ec5959d8e52b57cc4206bd82b6ee14f290f621f1654b9c86009b2078a';
 
 function sha256(text) {
   return createHash('sha256').update(String(text), 'utf8').digest('hex');
+}
+
+function assetUrl(pathname) {
+  return `/api/asset?path=${encodeURIComponent(pathname)}`;
 }
 
 function readBody(req) {
@@ -98,21 +103,22 @@ module.exports = async function handler(req, res) {
       if (buffer.length > 4 * 1024 * 1024) {
         throw new Error(`File too large for Publish: ${safePath}. Keep each file under 4 MB.`);
       }
-      const blob = await put(`am-pyp/${safePath}`, buffer, {
-        access: 'public',
+      const pathname = `am-pyp/${safePath}`;
+      await put(pathname, buffer, {
+        access: BLOB_ACCESS,
         addRandomSuffix: false,
         allowOverwrite: true,
         contentType: file.mime || 'application/octet-stream',
         token: process.env.BLOB_READ_WRITE_TOKEN,
       });
-      rewritePath(site, safePath, blob.url);
+      rewritePath(site, safePath, assetUrl(pathname));
     }
 
     site.generatedAt = new Date().toISOString();
     site.hostedOn = 'vercel';
 
     await put(SITE_PATH, JSON.stringify(site, null, 2), {
-      access: 'public',
+      access: BLOB_ACCESS,
       addRandomSuffix: false,
       allowOverwrite: true,
       contentType: 'application/json',

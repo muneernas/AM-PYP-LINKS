@@ -1,11 +1,8 @@
 const { get } = require('@vercel/blob');
 const { Readable } = require('node:stream');
 
-const SITE_PATH = 'am-pyp/site.json';
-
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Cache-Control', 'no-store');
 
   if (req.method === 'OPTIONS') {
     res.status(204).end();
@@ -21,29 +18,31 @@ module.exports = async function handler(req, res) {
     return;
   }
 
+  const rawPath = String(req.query.path || '');
+  const pathname = decodeURIComponent(rawPath).replace(/^\/+/, '');
+  if (!pathname.startsWith('am-pyp/assets/')) {
+    res.status(400).json({ error: 'Invalid asset path' });
+    return;
+  }
+
   try {
-    const result = await get(SITE_PATH, {
+    const result = await get(pathname, {
       access: 'private',
       token: process.env.BLOB_READ_WRITE_TOKEN,
-      useCache: false,
     });
 
     if (!result?.stream) {
-      res.status(404).json({ error: 'No published site yet' });
+      res.status(404).json({ error: 'Asset not found' });
       return;
     }
 
-    const chunks = [];
-    const nodeStream = Readable.fromWeb(result.stream);
-    for await (const chunk of nodeStream) {
-      chunks.push(Buffer.from(chunk));
-    }
-    const site = JSON.parse(Buffer.concat(chunks).toString('utf8'));
-    res.status(200).json(site);
+    res.setHeader('Content-Type', result.blob?.contentType || result.contentType || 'application/octet-stream');
+    res.setHeader('Cache-Control', 'public, max-age=3600');
+    Readable.fromWeb(result.stream).pipe(res);
   } catch (err) {
-    const message = err.message || 'Failed to load site';
+    const message = err.message || 'Failed to load asset';
     if (/not found|404|does not exist/i.test(message)) {
-      res.status(404).json({ error: 'No published site yet' });
+      res.status(404).json({ error: 'Asset not found' });
       return;
     }
     res.status(500).json({ error: message });
