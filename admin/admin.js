@@ -83,6 +83,7 @@ const el = {
   unitEn: document.getElementById('unitEn'),
   unitIdea: document.getElementById('unitIdea'),
   unitCancel: document.getElementById('unitCancel'),
+  unitError: document.getElementById('unitError'),
 };
 
 let site = null;
@@ -461,12 +462,38 @@ function setStatus(msg, state) {
 
 function markDirty() {
   dirty = true;
-  setStatus('Unsaved changes', 'dirty');
+  try {
+    if (site) {
+      site.generatedAt = new Date().toISOString();
+      localStorage.setItem(DRAFT_KEY, JSON.stringify(site));
+    }
+    setStatus('Draft saved — Publish to update the live site', 'dirty');
+  } catch {
+    setStatus('Changed, but draft could not be saved in this browser', 'dirty');
+  }
 }
 
 function clearDirty(msg) {
   dirty = false;
   setStatus(msg || 'Saved', 'ok');
+}
+
+function normalizeHref(raw) {
+  let href = String(raw || '').trim();
+  if (!href) return '';
+  if (
+    href.startsWith('#/') ||
+    href.startsWith('assets/') ||
+    href.startsWith('/') ||
+    href.startsWith('data:') ||
+    href.startsWith('blob:')
+  ) {
+    return href;
+  }
+  if (!/^[a-z][a-z0-9+.-]*:/i.test(href)) {
+    href = `https://${href}`;
+  }
+  return href;
 }
 
 function ensureUnits(page) {
@@ -497,6 +524,8 @@ async function loadSite() {
   if (draft) {
     try {
       site = JSON.parse(draft);
+      if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
+      if (!Array.isArray(site.pages)) site.pages = [];
       clearDirty('Loaded local draft');
       return;
     } catch {
@@ -506,6 +535,8 @@ async function loadSite() {
   const res = await fetch('../data/site.json', { cache: 'no-store' });
   if (!res.ok) throw new Error('Could not load site.json');
   site = await res.json();
+  if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
+  if (!Array.isArray(site.pages)) site.pages = [];
   clearDirty('Loaded live site data');
 }
 
@@ -798,16 +829,28 @@ if (el.linkImg) {
 
 el.addLinkForm.addEventListener('submit', async (e) => {
   e.preventDefault();
+  if (!site) {
+    alert('Site data is still loading. Try again in a moment.');
+    return;
+  }
+
   const page = site.pages.find((p) => p.id === el.linkPage.value);
-  if (!page) return;
+  if (!page) {
+    alert('Please choose a page.');
+    return;
+  }
   const units = ensureUnits(page);
   const unitIndex = Number(el.linkUnit.value);
   const unit = units[unitIndex];
-  if (!unit) return;
+  if (!unit) {
+    alert('Please choose a unit. You can add one with “+ Add unit”.');
+    return;
+  }
   if (!Array.isArray(unit.links)) unit.links = [];
 
   const title = el.linkLabel.value.trim();
   if (!title) {
+    el.linkLabel.focus();
     alert('Please enter a title for the tile.');
     return;
   }
@@ -816,7 +859,12 @@ el.addLinkForm.addEventListener('submit', async (e) => {
   const type = resourceType();
   if (type === 'file') {
     if (stagedFile) {
-      await persistPendingUpload(stagedFile);
+      try {
+        await persistPendingUpload(stagedFile);
+      } catch (err) {
+        alert(err.message || 'Could not store the uploaded file in this browser.');
+        return;
+      }
       href = stagedFile.path;
     } else if (existingFilePath) {
       href = existingFilePath;
@@ -825,18 +873,28 @@ el.addLinkForm.addEventListener('submit', async (e) => {
       return;
     }
   } else {
-    href = el.linkHref.value.trim();
+    href = normalizeHref(el.linkHref.value);
     if (!href) {
+      el.linkHref.focus();
       alert('Please enter a URL for this resource.');
       return;
     }
+    el.linkHref.value = href;
   }
 
   let img = el.linkImg.value.trim() || null;
+  if (img && !/^assets\//i.test(img) && !/^(data:|https?:|blob:)/i.test(img)) {
+    img = normalizeHref(img);
+  }
   if (stagedUpload) {
-    await persistPendingUpload(stagedUpload);
+    try {
+      await persistPendingUpload(stagedUpload);
+    } catch (err) {
+      alert(err.message || 'Could not store the uploaded picture in this browser.');
+      return;
+    }
     img = stagedUpload.path;
-  } else if (!img && el.linkImg.dataset.keepLocal) {
+  } else if (!img && el.linkImg?.dataset?.keepLocal) {
     img = el.linkImg.dataset.keepLocal;
   }
 
@@ -847,54 +905,77 @@ el.addLinkForm.addEventListener('submit', async (e) => {
     internal: /ahliyyahmutranpyp\.weebly\.com/i.test(href),
   };
 
-  if (isEditing()) {
-    const editPage = site.pages.find((p) => p.id === el.editPageId.value) || page;
-    const editUnits = ensureUnits(editPage);
-    const eu = Number(el.editUnitIndex.value);
-    const elIdx = Number(el.editLinkIndex.value);
-    const previous = editUnits[eu]?.links?.[elIdx];
-    if (!previous) {
-      alert('Could not find that resource to edit.');
-      return;
-    }
+  try {
+    if (isEditing()) {
+      const editPage = site.pages.find((p) => p.id === el.editPageId.value) || page;
+      const editUnits = ensureUnits(editPage);
+      const eu = Number(el.editUnitIndex.value);
+      const elIdx = Number(el.editLinkIndex.value);
+      const previous = editUnits[eu]?.links?.[elIdx];
+      if (!previous) {
+        alert('Could not find that resource to edit.');
+        return;
+      }
 
-    // If page/unit changed while editing, move the link.
-    if (editPage.id !== page.id || eu !== unitIndex) {
-      editUnits[eu].links.splice(elIdx, 1);
-      syncPageLinks(editPage);
-      unit.links.push({ ...previous, ...payload });
+      if (editPage.id !== page.id || eu !== unitIndex) {
+        editUnits[eu].links.splice(elIdx, 1);
+        syncPageLinks(editPage);
+        unit.links.push({ ...previous, ...payload });
+      } else {
+        editUnits[eu].links[elIdx] = { ...previous, ...payload };
+      }
+      syncPageLinks(page);
+      if (editPage.id !== page.id) syncPageLinks(editPage);
     } else {
-      editUnits[eu].links[elIdx] = { ...previous, ...payload };
+      unit.links.push(payload);
+      syncPageLinks(page);
     }
-    syncPageLinks(page);
-    if (editPage.id !== page.id) syncPageLinks(editPage);
-  } else {
-    unit.links.push(payload);
-    syncPageLinks(page);
-  }
 
-  selectedPageId = page.id;
-  markDirty();
-  resetComposerForm();
-  renderAll();
+    selectedPageId = page.id;
+    markDirty();
+    resetComposerForm();
+    renderAll();
+  } catch (err) {
+    console.error(err);
+    alert(err.message || 'Could not save that resource.');
+  }
 });
 
 el.addUnitBtn.addEventListener('click', () => {
+  if (!selectedPage()) {
+    alert('Select a page first, then add a unit.');
+    return;
+  }
   el.unitAr.value = '';
   el.unitEn.value = '';
   el.unitIdea.value = '';
+  if (el.unitError) el.unitError.hidden = true;
   el.unitDialog.showModal();
+  el.unitEn.focus();
 });
 
-el.unitCancel.addEventListener('click', () => el.unitDialog.close());
+el.unitCancel.addEventListener('click', (e) => {
+  e.preventDefault();
+  el.unitDialog.close();
+});
 
 el.unitForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const page = selectedPage();
-  if (!page) return;
+  if (!page) {
+    alert('Select a page first, then add a unit.');
+    return;
+  }
   const titleEn = el.unitEn.value.trim();
   const titleAr = el.unitAr.value.trim();
   const centralIdea = el.unitIdea.value.trim();
+  if (!titleEn && !titleAr) {
+    if (el.unitError) el.unitError.hidden = false;
+    el.unitEn.focus();
+    return;
+  }
+  if (el.unitError) el.unitError.hidden = true;
+
   ensureUnits(page).push({
     id: slugify(titleEn || titleAr),
     titleAr,
@@ -907,6 +988,9 @@ el.unitForm.addEventListener('submit', (e) => {
   markDirty();
   el.unitDialog.close();
   renderAll();
+  el.linkPage.value = page.id;
+  fillUnitSelector(page.id);
+  el.linkUnit.value = String(ensureUnits(page).length - 1);
 });
 
 el.unitsHost.addEventListener('click', (e) => {

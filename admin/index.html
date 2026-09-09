@@ -89,18 +89,18 @@
                   Give every resource a title for the tile. Choose a web link or upload a file — clicking the tile opens it.
                 </p>
               </div>
-              <form id="addLinkForm" class="form-grid">
+              <form id="addLinkForm" class="form-grid" novalidate>
                 <input type="hidden" id="editPageId" value="" />
                 <input type="hidden" id="editUnitIndex" value="" />
                 <input type="hidden" id="editLinkIndex" value="" />
 
                 <label class="field">
                   <span>Page</span>
-                  <select id="linkPage" required></select>
+                  <select id="linkPage"></select>
                 </label>
                 <label class="field">
                   <span>Unit</span>
-                  <select id="linkUnit" required></select>
+                  <select id="linkUnit"></select>
                 </label>
 
                 <label class="field span-2">
@@ -124,7 +124,7 @@
 
                 <label class="field span-2" id="hrefField">
                   <span>URL</span>
-                  <input id="linkHref" type="url" placeholder="https://…" />
+                  <input id="linkHref" type="text" inputmode="url" autocomplete="url" placeholder="https://padlet.com/…" />
                 </label>
 
                 <div class="field span-2" id="fileField" hidden>
@@ -174,7 +174,7 @@
                   </div>
                   <details class="url-fallback">
                     <summary>Or paste an image URL</summary>
-                    <input id="linkImg" type="url" placeholder="https://…" />
+                    <input id="linkImg" type="text" inputmode="url" placeholder="https://…" />
                   </details>
                 </div>
 
@@ -207,7 +207,7 @@
     </div>
 
     <dialog id="unitDialog">
-      <form method="dialog" id="unitForm" class="dialog-card">
+      <form id="unitForm" class="dialog-card">
         <p class="eyebrow">Unit plan</p>
         <h3>Add unit</h3>
         <label class="field">
@@ -216,15 +216,16 @@
         </label>
         <label class="field">
           <span>English title</span>
-          <input id="unitEn" type="text" required />
+          <input id="unitEn" type="text" />
         </label>
         <label class="field">
           <span>Central Idea</span>
           <textarea id="unitIdea" rows="3"></textarea>
         </label>
+        <p id="unitError" class="error" hidden>Add an Arabic or English title.</p>
         <div class="actions">
-          <button type="submit" class="btn btn-primary" value="ok">Save unit</button>
-          <button type="button" id="unitCancel" class="btn btn-ghost" value="cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save unit</button>
+          <button type="button" id="unitCancel" class="btn btn-ghost">Cancel</button>
         </div>
       </form>
     </dialog>
