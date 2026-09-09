@@ -525,6 +525,7 @@ async function loadSite() {
       if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
       if (!Array.isArray(site.pages)) site.pages = [];
       clearDirty('Loaded local draft');
+      syncNavWithPages();
       return;
     } catch {
       // fall through
@@ -538,6 +539,7 @@ async function loadSite() {
       if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
       if (!Array.isArray(site.pages)) site.pages = [];
       clearDirty('Loaded live Vercel content');
+      syncNavWithPages();
       return;
     }
   } catch {
@@ -550,6 +552,7 @@ async function loadSite() {
   if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
   if (!Array.isArray(site.pages)) site.pages = [];
   clearDirty('Loaded bundled site data');
+  syncNavWithPages();
 }
 
 function saveDraft() {
@@ -559,6 +562,16 @@ function saveDraft() {
 
 function selectedPage() {
   return site.pages.find((p) => p.id === selectedPageId) || null;
+}
+
+function syncNavWithPages() {
+  if (!site) return;
+  if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
+  for (const page of site.pages || []) {
+    if (page?.id && !site.primaryNav.includes(page.id)) {
+      site.primaryNav.push(page.id);
+    }
+  }
 }
 
 function pageLinkCount(page) {
@@ -1067,7 +1080,7 @@ el.addPageBtn.addEventListener('click', () => {
     links: [],
     headings: [],
   });
-  if (!site.primaryNav.includes(id) && /grade|home|pe|robot|franc/i.test(id)) {
+  if (!site.primaryNav.includes(id)) {
     site.primaryNav.push(id);
   }
   selectedPageId = id;

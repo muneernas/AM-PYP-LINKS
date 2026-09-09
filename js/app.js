@@ -130,14 +130,20 @@ function filterLinks(links, pageId) {
 }
 
 function renderNav(activeId) {
-  const main = site.primaryNav.filter((id) => !['franccedilais', 'robotics'].includes(id));
-  const more = ['franccedilais', 'robotics'];
+  const moreFixed = ['franccedilais', 'robotics'];
+  const main = (site.primaryNav || []).filter((id) => !moreFixed.includes(id));
+  const inMainOrMore = new Set([...main, ...moreFixed]);
+  // Pages created in admin (or migrated extras) that never got into primaryNav.
+  const orphans = (site.pages || [])
+    .map((p) => p.id)
+    .filter((id) => id && !inMainOrMore.has(id));
+  const more = [...moreFixed, ...orphans];
 
   const linkHtml = (id) => {
     const page = site.pages.find((p) => p.id === id);
     if (!page) return '';
     const current = id === activeId ? ' aria-current="page"' : '';
-    return `<a href="#/${id}"${current}>${escapeHtml(page.navLabel)}</a>`;
+    return `<a href="#/${id}"${current}>${escapeHtml(page.navLabel || page.id)}</a>`;
   };
 
   const auditCurrent = activeId === 'link-audit' ? ' aria-current="page"' : '';
@@ -145,11 +151,11 @@ function renderNav(activeId) {
   el.nav.innerHTML = `
     ${main.map(linkHtml).join('')}
     <div class="more">
-      <a href="#/${more[0]}" class="more-trigger">More…</a>
+      <a href="#/${more[0] || 'home'}" class="more-trigger">More…</a>
       <div class="more-panel">
-        ${more.map((id) => linkHtml(id)).join('')}
+        ${more.map(linkHtml).join('')}
         <a href="#/link-audit"${auditCurrent}>Link audit</a>
-        <a href="admin/">Admin</a>
+        <a href="/admin/">Admin</a>
       </div>
     </div>
   `;
