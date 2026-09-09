@@ -140,6 +140,26 @@ a {
   position: relative;
 }
 
+.more-trigger {
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0.45rem 0.65rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.more-trigger:hover,
+.more.is-open .more-trigger {
+  color: var(--teal-deep);
+  background: rgba(31, 92, 77, 0.08);
+}
+
 .more-panel {
   display: none;
   position: absolute;
@@ -151,10 +171,12 @@ a {
   border: 1px solid var(--line);
   border-radius: 12px;
   box-shadow: var(--shadow);
+  z-index: 30;
 }
 
 .more:hover .more-panel,
-.more:focus-within .more-panel {
+.more:focus-within .more-panel,
+.more.is-open .more-panel {
   display: grid;
 }
 

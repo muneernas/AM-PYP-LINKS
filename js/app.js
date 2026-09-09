@@ -131,13 +131,19 @@ function filterLinks(links, pageId) {
 
 function renderNav(activeId) {
   const moreFixed = ['franccedilais', 'robotics'];
-  const main = (site.primaryNav || []).filter((id) => !moreFixed.includes(id));
-  const inMainOrMore = new Set([...main, ...moreFixed]);
-  // Pages created in admin (or migrated extras) that never got into primaryNav.
-  const orphans = (site.pages || [])
-    .map((p) => p.id)
-    .filter((id) => id && !inMainOrMore.has(id));
-  const more = [...moreFixed, ...orphans];
+  const main = [];
+  for (const id of site.primaryNav || []) {
+    if (!moreFixed.includes(id) && !main.includes(id) && site.pages.some((p) => p.id === id)) {
+      main.push(id);
+    }
+  }
+  // Any page missing from the menu (e.g. newly published admin pages) goes in the main nav.
+  for (const page of site.pages || []) {
+    if (page?.id && !moreFixed.includes(page.id) && !main.includes(page.id)) {
+      main.push(page.id);
+    }
+  }
+  const more = moreFixed.filter((id) => site.pages.some((p) => p.id === id));
 
   const linkHtml = (id) => {
     const page = site.pages.find((p) => p.id === id);
@@ -151,7 +157,7 @@ function renderNav(activeId) {
   el.nav.innerHTML = `
     ${main.map(linkHtml).join('')}
     <div class="more">
-      <a href="#/${more[0] || 'home'}" class="more-trigger">More…</a>
+      <button type="button" class="more-trigger" aria-expanded="false">More…</button>
       <div class="more-panel">
         ${more.map(linkHtml).join('')}
         <a href="#/link-audit"${auditCurrent}>Link audit</a>
@@ -159,6 +165,23 @@ function renderNav(activeId) {
       </div>
     </div>
   `;
+
+  const moreWrap = el.nav.querySelector('.more');
+  const moreBtn = el.nav.querySelector('.more-trigger');
+  moreBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const open = moreWrap.classList.toggle('is-open');
+    moreBtn.setAttribute('aria-expanded', String(open));
+  });
+}
+
+function syncNavWithPages() {
+  if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
+  for (const page of site.pages || []) {
+    if (page?.id && !site.primaryNav.includes(page.id)) {
+      site.primaryNav.push(page.id);
+    }
+  }
 }
 
 function youtubeId(url) {
@@ -361,9 +384,16 @@ function renderPage(id) {
     return;
   }
 
-  const page = site.pages.find((p) => p.id === id) || site.pages.find((p) => p.id === 'home');
+  let page = site.pages.find((p) => p.id === id);
+  if (!page && (!id || id === 'home')) {
+    page = site.pages.find((p) => p.id === 'home');
+  }
   if (!page) {
-    el.content.innerHTML = `<p class="empty">Page not found.</p>`;
+    document.title = 'Page not found · Ahliyyah & Mutran';
+    el.title.textContent = 'Page not found';
+    el.meta.textContent = `No page named “${id}” in the live site data.`;
+    renderNav(id);
+    el.content.innerHTML = `<p class="empty">This page is not in the live site yet. Open Admin, then click <strong>Publish</strong>.</p>`;
     return;
   }
 
@@ -393,15 +423,20 @@ function route() {
 }
 
 async function boot() {
+  const wantDraft = new URLSearchParams(location.search).get('draft') === '1';
   let loadedFromDraft = false;
-  try {
-    const draft = localStorage.getItem('am-pyp-links-draft');
-    if (draft) {
-      site = JSON.parse(draft);
-      loadedFromDraft = true;
+
+  // Public visitors should see live Vercel content. Local drafts only with ?draft=1.
+  if (wantDraft) {
+    try {
+      const draft = localStorage.getItem('am-pyp-links-draft');
+      if (draft) {
+        site = JSON.parse(draft);
+        loadedFromDraft = true;
+      }
+    } catch {
+      loadedFromDraft = false;
     }
-  } catch {
-    loadedFromDraft = false;
   }
 
   if (!site) {
@@ -418,6 +453,8 @@ async function boot() {
     if (!res.ok) throw new Error('Could not load data/site.json');
     site = await res.json();
   }
+
+  syncNavWithPages();
 
   try {
     const auditRes = await fetch('data/link-audit.json');
