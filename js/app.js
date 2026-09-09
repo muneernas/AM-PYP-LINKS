@@ -399,6 +399,15 @@ async function boot() {
   }
 
   if (!site) {
+    try {
+      const live = await fetch('api/site', { cache: 'no-store' });
+      if (live.ok) site = await live.json();
+    } catch {
+      // fall through
+    }
+  }
+
+  if (!site) {
     const res = await fetch('data/site.json');
     if (!res.ok) throw new Error('Could not load data/site.json');
     site = await res.json();
@@ -413,7 +422,7 @@ async function boot() {
 
   el.stamp.textContent = loadedFromDraft
     ? `local draft ${new Date(site.generatedAt || Date.now()).toLocaleString()}`
-    : `synced ${new Date(site.generatedAt).toLocaleString()}`;
+    : `synced ${new Date(site.generatedAt || Date.now()).toLocaleString()}`;
   el.menuToggle?.addEventListener('click', () => {
     const open = document.body.classList.toggle('nav-open');
     el.menuToggle.setAttribute('aria-expanded', String(open));

@@ -1,13 +1,12 @@
 const PASS_HASH =
   '9e6d2d7ec5959d8e52b57cc4206bd82b6ee14f290f621f1654b9c86009b2078a';
-const REPO = { owner: 'muneernas', name: 'AM-PYP-LINKS', branch: 'master' };
 const DRAFT_KEY = 'am-pyp-links-draft';
 const AUTH_KEY = 'am-pyp-links-admin';
-const TOKEN_KEY = 'am-pyp-links-gh-token';
+const PASS_SESSION_KEY = 'am-pyp-links-admin-pass';
 const PENDING_DB = 'am-pyp-links-uploads';
 const PENDING_STORE = 'files';
 const MAX_IMAGE_BYTES = 4 * 1024 * 1024;
-const MAX_FILE_BYTES = 20 * 1024 * 1024;
+const MAX_FILE_BYTES = 4 * 1024 * 1024;
 const ALLOWED_FILE_EXT = new Set([
   'pdf',
   'doc',
@@ -75,7 +74,6 @@ const el = {
   saveDraftBtn: document.getElementById('saveDraftBtn'),
   publishBtn: document.getElementById('publishBtn'),
   logoutBtn: document.getElementById('logoutBtn'),
-  ghToken: document.getElementById('ghToken'),
   publishMsg: document.getElementById('publishMsg'),
   unitDialog: document.getElementById('unitDialog'),
   unitForm: document.getElementById('unitForm'),
@@ -219,7 +217,7 @@ async function prepareImageUpload(file) {
   let mime = file.type || 'image/jpeg';
   let dataUrl = originalDataUrl;
 
-  // Resize large photos so GitHub Pages stays snappy.
+  // Resize large photos so the live site stays snappy.
   if (!/gif$/i.test(mime)) {
     const img = await loadImage(originalDataUrl);
     const maxEdge = 1400;
@@ -319,7 +317,7 @@ async function prepareResourceFile(file) {
     throw new Error('Supported files: PDF, Word, Excel, PowerPoint, ZIP, video, TXT, CSV.');
   }
   if (file.size > MAX_FILE_BYTES) {
-    throw new Error('File is too large. Please use a file under 20 MB.');
+    throw new Error('File is too large. Please use a file under 4 MB for Vercel publish.');
   }
   const buffer = await file.arrayBuffer();
   const base64 = arrayBufferToBase64(buffer);
@@ -532,12 +530,26 @@ async function loadSite() {
       // fall through
     }
   }
+
+  try {
+    const live = await fetch('../api/site', { cache: 'no-store' });
+    if (live.ok) {
+      site = await live.json();
+      if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
+      if (!Array.isArray(site.pages)) site.pages = [];
+      clearDirty('Loaded live Vercel content');
+      return;
+    }
+  } catch {
+    // fall through to bundled JSON
+  }
+
   const res = await fetch('../data/site.json', { cache: 'no-store' });
   if (!res.ok) throw new Error('Could not load site.json');
   site = await res.json();
   if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
   if (!Array.isArray(site.pages)) site.pages = [];
-  clearDirty('Loaded live site data');
+  clearDirty('Loaded bundled site data');
 }
 
 function saveDraft() {
@@ -696,8 +708,6 @@ function showApp() {
   el.loginView.style.display = 'none';
   el.appView.hidden = false;
   el.appView.style.display = '';
-  const token = sessionStorage.getItem(TOKEN_KEY);
-  if (token) el.ghToken.value = token;
   syncResourceTypeUi();
   setComposerMode('add');
   renderAll();
@@ -712,6 +722,7 @@ el.loginForm.addEventListener('submit', async (e) => {
     return;
   }
   sessionStorage.setItem(AUTH_KEY, '1');
+  sessionStorage.setItem(PASS_SESSION_KEY, el.password.value);
   await loadPendingUploads();
   await loadSite();
   showApp();
@@ -719,7 +730,7 @@ el.loginForm.addEventListener('submit', async (e) => {
 
 el.logoutBtn.addEventListener('click', () => {
   sessionStorage.removeItem(AUTH_KEY);
-  sessionStorage.removeItem(TOKEN_KEY);
+  sessionStorage.removeItem(PASS_SESSION_KEY);
   location.reload();
 });
 
@@ -1069,123 +1080,56 @@ el.saveDraftBtn.addEventListener('click', () => {
   saveDraft();
 });
 
-el.ghToken.addEventListener('change', () => {
-  const token = el.ghToken.value.trim();
-  if (token) sessionStorage.setItem(TOKEN_KEY, token);
-  else sessionStorage.removeItem(TOKEN_KEY);
-});
-
-async function githubPutFile(token, path, base64Content, message) {
-  const url = `https://api.github.com/repos/${REPO.owner}/${REPO.name}/contents/${path}`;
-  const headers = {
-    Accept: 'application/vnd.github+json',
-    Authorization: `Bearer ${token}`,
-    'Content-Type': 'application/json',
-  };
-
-  let sha;
-  const metaRes = await fetch(`${url}?ref=${REPO.branch}`, { headers });
-  if (metaRes.ok) {
-    const meta = await metaRes.json();
-    sha = meta.sha;
-  } else if (metaRes.status !== 404) {
-    throw new Error(`Could not check ${path} (${metaRes.status}).`);
+async function publishToVercel() {
+  let password = sessionStorage.getItem(PASS_SESSION_KEY) || '';
+  if (!password) {
+    password = window.prompt('Enter the admin password to publish') || '';
   }
-
-  const putRes = await fetch(url, {
-    method: 'PUT',
-    headers,
-    body: JSON.stringify({
-      message,
-      content: base64Content,
-      branch: REPO.branch,
-      ...(sha ? { sha } : {}),
-    }),
-  });
-
-  if (!putRes.ok) {
-    const err = await putRes.json().catch(() => ({}));
-    throw new Error(err.message || `Upload failed for ${path} (${putRes.status})`);
-  }
-}
-
-async function publishPendingImages(token) {
-  const entries = [...pendingUploads.values()];
-  for (let i = 0; i < entries.length; i += 1) {
-    const entry = entries[i];
-    el.publishMsg.textContent = `Uploading file ${i + 1} of ${entries.length}…`;
-    await githubPutFile(
-      token,
-      entry.path,
-      entry.base64,
-      `Add ${entry.path.startsWith('assets/files/') ? 'file' : 'image'} ${entry.path.split('/').pop()} from admin`
-    );
-    await removePendingUpload(entry.path);
-  }
-}
-
-async function publishToGitHub() {
-  const token = el.ghToken.value.trim() || sessionStorage.getItem(TOKEN_KEY) || '';
-  if (!token) {
+  if (!password) {
     el.publishMsg.hidden = false;
-    el.publishMsg.textContent =
-      'Add a GitHub token above first (Contents: Read and write on this repo).';
+    el.publishMsg.textContent = 'Password required to publish.';
     return;
   }
 
   el.publishBtn.disabled = true;
   el.publishMsg.hidden = false;
-  el.publishMsg.textContent = 'Publishing…';
+  el.publishMsg.textContent = 'Publishing to Vercel…';
 
   try {
     site.generatedAt = new Date().toISOString();
     saveDraft();
 
-    if (pendingUploads.size) {
-      await publishPendingImages(token);
+    const files = [...pendingUploads.values()].map((entry) => ({
+      path: entry.path,
+      base64: entry.base64,
+      mime: entry.mime || 'application/octet-stream',
+    }));
+
+    if (files.length) {
+      el.publishMsg.textContent = `Uploading ${files.length} file${files.length === 1 ? '' : 's'}…`;
     }
 
-    el.publishMsg.textContent = 'Updating site content…';
-    const path = 'data/site.json';
-    const headers = {
-      Accept: 'application/vnd.github+json',
-      Authorization: `Bearer ${token}`,
-    };
-    const metaRes = await fetch(
-      `https://api.github.com/repos/${REPO.owner}/${REPO.name}/contents/${path}?ref=${REPO.branch}`,
-      { headers }
-    );
-    if (!metaRes.ok) {
-      throw new Error(`Could not read site.json (${metaRes.status}). Check token permissions.`);
-    }
-    const meta = await metaRes.json();
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(site, null, 2))));
+    const res = await fetch('../api/publish', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password, site, files }),
+    });
 
-    const putRes = await fetch(
-      `https://api.github.com/repos/${REPO.owner}/${REPO.name}/contents/${path}`,
-      {
-        method: 'PUT',
-        headers: {
-          ...headers,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          message: 'Update site content from admin',
-          content,
-          sha: meta.sha,
-          branch: REPO.branch,
-        }),
-      }
-    );
-
-    if (!putRes.ok) {
-      const err = await putRes.json().catch(() => ({}));
-      throw new Error(err.message || `Publish failed (${putRes.status})`);
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      throw new Error(data.error || `Publish failed (${res.status})`);
     }
 
-    clearDirty('Published — GitHub Pages will update in about a minute');
+    if (data.site) site = data.site;
+    for (const entry of [...pendingUploads.keys()]) {
+      await removePendingUpload(entry);
+    }
+    saveDraft();
+    sessionStorage.setItem(PASS_SESSION_KEY, password);
+    clearDirty('Published on Vercel');
     el.publishMsg.textContent =
-      'Published successfully. Live site usually updates within 1–2 minutes.';
+      'Published. Visitors will see the update right away (refresh if needed).';
+    renderAll();
   } catch (err) {
     el.publishMsg.textContent = err.message || String(err);
   } finally {
@@ -1193,7 +1137,7 @@ async function publishToGitHub() {
   }
 }
 
-el.publishBtn.addEventListener('click', publishToGitHub);
+el.publishBtn.addEventListener('click', publishToVercel);
 
 async function boot() {
   if (sessionStorage.getItem(AUTH_KEY) === '1') {

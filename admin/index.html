@@ -138,7 +138,7 @@
                     />
                     <div id="fileUploadEmpty" class="upload-empty">
                       <strong>Upload a file</strong>
-                      <span>PDF, Office, ZIP, video · up to 20&nbsp;MB</span>
+                      <span>PDF, Office, ZIP, video · up to 4&nbsp;MB</span>
                     </div>
                     <div id="fileUploadPreview" class="upload-preview file-preview" hidden>
                       <span class="file-badge" id="fileBadge">FILE</span>
@@ -188,17 +188,13 @@
             <section class="publish-panel">
               <div class="section-head">
                 <p class="eyebrow">Go live</p>
-                <h2>Publish settings</h2>
+                <h2>Publish to Vercel</h2>
                 <p class="help">
-                  Paste a GitHub token with <strong>Contents: Read and write</strong> on
-                  <code>muneernas/AM-PYP-LINKS</code>. Uploaded pictures, files, and content
-                  changes go live together on Publish. Kept in this browser session only.
+                  No GitHub token needed. Publishing saves content to Vercel Blob so the live site
+                  updates right away. One-time setup: connect a <strong>Blob</strong> store in your
+                  Vercel project.
                 </p>
               </div>
-              <label class="field">
-                <span>Personal access token</span>
-                <input id="ghToken" type="password" autocomplete="off" placeholder="ghp_…" />
-              </label>
               <p id="publishMsg" class="toast" hidden></p>
             </section>
           </div>
