@@ -129,37 +129,66 @@ function filterLinks(links, pageId) {
   });
 }
 
+const CORE_NAV = [
+  'home',
+  'grade-1',
+  'grade-2',
+  'grade-3',
+  'grade-4',
+  'grade-5',
+  'pe-videos',
+];
+
+function isJunkNavLabel(label) {
+  const text = String(label || '').trim();
+  if (!text) return true;
+  const letters = text.replace(/[^a-zA-Z\u0600-\u06ff]/g, '');
+  return letters.length < 2;
+}
+
 function renderNav(activeId) {
-  const moreFixed = ['franccedilais', 'robotics'];
-  const main = [];
-  for (const id of site.primaryNav || []) {
-    if (!moreFixed.includes(id) && !main.includes(id) && site.pages.some((p) => p.id === id)) {
-      main.push(id);
-    }
-  }
-  // Any page missing from the menu (e.g. newly published admin pages) goes in the main nav.
-  for (const page of site.pages || []) {
-    if (page?.id && !moreFixed.includes(page.id) && !main.includes(page.id)) {
-      main.push(page.id);
-    }
-  }
-  const more = moreFixed.filter((id) => site.pages.some((p) => p.id === id));
+  const main = CORE_NAV.filter((id) => site.pages.some((p) => p.id === id));
+  const moreIds = (site.pages || [])
+    .map((p) => p.id)
+    .filter((id) => id && !CORE_NAV.includes(id));
+
+  moreIds.sort((a, b) => {
+    const pageA = site.pages.find((p) => p.id === a);
+    const pageB = site.pages.find((p) => p.id === b);
+    const junkA = isJunkNavLabel(pageA?.navLabel);
+    const junkB = isJunkNavLabel(pageB?.navLabel);
+    if (junkA !== junkB) return junkA ? 1 : -1;
+    const pref = (page) =>
+      page &&
+      !isJunkNavLabel(page.navLabel) &&
+      /^[a-z0-9]+(?:-[a-z0-9]+)*$/i.test(page.id) &&
+      !/\d{6,}/.test(page.id)
+        ? 0
+        : 1;
+    const prefDiff = pref(pageA) - pref(pageB);
+    if (prefDiff) return prefDiff;
+    return String(pageA?.navLabel || a).localeCompare(String(pageB?.navLabel || b), undefined, {
+      sensitivity: 'base',
+    });
+  });
 
   const linkHtml = (id) => {
     const page = site.pages.find((p) => p.id === id);
     if (!page) return '';
     const current = id === activeId ? ' aria-current="page"' : '';
-    return `<a href="#/${id}"${current}>${escapeHtml(page.navLabel || page.id)}</a>`;
+    const label = isJunkNavLabel(page.navLabel) ? page.id : page.navLabel || page.id;
+    return `<a href="#/${id}"${current}>${escapeHtml(label)}</a>`;
   };
 
   const auditCurrent = activeId === 'link-audit' ? ' aria-current="page"' : '';
+  const activeInMore = moreIds.includes(activeId);
 
   el.nav.innerHTML = `
     ${main.map(linkHtml).join('')}
-    <div class="more">
-      <button type="button" class="more-trigger" aria-expanded="false">More…</button>
-      <div class="more-panel">
-        ${more.map(linkHtml).join('')}
+    <div class="more${activeInMore ? ' is-open' : ''}">
+      <button type="button" class="more-trigger" aria-expanded="${activeInMore ? 'true' : 'false'}">More…</button>
+      <div class="more-panel" role="menu">
+        ${moreIds.map(linkHtml).join('')}
         <a href="#/link-audit"${auditCurrent}>Link audit</a>
         <a href="/admin/">Admin</a>
       </div>
@@ -170,6 +199,7 @@ function renderNav(activeId) {
   const moreBtn = el.nav.querySelector('.more-trigger');
   moreBtn?.addEventListener('click', (e) => {
     e.preventDefault();
+    e.stopPropagation();
     const open = moreWrap.classList.toggle('is-open');
     moreBtn.setAttribute('aria-expanded', String(open));
   });
