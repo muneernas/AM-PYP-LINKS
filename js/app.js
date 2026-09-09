@@ -64,8 +64,7 @@ function pageIdFromHash() {
 function weeblyPathToId(href) {
   try {
     const u = new URL(href, location.href);
-    if (!String(u.hostname || '').includes('ahliyyahmutranpyp.weebly.com')) {
-      // also treat our internal hash pages
+    if (!/ahliyyahmutranpyp\.weebly\.com/i.test(String(u.hostname || ''))) {
       return null;
     }
     let p = u.pathname.replace(/^\//, '').replace(/\.html?$/, '');
@@ -73,6 +72,60 @@ function weeblyPathToId(href) {
   } catch {
     return null;
   }
+}
+
+function isWeeblyUrl(value) {
+  return /weebly\.com/i.test(String(value || ''));
+}
+
+function sanitizeLink(link, pages) {
+  if (!link) return null;
+  const next = { ...link };
+  delete next.imgRemote;
+  delete next.hrefRemote;
+  delete next.internal;
+
+  let href = String(next.href || '').trim();
+  if (!href || /javascript:/i.test(href) || href === '#') return null;
+
+  if (/ahliyyahmutranpyp\.weebly\.com/i.test(href)) {
+    const id = weeblyPathToId(href);
+    if (!id) return null;
+    const exists = (pages || []).some((p) => p.id === id);
+    // Keep only remapped internal pages; drop old Weebly chrome/nav leftovers.
+    if (!exists) return null;
+    if (!next.img && ['home', 'grade-1', 'grade-2', 'grade-3', 'grade-4', 'grade-5', 'pe-videos', 'franccedilais', 'robotics'].includes(id)) {
+      return null;
+    }
+    href = `#/${id}`;
+    next.href = href;
+    if (isWeeblyUrl(next.label)) {
+      const page = (pages || []).find((p) => p.id === id);
+      next.label = page?.navLabel || id.replace(/-/g, ' ');
+    }
+  }
+
+  // Hide any remaining Weebly-hosted destinations from the public tiles.
+  if (isWeeblyUrl(href) && !href.startsWith('#/')) return null;
+  if (isWeeblyUrl(next.label) && !next.img) return null;
+
+  next.href = href;
+  return next;
+}
+
+function sanitizeSiteData(data) {
+  if (!data || !Array.isArray(data.pages)) return data;
+  delete data.sourceLive;
+  for (const page of data.pages) {
+    if (!Array.isArray(page.units)) continue;
+    for (const unit of page.units) {
+      unit.links = (unit.links || [])
+        .map((link) => sanitizeLink(link, data.pages))
+        .filter(Boolean);
+    }
+    page.links = page.units.flatMap((unit) => unit.links || []);
+  }
+  return data;
 }
 
 function niceLabel(link) {
@@ -122,7 +175,8 @@ function isChromeLink(link, currentPageId) {
 
 function filterLinks(links, pageId) {
   return (links || []).filter((link) => {
-    if (/javascript:|^#$/i.test(link.href)) return false;
+    if (!link?.href || /javascript:|^#$/i.test(link.href)) return false;
+    if (isWeeblyUrl(link.href) && !link.href.startsWith('#/')) return false;
     if (isChromeLink(link, pageId)) return false;
     if (link.href.endsWith('#') && !link.img) return false;
     return true;
@@ -264,10 +318,10 @@ function tileHtml(link) {
             : label.slice(0, 2).toUpperCase()
       )}</div></div>`;
 
-  // If the Weebly page was migrated, don't scare people with Weebly-shutdown notes.
+  // Drop old Weebly shutdown notes from audits.
   let auditInfo = link.audit;
   if (migrated && auditInfo?.notes) {
-    const notes = auditInfo.notes.filter((n) => !/Hosted on Weebly/i.test(n));
+    const notes = auditInfo.notes.filter((n) => !/Hosted on Weebly|weebly\.com/i.test(n));
     if (!notes.length) auditInfo = null;
     else {
       const level = notes.some((n) =>
@@ -281,7 +335,7 @@ function tileHtml(link) {
     }
   }
   if (isLocalFile && auditInfo?.notes) {
-    const notes = auditInfo.notes.filter((n) => !/Hosted on Weebly/i.test(n));
+    const notes = auditInfo.notes.filter((n) => !/Hosted on Weebly|weebly\.com/i.test(n));
     if (!notes.length) auditInfo = null;
     else auditInfo = { ...auditInfo, notes, note: notes.join(' ') };
   }
@@ -433,7 +487,7 @@ function renderPage(id) {
   const namedUnits = (page.units || []).filter((u) => u.titleAr || u.titleEn);
   el.meta.textContent = namedUnits.length
     ? `${namedUnits.length} unit plans`
-    : 'Resource links from the Weebly site';
+    : 'Resource links';
 
   renderNav(page.id);
 
@@ -484,6 +538,7 @@ async function boot() {
     site = await res.json();
   }
 
+  site = sanitizeSiteData(site);
   syncNavWithPages();
 
   try {

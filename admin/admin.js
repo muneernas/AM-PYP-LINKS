@@ -517,6 +517,59 @@ function syncPageLinks(page) {
     .map((u) => u.titleEn || u.titleAr);
 }
 
+function weeblyPathToId(href) {
+  try {
+    const u = new URL(href);
+    if (!/ahliyyahmutranpyp\.weebly\.com/i.test(u.hostname || '')) return null;
+    return u.pathname.replace(/^\//, '').replace(/\.html?$/, '') || 'home';
+  } catch {
+    return null;
+  }
+}
+
+function sanitizeAdminLink(link, pages) {
+  if (!link) return null;
+  const next = { ...link };
+  delete next.imgRemote;
+  delete next.hrefRemote;
+  delete next.internal;
+  let href = String(next.href || '').trim();
+  if (!href || href === '#' || /javascript:/i.test(href)) return null;
+  if (/ahliyyahmutranpyp\.weebly\.com/i.test(href)) {
+    const id = weeblyPathToId(href);
+    if (!id || !(pages || []).some((p) => p.id === id)) return null;
+    if (
+      !next.img &&
+      ['home', 'grade-1', 'grade-2', 'grade-3', 'grade-4', 'grade-5', 'pe-videos', 'franccedilais', 'robotics'].includes(id)
+    ) {
+      return null;
+    }
+    href = `#/${id}`;
+    next.href = href;
+    if (/weebly\.com/i.test(next.label || '')) {
+      const page = (pages || []).find((p) => p.id === id);
+      next.label = page?.navLabel || id.replace(/-/g, ' ');
+    }
+  }
+  if (/weebly\.com/i.test(href) && !href.startsWith('#/')) return null;
+  next.href = href;
+  return next;
+}
+
+function sanitizeSiteData(data) {
+  if (!data || !Array.isArray(data.pages)) return data;
+  delete data.sourceLive;
+  for (const page of data.pages) {
+    for (const unit of page.units || []) {
+      unit.links = (unit.links || [])
+        .map((link) => sanitizeAdminLink(link, data.pages))
+        .filter(Boolean);
+    }
+    syncPageLinks(page);
+  }
+  return data;
+}
+
 async function loadSite() {
   const draft = localStorage.getItem(DRAFT_KEY);
   if (draft) {
@@ -525,6 +578,7 @@ async function loadSite() {
       if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
       if (!Array.isArray(site.pages)) site.pages = [];
       clearDirty('Loaded local draft');
+      site = sanitizeSiteData(site);
       syncNavWithPages();
       return;
     } catch {
@@ -539,6 +593,7 @@ async function loadSite() {
       if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
       if (!Array.isArray(site.pages)) site.pages = [];
       clearDirty('Loaded live Vercel content');
+      site = sanitizeSiteData(site);
       syncNavWithPages();
       return;
     }
@@ -552,6 +607,7 @@ async function loadSite() {
   if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
   if (!Array.isArray(site.pages)) site.pages = [];
   clearDirty('Loaded bundled site data');
+  site = sanitizeSiteData(site);
   syncNavWithPages();
 }
 
@@ -926,7 +982,7 @@ el.addLinkForm.addEventListener('submit', async (e) => {
     href,
     label: title,
     img,
-    internal: /ahliyyahmutranpyp\.weebly\.com/i.test(href),
+    internal: false,
   };
 
   try {
@@ -1110,6 +1166,7 @@ async function publishToVercel() {
 
   try {
     site.generatedAt = new Date().toISOString();
+    syncNavWithPages();
     saveDraft();
 
     const files = [...pendingUploads.values()].map((entry) => ({
