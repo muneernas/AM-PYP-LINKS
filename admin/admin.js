@@ -36,6 +36,9 @@ const el = {
   unitsHost: document.getElementById('unitsHost'),
   addUnitBtn: document.getElementById('addUnitBtn'),
   addPageBtn: document.getElementById('addPageBtn'),
+  hidePageBtn: document.getElementById('hidePageBtn'),
+  deletePageBtn: document.getElementById('deletePageBtn'),
+  pageActions: document.getElementById('pageActions'),
   addLinkForm: document.getElementById('addLinkForm'),
   linkPage: document.getElementById('linkPage'),
   linkUnit: document.getElementById('linkUnit'),
@@ -74,6 +77,7 @@ const el = {
   saveDraftBtn: document.getElementById('saveDraftBtn'),
   publishBtn: document.getElementById('publishBtn'),
   logoutBtn: document.getElementById('logoutBtn'),
+  discardDraftBtn: document.getElementById('discardDraftBtn'),
   publishMsg: document.getElementById('publishMsg'),
   unitDialog: document.getElementById('unitDialog'),
   unitForm: document.getElementById('unitForm'),
@@ -563,7 +567,11 @@ function sanitizeSiteData(data) {
     for (const unit of page.units || []) {
       unit.links = (unit.links || [])
         .map((link) => sanitizeAdminLink(link, data.pages))
-        .filter(Boolean);
+        .filter(Boolean)
+        .map((link) => {
+          if (link.audit) delete link.audit;
+          return link;
+        });
     }
     syncPageLinks(page);
   }
@@ -639,12 +647,15 @@ function renderPageList() {
   el.pageList.innerHTML = site.pages
     .map((p) => {
       const count = pageLinkCount(p);
+      const hidden = p.hidden ? ' is-hidden' : '';
       return `
       <li>
         <button type="button" data-page="${escapeHtml(p.id)}" class="${
           p.id === selectedPageId ? 'active' : ''
-        }">
-          <span class="page-name">${escapeHtml(p.navLabel || p.id)}</span>
+        }${hidden}">
+          <span class="page-name">${escapeHtml(p.navLabel || p.id)}${
+            p.hidden ? ' <em class="hidden-tag">hidden</em>' : ''
+          }</span>
           <span class="page-count">${count} resource${count === 1 ? '' : 's'}</span>
         </button>
       </li>`;
@@ -702,6 +713,7 @@ function renderUnits() {
         Pick a page from the left to manage its units and links.
       </div>`;
     el.addUnitBtn.hidden = true;
+    if (el.pageActions) el.pageActions.hidden = true;
     return;
   }
 
@@ -711,9 +723,13 @@ function renderUnits() {
   if (el.pageMeta) {
     el.pageMeta.textContent = `${units.length} unit${units.length === 1 ? '' : 's'} · ${linkCount} resource${
       linkCount === 1 ? '' : 's'
-    }`;
+    }${page.hidden ? ' · hidden from public site' : ''}`;
   }
+  if (el.pageActions) el.pageActions.hidden = false;
   el.addUnitBtn.hidden = false;
+  if (el.hidePageBtn) {
+    el.hidePageBtn.textContent = page.hidden ? 'Unhide page' : 'Hide page';
+  }
 
   el.unitsHost.innerHTML = units
     .map((unit, unitIndex) => {
@@ -1123,6 +1139,7 @@ el.addPageBtn.addEventListener('click', () => {
     path: `/${id}.html`,
     title: `${navLabel} - Ahliyyah & Mutran`,
     navLabel,
+    hidden: false,
     units: [
       {
         id: 'resources',
@@ -1144,9 +1161,61 @@ el.addPageBtn.addEventListener('click', () => {
   renderAll();
 });
 
+el.hidePageBtn?.addEventListener('click', () => {
+  const page = selectedPage();
+  if (!page) return;
+  page.hidden = !page.hidden;
+  markDirty();
+  renderAll();
+});
+
+el.deletePageBtn?.addEventListener('click', () => {
+  const page = selectedPage();
+  if (!page) return;
+  if (page.id === 'home') {
+    alert('The Home page cannot be deleted.');
+    return;
+  }
+  const label = page.navLabel || page.id;
+  if (!confirm(`Delete page “${label}” and all of its units/links? This cannot be undone in this draft.`)) {
+    return;
+  }
+  site.pages = site.pages.filter((p) => p.id !== page.id);
+  site.primaryNav = (site.primaryNav || []).filter((id) => id !== page.id);
+  selectedPageId = site.pages[0]?.id || null;
+  resetComposerForm();
+  markDirty();
+  renderAll();
+});
+
 el.saveDraftBtn.addEventListener('click', () => {
   site.generatedAt = new Date().toISOString();
   saveDraft();
+});
+
+el.discardDraftBtn?.addEventListener('click', async () => {
+  if (!confirm('Discard the local draft and reload the live/bundled site data?')) return;
+  localStorage.removeItem(DRAFT_KEY);
+  try {
+    const live = await fetch('/api/site', { cache: 'no-store' });
+    if (live.ok) {
+      site = sanitizeSiteData(await live.json());
+    } else {
+      const res = await fetch('/data/site.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error('Could not reload site data');
+      site = sanitizeSiteData(await res.json());
+    }
+  } catch (err) {
+    alert(err.message || String(err));
+    return;
+  }
+  if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
+  if (!Array.isArray(site.pages)) site.pages = [];
+  syncNavWithPages();
+  selectedPageId = site.pages[0]?.id || null;
+  resetComposerForm();
+  clearDirty('Reloaded live data (draft discarded)');
+  renderAll();
 });
 
 async function publishToVercel() {
@@ -1167,6 +1236,7 @@ async function publishToVercel() {
   try {
     site.generatedAt = new Date().toISOString();
     syncNavWithPages();
+    site = sanitizeSiteData(site);
     saveDraft();
 
     const files = [...pendingUploads.values()].map((entry) => ({

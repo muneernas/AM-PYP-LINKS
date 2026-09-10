@@ -579,6 +579,27 @@ textarea:focus {
   border-bottom: 1px solid var(--line);
 }
 
+.workspace-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: flex-end;
+}
+
+#pageList button.is-hidden {
+  opacity: 0.72;
+}
+
+#pageList .hidden-tag {
+  font-style: normal;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-left: 0.25rem;
+}
+
 .workspace-head h2 {
   font-size: clamp(1.45rem, 2.5vw, 1.9rem);
 }

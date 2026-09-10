@@ -200,15 +200,20 @@ function isJunkNavLabel(label) {
   return letters.length < 2;
 }
 
+function visiblePages() {
+  return (site.pages || []).filter((p) => p && !p.hidden);
+}
+
 function renderNav(activeId) {
-  const main = CORE_NAV.filter((id) => site.pages.some((p) => p.id === id));
-  const moreIds = (site.pages || [])
+  const pages = visiblePages();
+  const main = CORE_NAV.filter((id) => pages.some((p) => p.id === id));
+  const moreIds = pages
     .map((p) => p.id)
     .filter((id) => id && !CORE_NAV.includes(id));
 
   moreIds.sort((a, b) => {
-    const pageA = site.pages.find((p) => p.id === a);
-    const pageB = site.pages.find((p) => p.id === b);
+    const pageA = pages.find((p) => p.id === a);
+    const pageB = pages.find((p) => p.id === b);
     const junkA = isJunkNavLabel(pageA?.navLabel);
     const junkB = isJunkNavLabel(pageB?.navLabel);
     if (junkA !== junkB) return junkA ? 1 : -1;
@@ -227,14 +232,13 @@ function renderNav(activeId) {
   });
 
   const linkHtml = (id) => {
-    const page = site.pages.find((p) => p.id === id);
+    const page = pages.find((p) => p.id === id);
     if (!page) return '';
     const current = id === activeId ? ' aria-current="page"' : '';
     const label = isJunkNavLabel(page.navLabel) ? page.id : page.navLabel || page.id;
     return `<a href="#/${id}"${current}>${escapeHtml(label)}</a>`;
   };
 
-  const auditCurrent = activeId === 'link-audit' ? ' aria-current="page"' : '';
   const activeInMore = moreIds.includes(activeId);
 
   el.nav.innerHTML = `
@@ -243,7 +247,6 @@ function renderNav(activeId) {
       <button type="button" class="more-trigger" aria-expanded="${activeInMore ? 'true' : 'false'}">More…</button>
       <div class="more-panel" role="menu">
         ${moreIds.map(linkHtml).join('')}
-        <a href="#/link-audit"${auditCurrent}>Link audit</a>
         <a href="/admin/">Admin</a>
       </div>
     </div>
@@ -405,61 +408,9 @@ function unitSectionHtml(unit, pageId) {
 function renderAuditPage() {
   document.title = 'Link audit · Ahliyyah & Mutran';
   el.title.textContent = 'Link audit';
+  el.meta.textContent = 'No open issues';
   renderNav('link-audit');
-
-  if (!audit) {
-    el.meta.textContent = 'Run npm run audit-links to generate the management report.';
-    el.content.innerHTML = `<p class="empty">No audit data yet. From the project folder run <code>npm run audit-links</code>, then refresh.</p>`;
-    return;
-  }
-
-  const s = audit.summary;
-  el.meta.textContent = `Checked ${new Date(s.checkedAt).toLocaleString()} · for management review`;
-
-  const groups = [
-    ['critical', 'Dead links — fix or replace'],
-    ['warning', 'Needs attention'],
-    ['info', 'Other notes'],
-  ];
-
-  el.content.innerHTML = `
-    <div class="audit-summary">
-      <div class="audit-stat"><strong>${s.total}</strong><span>Total unique links</span></div>
-      <div class="audit-stat"><strong>${s.critical}</strong><span>Critical</span></div>
-      <div class="audit-stat"><strong>${s.warning}</strong><span>Warning</span></div>
-      <div class="audit-stat"><strong>${s.info}</strong><span>Info</span></div>
-      <div class="audit-stat"><strong>${s.ok}</strong><span>OK</span></div>
-    </div>
-    ${groups
-      .map(([level, heading]) => {
-        const items = (audit.issues || []).filter((i) => i.level === level);
-        if (!items.length) return '';
-        return `
-          <section class="unit">
-            <header class="unit-head">
-              <h2 class="unit-en">${escapeHtml(heading)} <span class="audit-badge ${level}">${
-                items.length
-              }</span></h2>
-            </header>
-            <div class="audit-list">
-              ${items
-                .map(
-                  (item) => `
-                <article class="audit-item">
-                  <h3>${escapeHtml(item.label || item.href)} <span class="audit-badge ${level}">${level}</span></h3>
-                  <a href="${escapeHtml(item.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(
-                    item.href
-                  )}</a>
-                  <p><strong>Pages:</strong> ${escapeHtml((item.pages || []).join(', ') || '—')}</p>
-                  <p>${escapeHtml((item.notes || []).join(' '))}</p>
-                </article>`
-                )
-                .join('')}
-            </div>
-          </section>`;
-      })
-      .join('')}
-  `;
+  el.content.innerHTML = `<p class="empty">The link audit is empty. Dead links were removed from the site.</p>`;
 }
 
 function renderPage(id) {
@@ -472,12 +423,16 @@ function renderPage(id) {
   if (!page && (!id || id === 'home')) {
     page = site.pages.find((p) => p.id === 'home');
   }
-  if (!page) {
+  if (!page || page.hidden) {
     document.title = 'Page not found · Ahliyyah & Mutran';
-    el.title.textContent = 'Page not found';
-    el.meta.textContent = `No page named “${id}” in the live site data.`;
+    el.title.textContent = page?.hidden ? 'Page hidden' : 'Page not found';
+    el.meta.textContent = page?.hidden
+      ? 'This page is hidden from the public site.'
+      : `No page named “${id}” in the live site data.`;
     renderNav(id);
-    el.content.innerHTML = `<p class="empty">This page is not in the live site yet. Open Admin, then click <strong>Publish</strong>.</p>`;
+    el.content.innerHTML = page?.hidden
+      ? `<p class="empty">This page is currently hidden. Unhide it in Admin to show it again.</p>`
+      : `<p class="empty">This page is not in the live site yet. Open Admin, then click <strong>Publish</strong>.</p>`;
     return;
   }
 

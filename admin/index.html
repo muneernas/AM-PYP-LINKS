@@ -75,7 +75,11 @@
                 <h2 id="pageHeading">Select a page</h2>
                 <p id="pageMeta" class="page-meta"></p>
               </div>
-              <button type="button" id="addUnitBtn" class="btn btn-ghost" hidden>+ Add unit</button>
+              <div class="workspace-actions" id="pageActions" hidden>
+                <button type="button" id="hidePageBtn" class="btn btn-ghost">Hide page</button>
+                <button type="button" id="addUnitBtn" class="btn btn-ghost">+ Add unit</button>
+                <button type="button" id="deletePageBtn" class="btn danger">Delete page</button>
+              </div>
             </div>
             <div id="unitsHost" class="units-host"></div>
           </section>
@@ -194,6 +198,9 @@
                   updates right away. One-time setup: connect a <strong>Blob</strong> store in your
                   Vercel project.
                 </p>
+              </div>
+              <div class="actions">
+                <button type="button" id="discardDraftBtn" class="btn btn-ghost">Discard local draft</button>
               </div>
               <p id="publishMsg" class="toast" hidden></p>
             </section>
