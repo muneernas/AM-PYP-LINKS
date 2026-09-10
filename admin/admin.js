@@ -321,7 +321,7 @@ async function prepareResourceFile(file) {
     throw new Error('Supported files: PDF, Word, Excel, PowerPoint, ZIP, video, TXT, CSV.');
   }
   if (file.size > MAX_FILE_BYTES) {
-    throw new Error('File is too large. Please use a file under 4 MB for Vercel publish.');
+    throw new Error('File is too large. Please use a file under 4 MB.');
   }
   const buffer = await file.arrayBuffer();
   const base64 = arrayBufferToBase64(buffer);
@@ -469,7 +469,7 @@ function markDirty() {
       site.generatedAt = new Date().toISOString();
       localStorage.setItem(DRAFT_KEY, JSON.stringify(site));
     }
-    setStatus('Draft saved — Publish to update the live site', 'dirty');
+    setStatus('Draft saved — Publish to update the website', 'dirty');
   } catch {
     setStatus('Changed, but draft could not be saved in this browser', 'dirty');
   }
@@ -600,7 +600,7 @@ async function loadSite() {
       site = await live.json();
       if (!Array.isArray(site.primaryNav)) site.primaryNav = [];
       if (!Array.isArray(site.pages)) site.pages = [];
-      clearDirty('Loaded live Vercel content');
+      clearDirty('Loaded live website content');
       site = sanitizeSiteData(site);
       syncNavWithPages();
       return;
@@ -621,7 +621,7 @@ async function loadSite() {
 
 function saveDraft() {
   localStorage.setItem(DRAFT_KEY, JSON.stringify(site));
-  clearDirty('Draft saved in this browser (site visitors will see it after Publish)');
+  clearDirty('Draft saved in this browser (visitors will see it after Publish)');
 }
 
 function selectedPage() {
@@ -1231,7 +1231,7 @@ async function publishToVercel() {
 
   el.publishBtn.disabled = true;
   el.publishMsg.hidden = false;
-  el.publishMsg.textContent = 'Publishing to Vercel…';
+  el.publishMsg.textContent = 'Publishing to website…';
 
   try {
     site.generatedAt = new Date().toISOString();
@@ -1266,9 +1266,9 @@ async function publishToVercel() {
     }
     saveDraft();
     sessionStorage.setItem(PASS_SESSION_KEY, password);
-    clearDirty('Published on Vercel');
+    clearDirty('Published on website');
     el.publishMsg.textContent =
-      'Published. Visitors will see the update right away (refresh if needed).';
+      'Published on website. Visitors will see the update right away (refresh if needed).';
     renderAll();
   } catch (err) {
     el.publishMsg.textContent = err.message || String(err);
