@@ -77,6 +77,8 @@ a {
   max-width: min(720px, 90vw);
   object-fit: contain;
   flex: 0 0 auto;
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic;
 }
 
 /* School name is already in the logo image */
