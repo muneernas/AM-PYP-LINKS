@@ -72,9 +72,9 @@ a {
 /* Wide wordmark — size by height, not a square box */
 .brand-logo {
   display: block;
-  height: 80px;
+  height: 110px;
   width: auto;
-  max-width: min(520px, 82vw);
+  max-width: min(720px, 90vw);
   object-fit: contain;
   flex: 0 0 auto;
 }
@@ -499,8 +499,8 @@ a {
 
 @media (max-width: 860px) {
   .brand-logo {
-    height: 52px;
-    max-width: min(360px, 88vw);
+    height: 72px;
+    max-width: min(480px, 92vw);
   }
 
   .menu-toggle {

@@ -276,9 +276,9 @@ textarea:focus {
 
 .login-logo {
   display: block;
-  height: 88px;
+  height: 110px;
   width: auto;
-  max-width: min(420px, 90vw);
+  max-width: min(560px, 92vw);
   object-fit: contain;
   margin: 0 auto 1.1rem;
   filter: drop-shadow(0 10px 20px rgba(15, 47, 39, 0.15));
@@ -375,9 +375,9 @@ textarea:focus {
 
 .brand-logo {
   display: block;
-  height: 56px;
+  height: 72px;
   width: auto;
-  max-width: min(320px, 42vw);
+  max-width: min(420px, 50vw);
   object-fit: contain;
   flex: 0 0 auto;
 }
