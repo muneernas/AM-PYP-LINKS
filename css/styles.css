@@ -68,8 +68,8 @@ a {
 }
 
 .brand-logo {
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   flex: 0 0 auto;
 }
@@ -480,6 +480,11 @@ a {
 }
 
 @media (max-width: 860px) {
+  .brand-logo {
+    width: 64px;
+    height: 64px;
+  }
+
   .menu-toggle {
     display: inline-flex;
   }
