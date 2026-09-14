@@ -275,10 +275,12 @@ textarea:focus {
 }
 
 .login-logo {
-  width: 72px;
-  height: 72px;
+  display: block;
+  height: 88px;
+  width: auto;
+  max-width: min(420px, 90vw);
   object-fit: contain;
-  margin-bottom: 1.1rem;
+  margin: 0 auto 1.1rem;
   filter: drop-shadow(0 10px 20px rgba(15, 47, 39, 0.15));
   animation: logo-float 5s ease-in-out infinite;
 }
@@ -372,8 +374,10 @@ textarea:focus {
 }
 
 .brand-logo {
-  width: 64px;
-  height: 64px;
+  display: block;
+  height: 56px;
+  width: auto;
+  max-width: min(320px, 42vw);
   object-fit: contain;
   flex: 0 0 auto;
 }
